@@ -36,13 +36,10 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 293px; mobile first*/
-    /*height: 46px;*/
 }
 
 img {
     width: 304px;
-    /*height: 46px;*/
 }
 
 /*h1 fix*/
@@ -65,11 +62,9 @@ h1 {
     width: fit-content;
     margin-top: 179px;
     font-style: normal;
-  /*  font-weight: 400;*/
     font-size: 20px;
     line-height: 115.6%;
     letter-spacing: -0.02em;
-
 }
 
 .link {
@@ -103,11 +98,12 @@ h1 {
     transform-origin: bottom left;
     background-color: var(--mainTxtColor);
 }
-.hover:after {
 
+.hover:after {
     transition: transform 0.20s ease-out;
     transform-origin: bottom left;
 }
+
 .hover:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -145,7 +141,6 @@ h1 {
 footer {
     position: absolute;
     bottom: 41px;
-
     text-align: center;
     width: 100%;
     font-family: 'Manrope-400' !important;
@@ -154,10 +149,10 @@ footer {
     line-height: 16px;
     letter-spacing: -0.02em;
 }
+
 /*
 * Za spreminjanje vidnosti uporabljam visually-hidden, da besedilo ostane vidno website crawlarjem
 */
-
 
 /* ==========================================================================
   Useful classes
@@ -219,15 +214,12 @@ video {
   Media Queries for Responsive Design.
    ==========================================================================
 */
+
 @media only screen and (min-width: 500px) {
     img {
         width: 485px;
-        /*height: 70px;*/
     }
-    .logo {
-       /* width: auto;*/
-        /*height: 70px;*/
-    }
+
     .link {
         font-size: 20px;
         line-height: 25px;
@@ -246,12 +238,8 @@ video {
         font-size: 30px;
         line-height: 115.6%;
         letter-spacing: -0.02em;
-
-       /* top:179px;
-        /*left: 50%;
-        transform: translate(-50%, -50%);*/
-
     }
+
     footer {
         font-size: 14px;
         line-height: 19px;
@@ -261,12 +249,12 @@ video {
 @media only screen and (min-width: 820px) {
     .logo {
         width: 726px;
-        /*height: 115px;*/
     }
+
     img {
         width: 726px;
-        /*height: 115px;*/
     }
+
     .link {
         font-size: 24px;
         line-height: 33px;
@@ -274,13 +262,9 @@ video {
         margin-left: 27px;
         height: 33px;
     }
+
     .motiv {
         width: fit-content;
-
         font-size: 41px;
-        /* top:179px;
-         /*left: 50%;
-         transform: translate(-50%, -50%);*/
-
     }
 }
