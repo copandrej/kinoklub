@@ -6,6 +6,10 @@
     font-family: 'Manrope-400';
     src: url('../fonts/Manrope-Regular.ttf');
 }
+@font-face {
+    font-family: 'Manrope-500';
+    src: url('../fonts/Manrope-Medium.ttf');
+}
 
 :root {
     --mainBgColor: #000000;
@@ -13,14 +17,14 @@
 }
 
 * {
-    font-family: 'Manrope';
+    /*font-family: 'Manrope';*/
     text-decoration: none;
     color: var(--mainTxtColor);
 }
 
 html {
     font-size: 24px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     line-height: 33px;
     letter-spacing: -0.02em;
     background-color: var(--mainBgColor);
@@ -50,14 +54,15 @@ h1 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 7px;
     text-align: center;
 }
 
 .motiv {
+    font-family: 'Manrope-500' !important;
+    font-weight: 500;
     margin-left: auto;
     margin-right: auto;
-    width: 271px;
+    width: fit-content;
     margin-top: 179px;
     font-style: normal;
     font-weight: 400;
@@ -227,11 +232,11 @@ video {
     .motiv {
         margin-left: auto;
         margin-right: auto;
-        width: 555px;
+        width: fit-content;
         margin-top: 179px;
         font-style: normal;
         font-weight: 400;
-        font-size: 41px;
+        font-size: 30px;
         line-height: 115.6%;
         letter-spacing: -0.02em;
 
@@ -261,5 +266,14 @@ video {
         margin-right: 27px;
         margin-left: 27px;
         height: 33px;
+    }
+    .motiv {
+        width: fit-content;
+
+        font-size: 41px;
+        /* top:179px;
+         /*left: 50%;
+         transform: translate(-50%, -50%);*/
+
     }
 }
