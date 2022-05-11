@@ -65,7 +65,7 @@ h1 {
     width: fit-content;
     margin-top: 179px;
     font-style: normal;
-    font-weight: 400;
+  /*  font-weight: 400;*/
     font-size: 20px;
     line-height: 115.6%;
     letter-spacing: -0.02em;
@@ -92,7 +92,7 @@ h1 {
     color: var(--mainTxtColor);
 }
 
-.hover:after, .hover-spec:after {
+.hover:after, .hover-spec:after, .hover-spec1:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -100,14 +100,25 @@ h1 {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--mainTxtColor);
     transform-origin: bottom left;
-    transition: transform 0.20s ease-out;
+    background-color: var(--mainTxtColor);
 }
+.hover:after {
 
+    transition: transform 0.20s ease-out;
+    transform-origin: bottom left;
+}
 .hover:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* The animation code */
+@keyframes example {
+    0%   {transform: scaleX(0);}
+    30%  {transform: scaleX(1);    transform-origin: bottom left;}
+    70%  {transform: scaleX(1);     transform-origin: bottom right;}
+    100% {transform: scaleX(0);     transform-origin: bottom right;}
 }
 
 .hover-spec, .hover-spec1 {
@@ -117,22 +128,18 @@ h1 {
     position: relative;
     color: var(--mainTxtColor);
 }
-.hover-spec:after, .hover-spec1:after {
-    transform-origin: bottom right;
+
+.hover-spec:after {
+    animation-name: example;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
 }
 .hover-spec1:after {
-    transition-delay: 0.15s;
-}
-
-.motiv:hover .hover-spec:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.motiv:hover .hover-spec1:after {
-    transition-delay: 0.15s;
-    transform: scaleX(1);
-    transform-origin: bottom left;
+    animation-delay: 1.15s;
+    animation-name: example;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
 }
 
 footer {
