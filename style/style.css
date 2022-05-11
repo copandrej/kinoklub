@@ -29,36 +29,41 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 726px;
-    height: 115px;
+    width: 293px; /*mobile first*/
+    height: 46px;
 }
+
+img {
+    width: 293px;
+    height: 46px;
+}
+
 /*h1 fix*/
 h1 {
     margin: 0;
 }
+
 .podlogo {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 7px;
-
+    text-align: center;
 }
+
 .link {
     text-decoration: none;
     font-family: 'Manrope' !important;
-
     font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 33px;
-    /* identical to box height */
 
+    font-size: 14px;
+    line-height: 19px;
     letter-spacing: -0.02em;
-    padding-left: 55px;
-    height: 33px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    height: 19px;
 }
-
-
 
 /*
 * Za spreminjanje vidnosti uporabljam visually-hidden, da besedilo ostane vidno website crawlarjem
@@ -78,15 +83,15 @@ h1 {
  */
 
 .visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   /* 1 */
 }
 /*
@@ -95,17 +100,17 @@ h1 {
  *
  * Customize the background color to match your design.
  */
-/*
+
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #808080;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #808080;
     text-shadow: none;
 }
-*/
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -124,39 +129,39 @@ video {
 /* ==========================================================================
   Media Queries for Responsive Design.
    ==========================================================================
-
-@media only screen and (min-width: 30em) {
-}
-@media only screen and (min-width: 40em) {
-    .logo {
-        width: 80%;
-    }
-
-
-}
-
-@media only screen and (min-width: 50em) {
-  .logo {
-        width: 60%;
-    }
-
-
-
-}
-
-@media only screen and (min-width: 65em) {
-
-
-  .logo {
-        width: 60%;
-    }
-
-
-}
-
-@media only screen and (min-width: 85em) {
-  .logo {
-        width: 40%;
-    }
-}
 */
+@media only screen and (min-width: 500px) {
+    img {
+        width: auto;
+        height: 70px;
+    }
+    .logo {
+        width: auto;
+        height: 70px;
+    }
+    .link {
+        font-size: 20px;
+        line-height: 25px;
+        padding-right: 15px;
+        padding-left: 15px;
+        height: 25px;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    .logo {
+        width: 726px;
+        height: 115px;
+    }
+    img {
+        width: 726px;
+        height: 115px;
+    }
+    .link {
+        font-size: 24px;
+        line-height: 33px;
+        padding-right: 27px;
+        padding-left: 27px;
+        height: 33px;
+    }
+}
