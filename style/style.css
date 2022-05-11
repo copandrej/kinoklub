@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-SemiBold.ttf');
+}
+:root {
+    --mainBgColor: #000000;
+    --mainTxtColor: #FFFFFF;
+    /*--hoverColor: #df6437;
+    --transitioni: 80ms;*/
+}
+
+* {
+    font-family: 'Manrope' !important;
+    text-decoration: none;
+    color: var(--mainTxtColor);
+}
+
+html {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+    background-color: var(--mainBgColor);
+}
+
+/*logo central */
+.logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 726px;
+    height: 115px;
+}
+/*h1 fix*/
+h1 {
+    margin: 0;
+}
+.podlogo {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7px;
+
+}
+.link {
+    text-decoration: none;
+    font-family: 'Manrope' !important;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    padding-left: 55px;
+    height: 33px;
+}
+
+
+
+/*
+* Za spreminjanje vidnosti uporabljam visually-hidden, da besedilo ostane vidno website crawlarjem
+*/
+
+
+/* ==========================================================================
+  Useful classes
+   ========================================================================== */
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+/*
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+*/
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+ */
+/* ==========================================================================
+  Media Queries for Responsive Design.
+   ==========================================================================
+
+@media only screen and (min-width: 30em) {
+}
+@media only screen and (min-width: 40em) {
+    .logo {
+        width: 80%;
+    }
+
+
+}
+
+@media only screen and (min-width: 50em) {
+  .logo {
+        width: 60%;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 65em) {
+
+
+  .logo {
+        width: 60%;
+    }
+
+
+}
+
+@media only screen and (min-width: 85em) {
+  .logo {
+        width: 40%;
+    }
+}
+*/
