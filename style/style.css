@@ -10,6 +10,10 @@
     font-family: 'Manrope-500';
     src: url('../fonts/Manrope-Medium.ttf');
 }
+@font-face {
+    font-family: 'Soleil-400';
+    src: url('../fonts/SoleilRegular.otf');
+}
 
 :root {
     --mainBgColor: #000000;
@@ -17,14 +21,12 @@
 }
 
 * {
-    /*font-family: 'Manrope';*/
     text-decoration: none;
     color: var(--mainTxtColor);
 }
 
 html {
     font-size: 24px;
-    /*font-weight: 600;*/
     line-height: 33px;
     letter-spacing: -0.02em;
     background-color: var(--mainBgColor);
@@ -55,7 +57,7 @@ h1 {
 }
 
 .motiv {
-    font-family: 'Manrope-500' !important;
+    font-family: 'Soleil-400' !important;
     font-weight: 500;
     margin-left: auto;
     margin-right: auto;
