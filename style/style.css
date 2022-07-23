@@ -2,14 +2,17 @@
     font-family: 'Manrope';
     src: url('../fonts/Manrope-SemiBold.ttf');
 }
+
 @font-face {
     font-family: 'Manrope-400';
     src: url('../fonts/Manrope-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Manrope-500';
     src: url('../fonts/Manrope-Medium.ttf');
 }
+
 @font-face {
     font-family: 'Soleil-400';
     src: url('../fonts/SoleilRegular.otf');
@@ -23,7 +26,7 @@
 
 * {
     text-decoration: none;
-    color: var(--mainTxtColor);
+    /*color: var(--mainTxtColor);*/
 }
 
 html {
@@ -32,9 +35,10 @@ html {
     letter-spacing: -0.02em;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-  }
+}
 
 .logo {
     width: 200px;
@@ -48,23 +52,23 @@ html, body {
 /*h1 fix*/
 h1 {
     margin: 0;
-
 }
+
 .navbar {
     background-color: transparent;
-    color: var(--mainTxtColor);
     text-transform: uppercase;
     padding: 0;
     display: flex;
+    height: 118px;
 }
+
 .navbar1 {
     padding: 0;
     position: relative;
-    margin-right: 188px;
+    margin-right: 111px;
     text-align: right;
     background-color: transparent;
     color: var(--secTxtColor) !important;
-
 }
 
 .bg-img {
@@ -79,14 +83,15 @@ h1 {
 
 .link {
     text-decoration: none;
-    font-family: 'Manrope' !important;
+    font-family: 'Manrope';
     font-style: normal;
-
-    font-size: 14px;
-    line-height: 19px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 115.6%;
+    /* or 23px */
     letter-spacing: -0.02em;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
 
     height: 19px;
 }
@@ -103,7 +108,7 @@ h1 {
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     transform-origin: bottom left;
     background-color: var(--secTxtColor);
@@ -114,12 +119,43 @@ h1 {
     transform-origin: bottom left;
 }
 
-.hover:hover:after{
+.hover:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
+.banner {
+    color: var(--secTxtColor) !important;
+    position: absolute;
+    bottom: 45px;
+    left: 40px;
+}
 
+.banner h2 {
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 115.6%;
+    /* identical to box height, or 57px */
+
+    letter-spacing: -0.06em;
+    margin-bottom: 0px;
+
+}
+
+.banner p {
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    margin: 0px;
+
+}
+
+/*main*/
 .jumbotron {
     min-height: 700px;
     padding-left: 130px;
@@ -137,13 +173,213 @@ h1 {
     height: 600px;
 }
 
+/*landing page style*/
+.landing-news-img {
+    width: 100%;
+    height: 600px;
+}
+
+.news-row {
+    padding-top: 50px;
+    padding-bottom: 92px;
+}
+
+.news-container {
+    padding-top: 100px;
+}
+
+h3 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+    letter-spacing: -0.06em;
+}
+.news-row h4 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding-top: 21px;
+}
+
+.news-row p {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+}
+.but-link {
+    color: #000000;
+    display: block;
+    float: right;
+    width: 173px;
+    height: 48px;
+    padding-top: 7px;
+    text-align: center;
+    border: 1px solid #000000;
+    text-decoration: none;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+}
+.landing-jumb {
+    min-height: 700px;
+    padding-left: 210px;
+    padding-right: 210px;
+}
+
+.landing-row {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 600px;
+}
+
+.par-row {
+    min-height: auto;
+    padding-bottom: 0;
+    padding-top: 27px;
+
+}
+
+.upcoming {
+    padding-left: 0;
+    padding-right: 0;
+}
+.upcoming h3 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+    letter-spacing: -0.02em;
+
+    padding: 52px 210px;
+    /*position: relative;/*
+    /*left: -210px;
+
+    width: 1920px;*/
+    background-color: #FCF5EF !important;
+}
+.events-container {
+    margin-top: 138px;
+}
+
+.events-row {
+    padding: 72px 14px 73px 9px;
+    padding-left: 219px;
+    padding-right: 219px;
+    min-height: 188px;
+    border-bottom: #000000 solid 1px;
+    width: 100%;
+}
+
+.events-row h4 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+}
+
+.events-row h4 span {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    color: #000000;
+
+    opacity: 0.6;
+
+    padding-left: 21px;
+}
+
+.events-row p {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+}
+
+.events-row a {
+    color: #000000;
+    display: block;
+    float: right;
+    text-decoration: none;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid #000000;
+
+}
+
+.events-container .but-link {
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    margin-top: 51px;
+}
+
+.read-more {
+    margin-top: 47px;
+}
+
+.notes-img {
+    position: relative;
+    width: 1920px;
+    max-width: 1920px;
+    left: -210px;
+    height: auto;
+    padding: 0;
+}
+
 footer {
     text-align: center;
     width: 100%;
     background-color: #000000;
     color: white;
     min-height: 200px;
-    padding-top: 90px;
+    margin-top: 90px;
+}
+
+.landingFooter {
+    height: 100%;
 }
 /*
 * Za spreminjanje vidnosti uporabljam visually-hidden, da besedilo ostane vidno website crawlarjem
@@ -171,8 +407,9 @@ footer {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  /* 1 */
+    /* 1 */
 }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
