@@ -461,6 +461,8 @@ letter-spacing: -0.02em;
 .past-event-cards {
     width: 1000%;
     padding-bottom: 0!important;
+    transition: 0.5s;
+
 }
 
 .un-col {
@@ -468,6 +470,23 @@ letter-spacing: -0.02em;
     margin-right: 77px;
 }
 
+.invis-hover, .invis-hover-back {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+    height: 600px;
+    width: 200px;
+    background-color: transparent;
+}
+
+.invis-hover-back {
+    left: 0;
+}
+
+/*.invis-hover:hover ~ .past-event-cards {
+    /*transform: translate(-400px, 0);
+}*/
 .our-klub {
     padding-right: 276px;
 }
