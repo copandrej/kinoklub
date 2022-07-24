@@ -38,6 +38,8 @@ html {
     font-size: 24px;
     line-height: 33px;
     letter-spacing: -0.02em;
+    overflow-x: hidden;
+
 }
 
 html,
@@ -387,7 +389,7 @@ h3 {
     letter-spacing: -0.02em;
 }
 
-.events-row a {
+.events-row a, .read-more {
     color: #000000;
     display: block;
     float: right;
@@ -426,13 +428,44 @@ h3 {
     position: relative;
     width: 1923px;
     max-width: 1923px;
-    left: -210px;
+    left: -273px;
     height: auto;
     padding: 0;
 }
 
 .past {
     margin-top: 36px;
+}
+
+.past .event-cards {
+    padding-top: 50px;
+}
+
+.past a {
+    text-decoration: none;
+}
+
+.past h4 {
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 32px !important;
+line-height: 44px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+    padding-top: 19px;
+}
+
+.past-event-cards {
+    width: 1000%;
+    padding-bottom: 0!important;
+}
+
+.un-col {
+    width: 700px;
+    margin-right: 77px;
 }
 
 .our-klub {
