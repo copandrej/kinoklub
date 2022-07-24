@@ -288,6 +288,13 @@ h3 {
     margin-right: -36px;
 
 }
+.but-link:hover {
+    color: #535353;
+}
+
+.black-hover:hover {
+    color: #535353;
+}
 
 .landing-jumb {
     min-height: 700px;
@@ -340,6 +347,7 @@ h3 {
     min-height: 188px;
     border-bottom: #000000 solid 1px;
     width: 100%;
+    margin: 0;
 }
 
 .events-row h4 {
@@ -416,8 +424,8 @@ h3 {
 
 .notes-img {
     position: relative;
-    width: 1920px;
-    max-width: 1920px;
+    width: 1923px;
+    max-width: 1923px;
     left: -210px;
     height: auto;
     padding: 0;
@@ -688,7 +696,7 @@ footer {
     text-decoration: none;
 }
 
-.gen-leg a:hover {
+footer a:hover {
     color: #b8b8b8;
     text-decoration: none;
 }
