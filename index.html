@@ -30,11 +30,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <!--<link rel="manifest" href="site.webmanifest">-->
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ffffff">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
 
     <!-- Styles -->
     <link rel="stylesheet" href="style/normalize.css">
@@ -50,6 +50,7 @@
 <body>
 
     <!-- navbar + bg imh-->
+    
     <div class="bg-img-parallax">
         <div class="navbar navbar-parallax">
             <h1>
@@ -66,12 +67,24 @@
         <div class="next-events">
             <img src="img/next-events.png">
             <h4><a class="hover" href="normal.html">Special summer event<span>30/6</span></a> <a class="hover"
-                    href="normal.html">Beach Bum on the beach <span>30/6</span></a><br>
+                    href="normal.html">Beach Bum on the beach <span>30/6</span></a>
                 <a class="hover" href="normal.html">Milan & Kino Trieste<span>30/6</span></a><a class="hover"
                     href="normal.html">Special screening<span>30/6</span></a>
             </h4>
             <p>Kino Klub is a project of Aspekt Institute. ©2022</p>
         </div>
+    </div>
+    <div id="mobile-meni" class="mobile-meni display-none">
+        <a class="link hover" href="index.html">NOTES AND STORIES</a>
+        <a class="link hover" href="events.html">EVENT CALANDAR</a>
+        <a class="link hover" href="normal.html">JUKE BOX CINEMA</a>
+        <a class="link hover" href="normal.html">ABOUT</a>
+        <a class="link hover join" href="normal.html">JOIN</a>
+    </div>
+    <div class="knof" onclick="anime()">
+        <div id ="sprememba" class="zg"></div>
+        <div id ="spremembaa" class="sr"></div>
+        <div id ="spremembaaa" class="sp"></div>
     </div>
 
     <!-- main content -->
@@ -89,7 +102,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row reverse">
             <div class="col-md-4 title">
                 <span class="category">NOTES AND STORIES</span>
                 <h3 class="title">
@@ -115,7 +128,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row reverse">
             <div class="col-md-4 title">
                 <span class="category">NOTES AND STORIES</span>
                 <h3 class="title">
@@ -131,27 +144,28 @@
     </div>
 
     <!-- footer -->
-    <footer class="gen-leg">
-        <div class="contact">
+    <footer class="row gen-leg reverse">
+        <div class="col-md-2 contact">
             <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a><br>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a><br>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a><br>
             Cesta svobode 12a, 4260 Bled
         </div>
-        <div class="socials">
+        <div class="col-md-1 socials">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
             <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
-        <div class="more">
+        <div class="col-md-6 more">
             <form>
                 <p>WANT MORE FROM KINO KLUB?</p>
                 <input type="email" placeholder="Email Address" required>
                 <input type="submit" value="Submit">
             </form>
         </div>
-    </footer>
 
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

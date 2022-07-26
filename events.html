@@ -30,11 +30,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <!--<link rel="manifest" href="site.webmanifest">-->
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ffffff">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
 
     <!-- Styles -->
     <link rel="stylesheet" href="style/normalize.css">
@@ -49,29 +49,45 @@
 
 <body>
 
-    <!-- navbar-->
+
     <div class="bg-img-general events-bg">
         <div class="navbar navbar-parallax">
             <h1>
                 <a style="display: flex;" href="index.html"><img alt="Kino Klub" class="logo" src="img/KK-LOGO.png"></a>
             </h1>
-            <div class="navbar1-parallax">
+
+            <div class="navbar1">
                 <a class="link hover" href="index.html">NOTES AND STORIES</a>
                 <a class="link hover" href="events.html">EVENT CALANDAR</a>
                 <a class="link hover" href="normal.html">JUKE BOX CINEMA</a>
                 <a class="link hover" href="normal.html">ABOUT</a>
                 <a class="link hover" href="normal.html">JOIN</a>
+
             </div>
         </div>
+    </div>
+    <!-- navbar-->
+    <div id="mobile-meni" class="mobile-meni display-none">
+        <a class="link hover" href="index.html">NOTES AND STORIES</a>
+        <a class="link hover" href="events.html">EVENT CALANDAR</a>
+        <a class="link hover" href="normal.html">JUKE BOX CINEMA</a>
+        <a class="link hover" href="normal.html">ABOUT</a>
+        <a class="link hover join" href="normal.html">JOIN</a>
+    </div>
+    <div class="knof" onclick="anime()">
+        <div id="sprememba" class="zg"></div>
+        <div id="spremembaa" class="sr"></div>
+        <div id="spremembaaa" class="sp"></div>
     </div>
 
     <!-- event cards, cards can be repeated. Bundle together 3 events in a row div -->
     <div class="jumbotron events-jumbo">
-        <h3 class="head-events">EVENT CALANDAR</h3>
+        <h3 class="head-events">Upcoming
+            Events</h3>
 
         <div class="row event-cards">
             <div class="col-md-4">
-                <img src="img/Rectangle 82evet1.png" eclass="event-img">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
                 <span>30/6/22, KINO RADOLCA</span>
                 <h4>Special summer event</h4>
                 <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
@@ -79,7 +95,7 @@
             </div>
 
             <div class="col-md-4">
-                <img src="img/Rectangle 82evet1.png" eclass="event-img">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
                 <span>30/6/22, KINO RADOLCA</span>
                 <h4>Special summer event</h4>
                 <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
@@ -87,7 +103,7 @@
             </div>
 
             <div class="col-md-4">
-                <img src="img/Rectangle 82evet1.png" eclass="event-img">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
                 <span>30/6/22, KINO RADOLCA</span>
                 <h4>Special summer event</h4>
                 <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
@@ -98,14 +114,14 @@
 
         <div class="row event-cards">
             <div class="col-md-4">
-                <img src="img/Rectangle 82evet1.png" eclass="event-img">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
                 <span>30/6/22, KINO RADOLCA</span>
                 <h4>Special summer event</h4>
                 <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
                     MORE</a>
             </div>
             <div class="col-md-4">
-                <img src="img/Rectangle 82evet1.png" eclass="event-img">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
                 <span>30/6/22, KINO RADOLCA</span>
                 <h4>Special summer event</h4>
                 <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
@@ -116,27 +132,28 @@
     </div>
 
     <!-- footer -->
-    <footer class="gen-leg">
-        <div class="contact">
+    <footer class="row gen-leg reverse">
+        <div class="col-md-2 contact">
             <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a><br>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a><br>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a><br>
             Cesta svobode 12a, 4260 Bled
         </div>
-        <div class="socials">
+        <div class="col-md-1 socials">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
             <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
-        <div class="more">
+        <div class="col-md-6 more">
             <form>
                 <p>WANT MORE FROM KINO KLUB?</p>
                 <input type="email" placeholder="Email Address" required>
                 <input type="submit" value="Submit">
             </form>
         </div>
-    </footer>
 
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

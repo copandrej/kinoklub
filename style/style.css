@@ -39,6 +39,7 @@ html {
 html,
 body {
     height: 100%;
+    width: 100vw;
 }
 
 /*KINO KLUB LOGO*/
@@ -54,6 +55,35 @@ body {
 /*h1 fix*/
 h1 {
     margin: 0;
+}
+
+/*burger bar from libandrej*/
+.zg, .sp, .sr {
+	width: 40px;
+	height: 4px;
+	background-color: rgb(255, 255, 255);
+	margin: 6px;
+	transition: background-color 200ms, transform 300ms;
+}
+.knof {
+	display: none;
+    cursor: pointer;
+    margin-right: 16px;
+    margin-top: 20px;
+
+}
+.spremeni {
+	background-color: transparent;
+}
+.spremenia  {
+	-ms-transform: translate(0px, 10px) rotate(45deg); /* IE 9 */
+    -webkit-transform: translate(0px, 10px) rotate(45deg); /* Safari */
+    transform: translate(0px, 10px) rotate(45deg);
+} 
+.spremeniaa {
+	-ms-transform: translate(0px, -10px) rotate(-45deg); /* IE 9 */
+    -webkit-transform: translate(0px, -10px) rotate(-45deg); /* Safari */
+    transform: translate(0px, -10px) rotate(-45deg);
 }
 
 /*Outter and inner navbar, overwriting some default bootstrap styles*/
@@ -81,7 +111,7 @@ h1 {
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-position-y: -0px;
-    background-size: 100% auto;
+    background-size: auto;
 }
 
 /*a bit different for generic , height not 100%*/
@@ -89,13 +119,15 @@ h1 {
     height: 820px !important;
     /*height: auto !important;*/
     background-image: url("../img/bg-general.png");
+    background-position: center;
+
 }
 
 
 /*paralex testing navbar is fixed*/
 .navbar-parallax {
     /*background-color: transparent;*/
-    width: 100%;
+    width: 100vw;
     z-index: 1;
     text-transform: uppercase;
     display: flex;
@@ -247,7 +279,7 @@ footer {
 }
 
 .contact {
-    width: 500px;
+    /*width: 500px;*/
     float: left;
     margin-left: 40px;
     margin-top: 270px;
@@ -273,23 +305,36 @@ footer a:hover {
 
 .gen-leg {
     min-height: 333px;
+    padding: 0px;
+    width: 100%;
+    margin: 0;
 }
 
 .gen-leg .contact {
-    width: 400px;
+    /*width: 400px;*/
     float: left;
     margin-left: 130px;
     margin-top: 89px;
     text-align: left;
 
 }
-
-.socials,
 .more {
-    float: left;
-    margin-left: 100px;
+    
+    float: right;
+    margin-left: 140px;
     margin-top: 89px;
     text-align: left;
+}
+.socials {
+    margin-top: 89px;
+
+    margin-left: 40px;
+    /*min-width: 100px;*/
+}
+.contact {
+    margin-left: 130px;
+    min-width: 365px;
+    
 }
 
 .more {
@@ -382,3 +427,171 @@ video {
   Media Queries for Responsive Design.
    ==========================================================================
 */
+
+@media only screen and (max-width: 1150px) {
+
+    .navbar1,
+    .navbar1-parallax {
+        display: none;
+    }
+    .jumbotron, .events-jumbo {
+            padding-left: 70px;
+            padding-right: 70px;
+}
+    .bg-img-parallax {
+        background-size: auto;
+
+    }
+    .knof {
+        display: inline-block;
+        z-index: 4;
+        position: fixed;
+        top: 0px;             
+        right: 22px;                                                                        
+    }
+    .mobile-meni {
+        z-index: 2;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #000000;
+        height: 100%;
+        width: 100%;
+        color: white;
+        
+        padding-top: 141px;
+        transition: 0.5s ease-out;
+        overflow: hidden;
+
+
+    }
+    .mobile-meni a {
+        display: block;
+        margin-bottom: 23px!important;
+        font-family: 'Manrope-700';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        height: auto;
+        /* or 32px */
+        margin-left: 0;
+        padding-left: 44px;
+        letter-spacing: -0.02em;
+
+        color: #FFFFFF;
+    }
+    .join {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .display-none {
+        padding-top: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .logo {
+        width: 166px;
+        left: 23px;
+
+    }
+    .navbar, .navbar-parallax {
+        height: 76px;
+    }
+
+    .banner, .next-events {
+        left: 23px;
+
+    }
+
+    .next-events p {
+        display: none;
+    }
+
+    
+
+
+
+    .next-events h4 {
+        font-size: 22px !important;
+        line-height: 30px !important;
+    }
+
+    .next-events a {
+        display: block;
+    }
+
+    .next-events img {
+        width: 122px;
+        height: 30px;
+    }
+
+    .bg-img-parallax {
+        background-position-x: -900px;
+    }
+
+    .navbar-parallax {
+        background-position-x: -900px;
+    }
+
+
+    .jumbotron, .events-jumbo {
+        padding-left: 13px;
+        padding-right: 13px;
+        max-width: 100%;
+        overflow-x: hidden;
+}
+    /*footer*/
+
+    .more p {
+        display: none;
+    }
+    .gen-leg {
+        height: 450px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .socials,
+    .more, .contact {
+        float: left;
+        margin-left: 27px;
+
+        margin-top: 43px;
+        text-align: left;
+        display: block;
+        width: 100%;
+        padding-right: 0px!important;
+        margin-right: 0px!important;
+
+    }
+    .contact {
+        max-width: 100%!important;
+        margin-left: 27px!important;
+        margin-top: 43px!important;
+    }
+    .more {
+        padding-right: 141px;
+        margin-left: 27px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .more input[type=email] {
+        width: 218px;
+        height: 52px;
+        padding-left: 14px;
+    }
+
+    .more input[type=submit] {
+        width: 104px;
+        height: 52px;
+    }
+    .reverse {
+    flex-direction: column-reverse;
+}
+
+}

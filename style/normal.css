@@ -1,4 +1,9 @@
 /*GENERIC NORMAL PAGE*/
+
+/*Slike brainstorm:
+če niso prave velikosti se da scalira na ustrezno višino za styling in levo desno poreže kar je preveč
+kljub temu se v css napiše najboljše razmerje
+za generičen page se up0orablja višino 88-- nekej zato da je bolj responsive kot height 100%*/
 .content {
     margin: 100px;
 
@@ -52,7 +57,41 @@
     transition: transform 0.4s ease-out;
 }
 
-.events-jumbo {
-    padding-left: 110px;
-    padding-right: 110px;
+
+
+@media only screen and (max-width: 1150px) {
+
+    
+    .content {
+        margin: 50px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .normal-page-con h2 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    .normal-page-con {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .content {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .normal-page-con {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .normal-page-con h2 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    .content {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
