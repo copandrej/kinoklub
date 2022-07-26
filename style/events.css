@@ -1,0 +1,51 @@
+/*Style for events page*/
+.head-events {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 115.6%;
+    /* or 46px */
+
+    letter-spacing: -0.02em;
+
+    color: #000000;
+
+    padding-top: 62px;
+}
+
+.events-bg {
+    height: 120px !important;
+}
+
+.event-cards {
+    padding-top: 62px;
+    padding-bottom: 40px;
+}
+
+.event-cards span {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+
+    color: #000000;
+
+    opacity: 0.6;
+
+}
+
+.event-cards h4 {
+    font-family: 'Manrope-600';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    color: #000000;
+}

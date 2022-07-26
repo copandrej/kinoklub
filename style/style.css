@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'Manrope';
-    src: url('../fonts/Manrope-SemiBold.ttf');
-}
-
-@font-face {
     font-family: 'Manrope-400';
     src: url('../fonts/Manrope-Regular.ttf');
 }
@@ -14,8 +9,8 @@
 }
 
 @font-face {
-    font-family: 'Soleil-400';
-    src: url('../fonts/SoleilRegular.otf');
+    font-family: 'Manrope-600';
+    src: url('../fonts/Manrope-SemiBold.ttf');
 }
 
 @font-face {
@@ -31,7 +26,6 @@
 
 * {
     text-decoration: none;
-    /*color: var(--mainTxtColor);*/
 }
 
 html {
@@ -39,14 +33,15 @@ html {
     line-height: 33px;
     letter-spacing: -0.02em;
     overflow-x: hidden;
-
 }
 
+/*for paralex to work*/
 html,
 body {
     height: 100%;
 }
 
+/*KINO KLUB LOGO*/
 .logo {
     width: 200px;
     height: 32px;
@@ -61,6 +56,7 @@ h1 {
     margin: 0;
 }
 
+/*Outter and inner navbar, overwriting some default bootstrap styles*/
 .navbar {
     background-color: transparent;
     text-transform: uppercase;
@@ -77,6 +73,7 @@ h1 {
     color: var(--secTxtColor) !important;
 }
 
+/*MAXxMAX main background img, also alternative classes for paralex*/
 .bg-img {
     width: 100%;
     min-height: 100% !important;
@@ -87,6 +84,7 @@ h1 {
     background-size: 100% auto;
 }
 
+/*a bit different for generic , height not 100%*/
 .bg-img-general {
     height: 820px !important;
     /*height: auto !important;*/
@@ -94,7 +92,7 @@ h1 {
 }
 
 
-/*paralex testing*/
+/*paralex testing navbar is fixed*/
 .navbar-parallax {
     /*background-color: transparent;*/
     width: 100%;
@@ -131,6 +129,8 @@ h1 {
     background-attachment: fixed;
 }
 
+/*Navbar links, with fancy hover animation. .hover class can be used on any text with small 
+changes to the .hover:after bottom and height depending on text size*/
 .link {
     text-decoration: none;
     font-family: 'Manrope-700';
@@ -174,6 +174,8 @@ h1 {
     transform-origin: bottom left;
 }
 
+/*banner is for A COMMUNITY OF FELLOW MOTION PICTURE LOVERS
+next events is for dynamic banner for link with next events*/
 .banner,
 .next-events {
     color: var(--secTxtColor) !important;
@@ -182,18 +184,19 @@ h1 {
     left: 40px;
 }
 
+/* redudntan, for old-index.html
 .banner h2 {
     font-family: 'Manrope-400';
     font-style: normal;
     font-weight: 400;
     font-size: 49px;
     line-height: 115.6%;
-    /* identical to box height, or 57px */
+    /* identical to box height, or 57px 
 
     letter-spacing: -0.06em;
     margin-bottom: 0px;
 
-}
+}*/
 
 .banner p,
 .next-events p {
@@ -207,34 +210,23 @@ h1 {
 
 }
 
-/*main*/
+
+/*main/general classes*/
+/*jumbotron defines general padding on each page, can be overwritten if needed*/
 .jumbotron {
     min-height: 700px;
     padding-left: 130px;
     padding-right: 130px;
 }
 
+/*overwriting deafult row styles. This is source of many bugs but cant temper with this right now*/
 .row {
     padding-top: 120px;
     padding-bottom: 100px;
     min-height: 600px;
 }
 
-/*landing page style*/
-.landing-news-img {
-    width: 100%;
-    height: 600px;
-}
-
-.news-row {
-    padding-top: 50px;
-    padding-bottom: 92px;
-}
-
-.news-container {
-    padding-top: 100px;
-}
-
+/*is this even needed?*/
 h3 {
     font-family: 'Manrope-700';
     font-style: normal;
@@ -244,344 +236,14 @@ h3 {
     letter-spacing: -0.06em;
 }
 
-.news-row h4 {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 44px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-    margin: 0;
-    padding-top: 21px;
-}
-
-.news-row p {
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: -0.02em;
-}
-
-.but-link {
-    color: #000000;
-    display: block;
-    float: right;
-    width: 173px;
-    height: 48px;
-    padding-top: 7px;
-    text-align: center;
-    border: 1px solid #000000;
-    text-decoration: none;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-    /*margin fix*/
-    margin-right: -36px;
-
-}
-.but-link:hover {
-    color: #535353;
-}
-
-.black-hover:hover {
-    color: #535353;
-}
-
-.landing-jumb {
-    min-height: 700px;
-    padding-left: 210px;
-    padding-right: 210px;
-}
-
-.landing-row {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    min-height: 600px;
-}
-
-.par-row {
-    min-height: auto;
-    padding-bottom: 0;
-    padding-top: 27px;
-
-}
-
-.upcoming {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.upcoming h3 {
-    font-family: 'Manrope-700';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 76px;
-    letter-spacing: -0.02em;
-
-    padding: 52px 210px;
-    /*position: relative;/*
-    /*left: -210px;
-
-    width: 1920px;*/
-    background-color: #FCF5EF !important;
-}
-
-.events-container {
-    /*margin-top: 138px;*/
-}
-
-.events-row {
-    padding: 72px 14px 73px 9px;
-    padding-left: 219px;
-    padding-right: 219px;
-    min-height: 188px;
-    border-bottom: #000000 solid 1px;
-    width: 100%;
-    margin: 0;
-}
-
-.events-row h4 {
-    font-family: 'Manrope-700';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-}
-
-.events-row h4 span {
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 44px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-    color: #000000;
-
-    opacity: 0.6;
-
-    padding-left: 21px;
-}
-
-.events-row p {
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: -0.02em;
-}
-
-.events-row a, .read-more {
-    color: #000000;
-    display: block;
-    float: right;
-    text-decoration: none;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-    border-bottom: 1px solid #000000;
-
-}
-
-.events-container .but-link {
-    font-family: 'Manrope-400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 30px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-    margin-top: 51px;
-}
-
-.read-more {
-    margin-top: 47px;
-}
-
-.notes-img {
-    position: relative;
-    width: 1923px;
-    max-width: 1923px;
-    left: -273px;
-    height: auto;
-    padding: 0;
-}
-
-.past {
-    margin-top: 36px;
-}
-
-.past .event-cards {
-    padding-top: 50px;
-}
-
-.past a {
-    text-decoration: none;
-}
-
-.past h4 {
-    font-family: 'Manrope';
-font-style: normal;
-font-weight: 600;
-font-size: 32px !important;
-line-height: 44px;
-/* identical to box height */
-
-letter-spacing: -0.02em;
-
-    padding-top: 19px;
-}
-
-.past-event-cards {
-    width: 1000%;
-    padding-bottom: 0!important;
-    transition: 0.5s;
-
-}
-
-.un-col {
-    width: 700px;
-    margin-right: 77px;
-}
-
-.invis-hover, .invis-hover-back {
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    margin-top: 50px;
-    height: 600px;
-    width: 200px;
-    background-color: transparent;
-}
-
-.invis-hover-back {
-    left: 0;
-}
-
-/*.invis-hover:hover ~ .past-event-cards {
-    /*transform: translate(-400px, 0);
-}*/
-.our-klub {
-    padding-right: 276px;
-}
-
-.our-klub h4 {
-    margin-top: 145px;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 41px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-}
-
-.our-klub p {
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 33px;
-    letter-spacing: -0.02em;
-}
-
-.join-us {
-    margin-top: 36px;
-    font-family: 'Manrope' !important;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 44px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-}
-
-.sub {
-    display: inline-block;
-    max-width: 790px;
-}
-
-input[type=email] {
-    display: block;
-    float: right;
-    width: 566px;
-    height: 72px;
-    border: 2px solid #000000;
-    border-radius: 37px;
-    padding-left: 36px;
-    box-sizing: border-box;
-}
-
-/*input[type=email]::placeholder  {
-    position: relative;
-    top: -14px;
-    left: 30px;
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: -0.02em;
-
-    color: #000000;
-
-    opacity: 0.6;
-}*/
-
-input[type=submit] {
-    display: block;
-    float: right;
-    /*margin-right: 0!important;*/
-    width: 215px;
-    height: 72px;
-    background: #000000;
-    border: 3px solid #000000;
-    border-radius: 37px;
-    color: #FFFFFF;
-}
-
+/*some general footer style -> now can be combined because everywhere the same footer*/
 footer {
-
     text-align: center;
     width: 100%;
     background-color: #000000;
     color: white;
     min-height: 200px;
     margin-top: 90px;
-}
-
-.landingFooter {
-    position: relative;
-    height: 100%;
 }
 
 .contact {
@@ -599,168 +261,14 @@ footer {
     padding-top: 8px;
 }
 
-.moto {
-    margin-top: 220px;
-    margin-right: 425px;
-    float: right;
-    text-align: left;
-    width: 742px;
-
-}
-
-.moto h3 {
-    font-family: 'Manrope-700';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 80px !important;
-    line-height: 109px;
-    letter-spacing: -0.02em;
-    color: #FFFFFF;
-}
-
-.leg {
-    float: left;
-    max-width: 500px;
-    position: absolute;
-    margin-left: 40px;
-    margin-bottom: 45px;
-    left: 0;
-    bottom: 0;
-    font-family: 'Manrope-400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-
-    color: #FFFFFF;
-}
-
-.len {
-    position: absolute;
-    margin-right: 40px;
-    margin-bottom: 45px;
-    right: 0 !important;
-    bottom: 0;
-
-    font-family: 'Manrope-400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: -0.02em;
-
-    color: #FFFFFF;
-}
-
-
-/*notes page style*/
-.next-events {
-    max-width: 1300px;
-}
-
-.next-events h4 {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 68px;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-}
-
-.next-events a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.next-events .hover:after {
-    height: 4px;
-    bottom: 0px;
-    transition: transform 0.12s ease-out;
-}
-
-.next-events span {
-    font-size: 22px;
-    line-height: 30px;
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 10px;
-    transform: translate(0px, -15px);
-}
-
-.note-img {
-    width: 990px;
-    height: 600px;
-}
-
-.category {
-    display: block;
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: -0.06em;
-
-    color: #000000;
-}
-
-.title {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 55px;
-    letter-spacing: -0.02em;
-
-    color: #000000;
-    position: relative;
-}
-
-.notes-link {
-    color: #000000;
-    display: block;
-    float: left;
-    width: 210px;
-    height: 54px;
-    padding-bottom: 7px;
-    text-align: center;
-    text-decoration: none;
-    position: absolute;
-    bottom: 0;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-    /*margin fix*/
-    margin-right: -36px;
-}
-
-.notes-link:hover {
-    color: #535353;
-    text-decoration: none;
-}
-
 footer a:hover {
     color: #b8b8b8;
     text-decoration: none;
 }
+
 .gen-leg img:hover {
     transform: rotate(360deg);
     transition: transform 0.4s ease-out;
-}
-
-.notes-link img {
-    width: 47px;
-    margin-right: 20px;
-
 }
 
 .gen-leg {
@@ -813,120 +321,6 @@ footer a:hover {
 }
 
 
-/*GEERIC NORMAL PAGE*/
-.content {
-    margin: 100px;
-
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    letter-spacing: -0.02em;
-
-    color: #000000;
-}
-
-.normal-page-con .date {
-    margin-top: 92px;
-    font-family: 'Manrope-400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: -0.06em;
-}
-
-.normal-page-con h2 {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 60px;
-    line-height: 82px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-}
-
-.normal-page-con span {
-    font-family: 'Manrope-400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: -0.06em;
-
-    color: #000000;
-
-    padding-right: 40px;
-}
-
-.normal-page-con img:hover {
-    transform: rotate(360deg);
-    transition: transform 0.4s ease-out;
-}
-
-.events-jumbo {
-    padding-left: 110px;
-    padding-right: 110px;
-}
-/*Style for events page*/
-.head-events {
-    font-family: 'Manrope-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 115.6%;
-    /* or 46px */
-
-    letter-spacing: -0.02em;
-
-    color: #000000;
-
-    padding-top: 62px;
-}
-
-.events-bg {
-    height: 120px !important;
-}
-
-.event-cards {
-    padding-top: 62px;
-    padding-bottom: 40px;
-}
-.event-cards span {
-    font-family: 'Manrope-500';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 27px;
-letter-spacing: -0.02em;
-
-color: #000000;
-
-opacity: 0.6;
-
-}
-
-.event-cards h4 {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 55px;
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-    color: #000000;
-
-
-}
-/*
-* Za spreminjanje vidnosti uporabljam visually-hidden, da besedilo ostane vidno website crawlarjem
-*/
-
 /* ==========================================================================
   Useful classes
    ========================================================================== */
@@ -974,7 +368,7 @@ opacity: 0.6;
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
 
-
+ */
 audio,
 canvas,
 iframe,
@@ -983,7 +377,7 @@ svg,
 video {
     vertical-align: middle;
 }
- */
+
 /* ==========================================================================
   Media Queries for Responsive Design.
    ==========================================================================
