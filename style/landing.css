@@ -11,12 +11,29 @@
     font-size: 50px;
     line-height: 68px;
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
+    margin-bottom: 17px!important;
 }
 
 .next-events a {
     text-decoration: none;
     color: #FFFFFF;
+}
+.lan {
+    position: absolute;
+    
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115.6%;
+    /* or 23px */
+
+    letter-spacing: -0.02em;
+    right: 44px;
+    bottom: 62px;
+    color: #FFFFFF;
+
+
 }
 
 /*changing hover animatin for this links*/
@@ -112,4 +129,37 @@
         font-size: 40px!important;
         line-height: 120%;
     }
+    .notes-link {
+        width: 210px;
+        height: 54px;
+        text-align: left;
+        position: relative;
+        padding-bottom: 0px;
+        font-family: 'Manrope-400';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        /* identical to box height */
+    
+        letter-spacing: -0.02em;
+    
+        /*margin fix*/
+        margin-right: -36px;
+    }
+    .landing-main .row {
+        padding-bottom: 40px;
+        padding-top: 40px;
+        border-bottom: solid 1px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .landing-main div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .landing-main {
+        padding-top: 10px;
+    }
+    
 }

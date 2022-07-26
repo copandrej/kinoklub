@@ -1,3 +1,16 @@
+/*FRONTEND TODO:
+1. EN/SL buttons -- DONE
+2. Fix bg image inconsictency in notes page  -- DONE
+3  Add search icon to navbar for the sake of it -- DONE
+4. Fix footer styling -- DONE
+5. Fix mobile cards at events and notes pages
+6. Fix image sizing at events and notes pages on mobile
+7. Add a configurator bar to notes page
+8. Change/refactor the code for mobile first design
+9. Clean up the code
+*/
+
+
 @font-face {
     font-family: 'Manrope-400';
     src: url('../fonts/Manrope-Regular.ttf');
@@ -58,31 +71,44 @@ h1 {
 }
 
 /*burger bar from libandrej*/
-.zg, .sp, .sr {
-	width: 40px;
-	height: 4px;
-	background-color: rgb(255, 255, 255);
-	margin: 6px;
-	transition: background-color 200ms, transform 300ms;
+.zg,
+.sp,
+.sr {
+    width: 40px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px;
+    transition: background-color 200ms, transform 300ms;
 }
+
 .knof {
-	display: none;
+    display: none;
     cursor: pointer;
     margin-right: 16px;
     margin-top: 20px;
 
 }
+
 .spremeni {
-	background-color: transparent;
+    background-color: transparent;
 }
-.spremenia  {
-	-ms-transform: translate(0px, 10px) rotate(45deg); /* IE 9 */
-    -webkit-transform: translate(0px, 10px) rotate(45deg); /* Safari */
+.display-none {
+    display: none;
+}
+
+.spremenia {
+    -ms-transform: translate(0px, 10px) rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: translate(0px, 10px) rotate(45deg);
+    /* Safari */
     transform: translate(0px, 10px) rotate(45deg);
-} 
+}
+
 .spremeniaa {
-	-ms-transform: translate(0px, -10px) rotate(-45deg); /* IE 9 */
-    -webkit-transform: translate(0px, -10px) rotate(-45deg); /* Safari */
+    -ms-transform: translate(0px, -10px) rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: translate(0px, -10px) rotate(-45deg);
+    /* Safari */
     transform: translate(0px, -10px) rotate(-45deg);
 }
 
@@ -97,7 +123,7 @@ h1 {
 
 .navbar1 {
     padding: 0;
-    margin-right: 111px;
+    margin-right: 121px;
     text-align: right;
     background-color: transparent;
     color: var(--secTxtColor) !important;
@@ -122,7 +148,12 @@ h1 {
     background-position: center;
 
 }
-
+.search-icon {
+    position: relative;
+    right: -70px;
+    width: 20px;
+    height: 20px;
+}
 
 /*paralex testing navbar is fixed*/
 .navbar-parallax {
@@ -144,7 +175,7 @@ h1 {
 .navbar1-parallax {
     padding: 0;
     position: fixed;
-    right: 111px;
+    right: 121px;
     text-align: right;
     background-color: transparent;
     color: var(--secTxtColor) !important;
@@ -318,29 +349,27 @@ footer a:hover {
     text-align: left;
 
 }
+
 .more {
-    
-    float: right;
-    margin-left: 140px;
+    display: flex;
+    margin-left:auto;
+    margin: right 0!important;
     margin-top: 89px;
     text-align: left;
 }
+
 .socials {
     margin-top: 89px;
-
     margin-left: 40px;
     /*min-width: 100px;*/
 }
+
 .contact {
     margin-left: 130px;
     min-width: 365px;
-    
+
 }
 
-.more {
-    padding-right: 141px;
-    float: right;
-}
 
 .more input[type=email] {
     border-radius: 0;
@@ -434,21 +463,21 @@ video {
     .navbar1-parallax {
         display: none;
     }
-    .jumbotron, .events-jumbo {
-            padding-left: 70px;
-            padding-right: 70px;
-}
-    .bg-img-parallax {
-        background-size: auto;
 
+    .jumbotron,
+    .events-jumbo {
+        padding-left: 70px;
+        padding-right: 70px;
     }
+
     .knof {
         display: inline-block;
         z-index: 4;
         position: fixed;
-        top: 0px;             
-        right: 22px;                                                                        
+        top: 0px;
+        right: 22px;
     }
+
     .mobile-meni {
         z-index: 2;
         position: fixed;
@@ -458,16 +487,17 @@ video {
         height: 100%;
         width: 100%;
         color: white;
-        
+
         padding-top: 141px;
-        transition: 0.5s ease-out;
+        transition: background-color 0.4s, height 0.5s, padding-top 0.5s;
         overflow: hidden;
 
 
     }
-    .mobile-meni a {
+
+    .mobile-meni a, .mobile-lan {
         display: block;
-        margin-bottom: 23px!important;
+        margin-bottom: 23px !important;
         font-family: 'Manrope-700';
         font-style: normal;
         font-weight: 700;
@@ -478,18 +508,43 @@ video {
         margin-left: 0;
         padding-left: 44px;
         letter-spacing: -0.02em;
+        transition: 0.3s;
+        color: white;
+        text-decoration: none;
 
-        color: #FFFFFF;
+        /*color: #FFFFFF;*/
     }
+    .mobile-lan {
+        text-align: right;
+        position: absolute;
+        bottom: 32px;
+        right: 26px;
+    }
+    .lan {
+        display: none!important;
+        float: right;
+    }
+
     .join {
         text-align: center;
-        margin-top: 100px;
+        margin: auto;
+        margin-top: 121px!important;
+        padding: 0px!important;
     }
+
     .display-none {
+        display: inline-block;
         padding-top: 0px;
         height: 0px;
-        overflow: hidden;
+        background-color: transparent;
     }
+
+    .display-none a, .display-none .mobile-lan{
+        color: transparent !important;
+        transition: 0.1s;
+
+    }
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -498,11 +553,14 @@ video {
         left: 23px;
 
     }
-    .navbar, .navbar-parallax {
+
+    .navbar,
+    .navbar-parallax {
         height: 76px;
     }
 
-    .banner, .next-events {
+    .banner,
+    .next-events {
         left: 23px;
 
     }
@@ -511,9 +569,14 @@ video {
         display: none;
     }
 
-    
+    .bg-img-parallax {
+        background-size: auto;
 
+    }
 
+    .navbar-parallax {
+        background-size: auto;
+    }
 
     .next-events h4 {
         font-size: 22px !important;
@@ -522,6 +585,12 @@ video {
 
     .next-events a {
         display: block;
+    }
+
+    .next-events span {
+        font-size: 14px !important;
+        line-height: 19px !important;
+        transform: translate(0px, -7px) !important;
     }
 
     .next-events img {
@@ -534,21 +603,24 @@ video {
     }
 
     .navbar-parallax {
-        background-position-x: -900px;
+        background-position-x: -900px !important;
     }
 
 
-    .jumbotron, .events-jumbo {
+    .jumbotron,
+    .events-jumbo {
         padding-left: 13px;
         padding-right: 13px;
         max-width: 100%;
         overflow-x: hidden;
-}
+    }
+
     /*footer*/
 
     .more p {
         display: none;
     }
+
     .gen-leg {
         height: 450px;
         width: 100%;
@@ -556,7 +628,8 @@ video {
     }
 
     .socials,
-    .more, .contact {
+    .more,
+    .contact {
         float: left;
         margin-left: 27px;
 
@@ -564,15 +637,18 @@ video {
         text-align: left;
         display: block;
         width: 100%;
-        padding-right: 0px!important;
-        margin-right: 0px!important;
+        padding-right: 0px !important;
+        margin-right: 0px !important;
 
     }
+
     .contact {
-        max-width: 100%!important;
-        margin-left: 27px!important;
-        margin-top: 43px!important;
+        max-width: 100% !important;
+        margin-left: 27px !important;
+        margin-top: 43px !important;
+        margin-bottom: 25px!important;
     }
+
     .more {
         padding-right: 141px;
         margin-left: 27px;
@@ -590,8 +666,9 @@ video {
         width: 104px;
         height: 52px;
     }
+
     .reverse {
-    flex-direction: column-reverse;
-}
+        flex-direction: column-reverse;
+    }
 
 }
