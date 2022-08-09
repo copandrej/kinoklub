@@ -1,0 +1,372 @@
+/*landing page style
+this page was mistakenly build as a landing page but is now redundant..... */
+.landing-news-img {
+    width: 100%;
+    height: 600px;
+}
+
+.news-row {
+    padding-top: 50px;
+    padding-bottom: 92px;
+}
+
+.news-container {
+    padding-top: 100px;
+}
+
+.news-row h4 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding-top: 21px;
+}
+
+.news-row p {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+}
+
+.but-link {
+    color: #000000;
+    display: block;
+    float: right;
+    width: 173px;
+    height: 48px;
+    padding-top: 7px;
+    text-align: center;
+    border: 1px solid #000000;
+    text-decoration: none;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    /*margin fix*/
+    margin-right: -36px;
+
+}
+.but-link:hover {
+    color: #535353;
+}
+
+.black-hover:hover {
+    color: #535353;
+}
+
+.landing-jumb {
+    min-height: 700px;
+    padding-left: 210px;
+    padding-right: 210px;
+}
+
+.landing-row {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 600px;
+}
+
+.par-row {
+    min-height: auto;
+    padding-bottom: 0;
+    padding-top: 27px;
+
+}
+
+.upcoming {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.upcoming h3 {
+    font-family: 'Manrope-700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+    letter-spacing: -0.02em;
+
+    padding: 52px 210px;
+    /*position: relative;/*
+    /*left: -210px;
+
+    width: 1920px;*/
+    background-color: #FCF5EF !important;
+}
+
+.events-row {
+    padding: 72px 14px 73px 9px;
+    padding-left: 219px;
+    padding-right: 219px;
+    min-height: 188px;
+    border-bottom: #000000 solid 1px;
+    width: 100%;
+    margin: 0;
+}
+
+.events-row h4 {
+    font-family: 'Manrope-700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+}
+
+.events-row h4 span {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    color: #000000;
+
+    opacity: 0.6;
+
+    padding-left: 21px;
+}
+
+.events-row p {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+}
+
+.events-row a, .read-more {
+    color: #000000;
+    display: block;
+    float: right;
+    text-decoration: none;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid #000000;
+
+}
+
+.events-container .but-link {
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    margin-top: 51px;
+}
+
+.read-more {
+    margin-top: 47px;
+}
+
+.notes-img {
+    position: relative;
+    width: 1923px;
+    max-width: 1923px;
+    left: -273px;
+    height: auto;
+    padding: 0;
+}
+
+.past {
+    margin-top: 36px;
+}
+
+.past .event-cards {
+    padding-top: 50px;
+}
+
+.past a {
+    text-decoration: none;
+}
+
+.past h4 {
+    font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 32px !important;
+line-height: 44px;
+letter-spacing: -0.02em;
+
+    padding-top: 19px;
+}
+
+.past-event-cards {
+    width: 1000%;
+    padding-bottom: 0!important;
+    transition: 0.5s;
+
+}
+
+.un-col {
+    width: 700px;
+    margin-right: 77px;
+}
+
+.invis-hover, .invis-hover-back {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+    height: 600px;
+    width: 200px;
+    background-color: transparent;
+}
+
+.invis-hover-back {
+    left: 0;
+}
+
+.our-klub {
+    padding-right: 276px;
+}
+
+.our-klub h4 {
+    margin-top: 145px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+
+    letter-spacing: -0.02em;
+}
+
+.our-klub p {
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+}
+
+.join-us {
+    margin-top: 36px;
+    font-family: 'Manrope' !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+}
+
+.sub {
+    display: inline-block;
+    max-width: 790px;
+}
+
+input[type=email] {
+    display: block;
+    float: right;
+    width: 566px;
+    height: 72px;
+    border: 2px solid #000000;
+    border-radius: 37px;
+    padding-left: 36px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    display: block;
+    float: right;
+    /*margin-right: 0!important;*/
+    width: 215px;
+    height: 72px;
+    background: #000000;
+    border: 3px solid #000000;
+    border-radius: 37px;
+    color: #FFFFFF;
+}
+
+.landingFooter {
+    position: relative;
+    height: 100%;
+}
+
+.leg {
+    float: left;
+    max-width: 500px;
+    position: absolute;
+    margin-left: 40px;
+    margin-bottom: 45px;
+    left: 0;
+    bottom: 0;
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+
+    color: #FFFFFF;
+}
+
+.len {
+    position: absolute;
+    margin-right: 40px;
+    margin-bottom: 45px;
+    right: 0 !important;
+    bottom: 0;
+
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+
+    color: #FFFFFF;
+}
+
+
+.moto {
+    margin-top: 220px;
+    margin-right: 425px;
+    float: right;
+    text-align: left;
+    width: 742px;
+
+}
+
+.moto h3 {
+    font-family: 'Manrope-700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px !important;
+    line-height: 109px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}

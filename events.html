@@ -4,7 +4,7 @@
 <head>
     <!-- meta tags -->
     <meta charset="utf-8">
-    <title>Kino Klub | Home</title>
+    <title>Kino Klub | Events</title>
     <meta name="description" content="A community of fellow motion picture lovers. Join us.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -49,36 +49,25 @@
 
 <body>
 
-    <!-- navbar + bg imh-->
-    
-    <div class="bg-img-parallax">
+
+    <div class="events-bg">
         <div class="navbar navbar-parallax">
             <h1>
                 <a style="display: flex;" href="index.html"><img alt="Kino Klub" class="logo" src="img/KK-LOGO.png"></a>
             </h1>
-            <div class="navbar1-parallax">
+
+            <div class="navbar1">
                 <a class="link hover" href="notes.html">NOTES AND STORIES</a>
                 <a class="link hover" href="events.html">EVENT CALANDAR</a>
                 <a class="link hover" href="normal.html">JUKE BOX CINEMA</a>
                 <a class="link hover" href="normal.html">ABOUT</a>
                 <a class="link hover" href="normal.html">JOIN</a>
                 <img src="img/Vectorsearch.svg" alt="Search" class="search-icon">
+
             </div>
         </div>
-        <div class="next-events">
-            <img src="img/next-events.png">
-            <h4><a class="hover" href="normal.html">Special summer event<span>30/6</span></a> <a class="hover"
-                    href="normal.html">Beach Bum on the beach <span>30/6</span></a>
-                <a class="hover" href="normal.html">Milan & Kino Trieste<span>30/6</span></a><a class="hover"
-                    href="normal.html">Special screening<span>30/6</span></a>
-            </h4>
-            
-            <p>Kino Klub is a project of Aspekt Institute. ©2022</p>
-            
-            
-        </div>
-        <lan class="lan"><lan>SL </lan>/<lan> EN</lan></lan>
     </div>
+    <!-- navbar-->
     <div id="mobile-meni" class="mobile-meni display-none">
         <a href="notes.html">NOTES AND STORIES</a>
         <a href="events.html">EVENT CALANDAR</a>
@@ -88,78 +77,60 @@
         <spn class="mobile-lan"><span>SL </span>/<span> EN</span></spn>
     </div>
     <div class="knof" onclick="anime()">
-        <div id ="sprememba" class="zg"></div>
-        <div id ="spremembaa" class="sr"></div>
-        <div id ="spremembaaa" class="sp"></div>
+        <div id="sprememba" class="zg"></div>
+        <div id="spremembaa" class="sr"></div>
+        <div id="spremembaaa" class="sp"></div>
     </div>
 
-    <!-- main content -->
-    <div class="jumbotron landing-main">
-        <div class="row">
-            <div class="col-xl-8">
-                <img class="note-img" src="img/Rectangle 24.png">
+    <!-- event cards, cards can be repeated. Bundle together 3 events in a row div -->
+    <div class="jumbotron events-jumbo">
+        <h3 class="head-events">Upcoming
+            Events</h3>
+
+        <div class="row event-cards">
+            <div class="col-md-4">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
+                <span>30/6/22, KINO RADOLCA</span>
+                <h4>Special summer event</h4>
+                <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
+                    MORE</a>
             </div>
-            <div class="col-xl-4 title">
-                <span class="category">NOTES AND STORIES</span>
-                <h3 class="title">
-                    A story about a cinema bakery, right in the heart of Barcelona
-                </h3>
-                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
+
+            <div class="col-md-4">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
+                <span>30/6/22, KINO RADOLCA</span>
+                <h4>Special summer event</h4>
+                <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
+                    MORE</a>
+            </div>
+
+            <div class="col-md-4">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
+                <span>30/6/22, KINO RADOLCA</span>
+                <h4>Special summer event</h4>
+                <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
+                    MORE</a>
+            </div>
+
+        </div>
+
+        <div class="row event-cards">
+            <div class="col-md-4">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
+                <span>30/6/22, KINO RADOLCA</span>
+                <h4>Special summer event</h4>
+                <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
+                    MORE</a>
+            </div>
+            <div class="col-md-4">
+                <img src="img/Rectangle 82evet1.png" class="event-img">
+                <span>30/6/22, KINO RADOLCA</span>
+                <h4>Special summer event</h4>
+                <a class="notes-link" style="position: relative;" href="normal.html"><img src="img/Vectorvec.svg">LEARN
+                    MORE</a>
             </div>
         </div>
 
-        <div class="row reverse">
-            <div class="col-xl-4 title">
-                <span class="category">NOTES AND STORIES</span>
-                <h3 class="title">
-                    A story about a cinema bakery, right in the heart of Barcelona
-                </h3>
-                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
-            </div>
-            <div class="col-xl-8">
-                <img class="note-img" style="float: right" src="img/Rectangle 39.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xl-8">
-                <img class="note-img" src="img/Rectangle 24.png">
-            </div>
-            <div class="col-xl-4 title">
-                <span class="category">NOTES AND STORIES</span>
-                <h3 class="title">
-                    A story about a cinema bakery, right in the heart of Barcelona
-                </h3>
-                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
-            </div>
-        </div>
-
-        <div class="row reverse">
-            <div class="col-xl-4 title">
-                <span class="category">NOTES AND STORIES</span>
-                <h3 class="title">
-                    A story about a cinema bakery, right in the heart of Barcelona
-                </h3>
-                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
-            </div>
-            <div class="col-xl-8">
-                <img class="note-img" style="float: right" src="img/Rectangle 39.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xl-8">
-                <img class="note-img" src="img/Rectangle 24.png">
-            </div>
-            <div class="col-xl-4 title">
-                <span class="category">NOTES AND STORIES</span>
-                <h3 class="title">
-                    A story about a cinema bakery, right in the heart of Barcelona
-                </h3>
-                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
-            </div>
-        </div>
-        <!--row can be repeated more. Dynamic content from server-->
     </div>
 
     <!-- footer -->

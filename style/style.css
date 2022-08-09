@@ -1,47 +1,68 @@
-@font-face {
-    font-family: 'Manrope';
-    src: url('../fonts/Manrope-SemiBold.ttf');
-}
+/*FRONTEND TODO:
+1. EN/SL buttons -- DONE
+2. Fix bg image inconsictency in notes page  -- DONE
+3  Add search icon to navbar for the sake of it -- DONE
+4. Fix footer styling -- DONE
+5. Fix mobile cards at events and notes pages
+6. Fix image sizing at events and notes pages on mobile
+7. Add a configurator bar to notes page
+8. Change/refactor the code for mobile first design
+9. Clean up the code
+*/
+
+
 @font-face {
     font-family: 'Manrope-400';
     src: url('../fonts/Manrope-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Manrope-500';
     src: url('../fonts/Manrope-Medium.ttf');
 }
+
 @font-face {
-    font-family: 'Soleil-400';
-    src: url('../fonts/SoleilRegular.otf');
+    font-family: 'Manrope-600';
+    src: url('../fonts/Manrope-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope-700';
+    src: url('../fonts/Manrope-Bold.ttf');
 }
 
 :root {
     --mainBgColor: #000000;
-    --mainTxtColor: #FFFFFF;
+    --mainTxtColor: #000000;
+    --secTxtColor: #FFFFFF;
 }
 
 * {
     text-decoration: none;
-    color: var(--mainTxtColor);
 }
 
 html {
     font-size: 24px;
     line-height: 33px;
     letter-spacing: -0.02em;
-    background-color: var(--mainBgColor);
+    overflow-x: hidden;
 }
 
-/*logo central */
+/*for paralex to work*/
+html,
+body {
+    height: 100%;
+    width: 100vw;
+}
+
+/*KINO KLUB LOGO*/
 .logo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-img {
-    width: 304px;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    height: auto;
 }
 
 /*h1 fix*/
@@ -49,36 +70,141 @@ h1 {
     margin: 0;
 }
 
-.podlogo {
+/*burger bar from libandrej*/
+.zg,
+.sp,
+.sr {
+    width: 40px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px;
+    transition: background-color 200ms, transform 300ms;
+}
+
+.knof {
+    display: none;
+    cursor: pointer;
+    margin-right: 16px;
+    margin-top: 20px;
+
+}
+
+.spremeni {
+    background-color: transparent;
+}
+.display-none {
+    display: none;
+}
+
+.spremenia {
+    -ms-transform: translate(0px, 10px) rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: translate(0px, 10px) rotate(45deg);
+    /* Safari */
+    transform: translate(0px, 10px) rotate(45deg);
+}
+
+.spremeniaa {
+    -ms-transform: translate(0px, -10px) rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: translate(0px, -10px) rotate(-45deg);
+    /* Safari */
+    transform: translate(0px, -10px) rotate(-45deg);
+}
+
+/*Outter and inner navbar, overwriting some default bootstrap styles*/
+.navbar {
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 0;
+    display: flex;
+    height: 120px;
+}
+
+.navbar1 {
+    padding: 0;
+    margin-right: 121px;
+    text-align: right;
+    background-color: transparent;
+    color: var(--secTxtColor) !important;
+}
+
+/*MAXxMAX main background img, also alternative classes for paralex*/
+.bg-img {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    min-height: 100% !important;
+    background-position: center;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position-y: -0px;
+    background-size: auto;
 }
 
-.motiv {
-    font-family: 'Soleil-400' !important;
-    font-weight: 500;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    margin-top: 179px;
-    font-style: normal;
-    font-size: 20px;
-    line-height: 115.6%;
-    letter-spacing: -0.02em;
+/*a bit different for generic , height not 100%*/
+.bg-img-general {
+    height: 820px !important;
+    /*height: auto !important;*/
+    background-image: url("../img/bg-general.png");
+    background-position: center;
+
+}
+.search-icon {
+    position: relative;
+    right: -70px;
+    width: 20px;
+    height: 20px;
 }
 
+/*paralex testing navbar is fixed*/
+.navbar-parallax {
+    /*background-color: transparent;*/
+    width: 100vw;
+    z-index: 1;
+    text-transform: uppercase;
+    display: flex;
+    height: 120px;
+    position: fixed;
+    background-position: center;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position-y: -0px;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+.navbar1-parallax {
+    padding: 0;
+    position: fixed;
+    right: 121px;
+    text-align: right;
+    background-color: transparent;
+    color: var(--secTxtColor) !important;
+}
+
+.bg-img-parallax {
+    width: 100%;
+    min-height: 100% !important;
+    background-position: center;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position-y: -0px;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+/*Navbar links, with fancy hover animation. .hover class can be used on any text with small 
+changes to the .hover:after bottom and height depending on text size*/
 .link {
     text-decoration: none;
-    font-family: 'Manrope' !important;
+    font-family: 'Manrope-700';
     font-style: normal;
-
-    font-size: 14px;
-    line-height: 19px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 115.6%;
+    /* or 23px */
     letter-spacing: -0.02em;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
 
     height: 19px;
 }
@@ -86,19 +212,19 @@ h1 {
 .hover {
     display: inline-block;
     position: relative;
-    color: var(--mainTxtColor);
+    color: var(--secTxtColor) !important;
 }
 
-.hover:after, .hover-spec:after, .hover-spec1:after {
+.hover:after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     transform-origin: bottom left;
-    background-color: var(--mainTxtColor);
+    background-color: var(--secTxtColor);
 }
 
 .hover:after {
@@ -106,55 +232,168 @@ h1 {
     transform-origin: bottom left;
 }
 
-.hover:hover:after{
+.hover:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-/* The animation code */
-@keyframes example {
-    0%   {transform: scaleX(0);}
-    30%  {transform: scaleX(1);    transform-origin: bottom left;}
-    70%  {transform: scaleX(1);     transform-origin: bottom right;}
-    100% {transform: scaleX(0);     transform-origin: bottom right;}
-}
-
-.hover-spec, .hover-spec1 {
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    position: relative;
-    color: var(--mainTxtColor);
-}
-
-.hover-spec:after {
-    animation-name: example;
-    animation-delay: 1s;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
-}
-.hover-spec1:after {
-    animation-delay: 1.15s;
-    animation-name: example;
-    animation-duration: 0.5s;
-    animation-timing-function: ease;
-}
-
-footer {
+/*banner is for A COMMUNITY OF FELLOW MOTION PICTURE LOVERS
+next events is for dynamic banner for link with next events*/
+.banner,
+.next-events {
+    color: var(--secTxtColor) !important;
     position: absolute;
-    bottom: 41px;
+    bottom: 45px;
+    left: 40px;
+}
+
+/* redudntan, for old-index.html
+.banner h2 {
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 115.6%;
+    /* identical to box height, or 57px 
+
+    letter-spacing: -0.06em;
+    margin-bottom: 0px;
+
+}*/
+
+.banner p,
+.next-events p {
+    font-family: 'Manrope-400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    margin: 0px;
+
+}
+
+
+/*main/general classes*/
+/*jumbotron defines general padding on each page, can be overwritten if needed*/
+.jumbotron {
+    min-height: 700px;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+/*overwriting deafult row styles. This is source of many bugs but cant temper with this right now*/
+.row {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    min-height: 600px;
+}
+
+/*is this even needed?*/
+h3 {
+    font-family: 'Manrope-700';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 76px;
+    letter-spacing: -0.06em;
+}
+
+/*some general footer style -> now can be combined because everywhere the same footer*/
+footer {
     text-align: center;
     width: 100%;
-    font-family: 'Manrope-400' !important;
-    font-style: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.02em;
+    background-color: #000000;
+    color: white;
+    min-height: 200px;
+    margin-top: 90px;
 }
 
-/*
-* Za spreminjanje vidnosti uporabljam visually-hidden, da besedilo ostane vidno website crawlarjem
-*/
+.contact {
+    /*width: 500px;*/
+    float: left;
+    margin-left: 40px;
+    margin-top: 270px;
+    text-align: left;
+
+}
+
+.contact a {
+    text-decoration: none !important;
+    color: #FFFFFF;
+    padding-top: 8px;
+}
+
+footer a:hover {
+    color: #b8b8b8;
+    text-decoration: none;
+}
+
+.gen-leg img:hover {
+    transform: rotate(360deg);
+    transition: transform 0.4s ease-out;
+}
+
+.gen-leg {
+    min-height: 333px;
+    padding: 0px;
+    width: 100%;
+    margin: 0;
+}
+
+.gen-leg .contact {
+    /*width: 400px;*/
+    float: left;
+    margin-left: 130px;
+    margin-top: 89px;
+    text-align: left;
+
+}
+
+.more {
+    display: flex;
+    margin-left:auto;
+    margin: right 0!important;
+    margin-top: 89px;
+    text-align: left;
+}
+
+.socials {
+    margin-top: 89px;
+    margin-left: 40px;
+    /*min-width: 100px;*/
+}
+
+.contact {
+    margin-left: 130px;
+    min-width: 365px;
+
+}
+
+
+.more input[type=email] {
+    border-radius: 0;
+    float: left;
+    width: 566px;
+    height: 72px;
+    border: 2px solid #FFFFFF;
+    padding-left: 36px;
+    box-sizing: border-box;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.more input[type=submit] {
+    border-radius: 0;
+    float: left;
+    width: 215px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+
+    color: #000000;
+}
+
 
 /* ==========================================================================
   Useful classes
@@ -178,8 +417,9 @@ footer {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  /* 1 */
+    /* 1 */
 }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -202,7 +442,7 @@ footer {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
 
-
+ */
 audio,
 canvas,
 iframe,
@@ -211,62 +451,224 @@ svg,
 video {
     vertical-align: middle;
 }
- */
+
 /* ==========================================================================
   Media Queries for Responsive Design.
    ==========================================================================
 */
 
-@media only screen and (min-width: 500px) {
-    img {
-        width: 485px;
+@media only screen and (max-width: 1150px) {
+
+    .navbar1,
+    .navbar1-parallax {
+        display: none;
     }
 
-    .link {
-        font-size: 20px;
-        line-height: 25px;
-        margin-right: 15px;
-        margin-left: 15px;
-        height: 25px;
+    .jumbotron,
+    .events-jumbo {
+        padding-left: 70px;
+        padding-right: 70px;
     }
 
-    .motiv {
-        margin-left: auto;
-        margin-right: auto;
-        width: fit-content;
-        margin-top: 179px;
+    .knof {
+        display: inline-block;
+        z-index: 4;
+        position: fixed;
+        top: 0px;
+        right: 22px;
+    }
+
+    .mobile-meni {
+        z-index: 2;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #000000;
+        height: 100%;
+        width: 100%;
+        color: white;
+
+        padding-top: 141px;
+        transition: background-color 0.4s, height 0.5s, padding-top 0.5s;
+        overflow: hidden;
+
+
+    }
+
+    .mobile-meni a, .mobile-lan {
+        display: block;
+        margin-bottom: 23px !important;
+        font-family: 'Manrope-700';
         font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 115.6%;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        height: auto;
+        /* or 32px */
+        margin-left: 0;
+        padding-left: 44px;
         letter-spacing: -0.02em;
+        transition: 0.3s;
+        color: white;
+        text-decoration: none;
+
+        /*color: #FFFFFF;*/
+    }
+    .mobile-lan {
+        text-align: right;
+        position: absolute;
+        bottom: 32px;
+        right: 26px;
+    }
+    .lan {
+        display: none!important;
+        float: right;
     }
 
-    footer {
-        font-size: 14px;
-        line-height: 19px;
+    .join {
+        text-align: center;
+        margin: auto;
+        margin-top: 121px!important;
+        padding: 0px!important;
     }
+
+    .display-none {
+        display: inline-block;
+        padding-top: 0px;
+        height: 0px;
+        background-color: transparent;
+    }
+
+    .display-none a, .display-none .mobile-lan{
+        color: transparent !important;
+        transition: 0.1s;
+
+    }
+
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (max-width: 850px) {
     .logo {
-        width: 726px;
+        width: 166px;
+        left: 23px;
+
     }
 
-    img {
-        width: 726px;
+    .navbar,
+    .navbar-parallax {
+        height: 76px;
     }
 
-    .link {
-        font-size: 24px;
-        line-height: 33px;
-        margin-right: 27px;
+    .banner,
+    .next-events {
+        left: 23px;
+
+    }
+
+    .next-events p {
+        display: none;
+    }
+
+    .bg-img-parallax {
+        background-size: auto;
+
+    }
+
+    .navbar-parallax {
+        background-size: auto;
+    }
+
+    .next-events h4 {
+        font-size: 22px !important;
+        line-height: 30px !important;
+    }
+
+    .next-events a {
+        display: block;
+    }
+
+    .next-events span {
+        font-size: 14px !important;
+        line-height: 19px !important;
+        transform: translate(0px, -7px) !important;
+    }
+
+    .next-events img {
+        width: 122px;
+        height: 30px;
+    }
+
+    .bg-img-parallax {
+        background-position-x: -900px;
+    }
+
+    .navbar-parallax {
+        background-position-x: -900px !important;
+    }
+
+
+    .jumbotron,
+    .events-jumbo {
+        padding-left: 13px;
+        padding-right: 13px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /*footer*/
+
+    .more p {
+        display: none;
+    }
+
+    .gen-leg {
+        height: 450px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .socials,
+    .more,
+    .contact {
+        float: left;
         margin-left: 27px;
-        height: 33px;
+
+        margin-top: 43px;
+        text-align: left;
+        display: block;
+        width: 100%;
+        padding-right: 0px !important;
+        margin-right: 0px !important;
+
     }
 
-    .motiv {
-        width: fit-content;
-        font-size: 41px;
+    .contact {
+        max-width: 100% !important;
+        margin-left: 27px !important;
+        margin-top: 43px !important;
+        margin-bottom: 25px!important;
     }
+
+    .more {
+        padding-right: 141px;
+        margin-left: 27px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .more input[type=email] {
+        width: 218px;
+        height: 52px;
+        padding-left: 14px;
+    }
+
+    .more input[type=submit] {
+        width: 104px;
+        height: 52px;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
 }
