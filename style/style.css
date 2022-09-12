@@ -1,6 +1,6 @@
 /*FRONTEND TODO:
 1. EN/SL buttons -- DONE
-2. Fix bg image inconsictency in notes page  -- DONE
+2. Fix bg image inconsictency in s page  -- DONE
 3  Add search icon to navbar for the sake of it -- DONE
 4. Fix footer styling -- DONE
 5. Fix mobile cards at events and notes pages
@@ -293,6 +293,77 @@ h3 {
     font-size: 56px;
     line-height: 76px;
     letter-spacing: -0.06em;
+}
+
+.config {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 54px;
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
+    padding-bottom: 45px;
+}
+
+.config span {
+    padding-right: 50px;
+    border-right: solid 1px rgba(0, 0, 0, .6);
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 115.6%;
+/* or 31px */
+
+letter-spacing: -0.02em;
+
+color: #000000;
+
+opacity: 0.6;
+}
+
+.conf-meni-item {
+    text-decoration: none;
+    margin-left: 50px;
+
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 115.6%;
+    /* or 31px */
+    
+    letter-spacing: -0.02em;
+    
+    color: #000000;
+}
+
+.conf-meni-item:hover {
+    color: #000000;
+    border-bottom: solid 1px;
+}
+
+.discover {
+    margin-left: 57px;
+    margin-bottom: 80px;
+}
+.discover a {
+    padding-left: 20px;
+    font-family: 'Manrope-600';
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+    
+    letter-spacing: -0.02em;
+    
+    color: #000000;
+    
+}
+
+.discover a:hover {
+    color: #535353;
+    text-decoration: none;
 }
 
 /*some general footer style -> now can be combined because everywhere the same footer*/
@@ -635,6 +706,23 @@ video {
         overflow-x: hidden;
     }
 
+    .discover {
+        margin-left: 0px;
+        margin-bottom: 63px;
+    }
+    .discover a {
+
+        font-family: 'Manrope-600';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        /* identical to box height */
+
+        letter-spacing: -0.02em;
+
+        color: #000000;
+}
     /*footer*/
     .desktop-footer {
         display: none!important;
