@@ -4,6 +4,10 @@
 če niso prave velikosti se da scalira na ustrezno višino za styling in levo desno poreže kar je preveč
 kljub temu se v css napiše najboljše razmerje
 za generičen page se up0orablja višino 88-- nekej zato da je bolj responsive kot height 100%*/
+.navbar-parallax {
+    background-image: none;
+    background-color: #000000!important;
+}
 .not-fixed {
     position: absolute;
 }

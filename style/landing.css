@@ -1,5 +1,9 @@
 /*notes&stories page style*/
 /*banner on bg img for next events links*/
+.navbar-parallax {
+    background-color: transparent;
+    background-image: url("../img/bg.jpg");
+}
 .next-events {
     max-width: 1300px;
 }

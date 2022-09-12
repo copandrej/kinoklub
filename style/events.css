@@ -1,5 +1,8 @@
 /*Style for events page*/
+.navbar-parallax {
 
+    background-color: #000000!;
+}
 .head-events {
     font-family: 'Manrope-500';
     font-style: normal;

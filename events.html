@@ -51,32 +51,26 @@
 
 
     <div class="events-bg">
-        <div class="navbar navbar-parallax">
+        <div class="navbar navbar-parallax" id="fade-out">
             <h1>
                 <a style="display: flex;" href="index.html"><img alt="Kino Klub" class="logo" src="img/KK-LOGO.png"></a>
             </h1>
-
-            <div class="navbar1">
+            <div class="navbar1-parallax">
                 <a class="link hover" href="notes.html">NOTES AND STORIES</a>
                 <a class="link hover" href="events.html">EVENT CALANDAR</a>
-                <a class="link hover" href="normal.html">JUKE BOX CINEMA</a>
+                <a class="link hover" href="normal.html">PROJECTS</a>
                 <a class="link hover" href="normal.html">ABOUT</a>
-                <a class="link hover" href="normal.html">JOIN</a>
-                <img src="img/Vectorsearch.svg" alt="Search" class="search-icon">
-
             </div>
         </div>
     </div>
-    <!-- navbar-->
     <div id="mobile-meni" class="mobile-meni display-none">
         <a href="notes.html">NOTES AND STORIES</a>
         <a href="events.html">EVENT CALANDAR</a>
         <a href="normal.html">JUKE BOX CINEMA</a>
         <a href="normal.html">ABOUT</a>
-        <a class="join" href="normal.html">JOIN</a>
         <spn class="mobile-lan"><span>SL </span>/<span> EN</span></spn>
     </div>
-    <div class="knof" onclick="anime()">
+    <div class="knof" id="knof" onclick="anime()">
         <div id="sprememba" class="zg"></div>
         <div id="spremembaa" class="sr"></div>
         <div id="spremembaaa" class="sp"></div>
@@ -134,28 +128,54 @@
     </div>
 
     <!-- footer -->
-    <footer class="row gen-leg reverse">
-        <div class="col-md-2 contact">
-            <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a><br>
-            <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a><br>
-            <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a><br>
-            Cesta svobode 12a, 4260 Bled
+    <footer class="row gen-leg">
+        <div class="col-md-2 contact desktop-footer">
+            <p>GET IN TOUCH</p>
+
+            <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
+            <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+            <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+            <a>Cesta svobode 12a, 4260 Bled</a>
         </div>
-        <div class="col-md-1 socials">
+        <div class="col-md-1 socials desktop-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
-            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
+            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;"
+                    src="img/Vectorfb.png"></a>
         </div>
-        <div class="col-md-6 more">
+        <div class="col-md-6 more desktop-footer">
             <form>
                 <p>WANT MORE FROM KINO KLUB?</p>
                 <input type="email" placeholder="Email Address" required>
                 <input type="submit" value="Submit">
             </form>
-        </div>
+            <span>Kino Klub is a project of Aspekt Institute. ©2022</span>
 
-    </footer>
-    <script src="js/script.js"></script>
+        </div>
+    <!---mobile footer-->
+        <div class="more mobile-footer">
+            <form>
+                <p>WANT TO KNOW MORE</p>
+                <input type="email" placeholder="Email Address" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="socials mobile-footer">
+            <p>FOLLOW</p>
+            <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
+            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;"
+                    src="img/Vectorfb.png"></a>
+        </div>
+        <div class="contact mobile-footer">
+            <p>GET IN TOUCH</p>
+            <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
+            <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+            <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+            <a>Cesta svobode 12a, 4260 Bled</a>
+            <p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
+        </div>
+</footer>
+<script src="js/script.js"></script>
 </body>
 
 </html>
