@@ -80,10 +80,10 @@
 
     <div class="config">
         <span>NOTES AND STORIES</span>
-        <a class="conf-meni-item">ALL</a>
-        <a class="conf-meni-item">NOTES AND STORIES</a>
-        <a class="conf-meni-item">ARTICLES</a>
-        <a class="conf-meni-item">PODCASTS</a>
+        <item class="conf-meni-item active" value="0">ALL</item>
+        <item class="conf-meni-item" value="1">NOTES AND STORIES</item>
+        <item class="conf-meni-item" value="2">ARTICLES</item>
+        <item class="conf-meni-item" value="3">PODCASTS</span>
     </div>
     <select class="form-select form-select-lg mx-auto"  style="width: 333px;" aria-label="Default select example">
         <option selected>ALL</option>
@@ -157,12 +157,38 @@
                 <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
             </div>
         </div>
+
+        <div class="row reverse  display-none disc-more">
+            <div class="col-xl-4 title">
+                <span class="category">NOTES AND STORIES</span>
+                <h3 class="title">
+                    A story about a cinema bakery, right in the heart of Barcelona
+                </h3>
+                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
+            </div>
+            <div class="col-xl-8">
+                <img class="note-img" style="float: right" src="img/Rectangle 39.png">
+            </div>
+        </div>
+
+        <div class="row  display-none disc-more">
+            <div class="col-xl-8">
+                <img class="note-img" src="img/Rectangle 24.png">
+            </div>
+            <div class="col-xl-4 title">
+                <span class="category">NOTES AND STORIES</span>
+                <h3 class="title">
+                    A story about a cinema bakery, right in the heart of Barcelona
+                </h3>
+                <a class="notes-link" href="normal.html"><img src="img/Vectorvec.svg">READ MORE</a>
+            </div>
+        </div>
         <!--row can be repeated more. Dynamic content from server-->
         
     </div>
-    <div class="discover">
-        <a href="#"><img style="width:70px;" src="img/plus.svg">DISCOVER MORE</a>
-    </div>
+    <div class="discover" onclick="discMore()">
+        <img style="width:70px;" src="img/plus.svg">DISCOVER MORE
+        </div>
     <!-- footer -->
     <footer class="row gen-leg">
         <div class="col-md-2 contact desktop-footer">

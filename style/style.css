@@ -321,6 +321,7 @@ opacity: 0.6;
 }
 
 .conf-meni-item {
+    cursor: pointer;
     text-decoration: none;
     margin-left: 50px;
 
@@ -341,7 +342,13 @@ opacity: 0.6;
     border-bottom: solid 1px;
 }
 
+.active {
+    color: #000000;
+    border-bottom: solid 1px;
+}
+
 .discover {
+    cursor: pointer;
     margin-left: 57px;
     margin-bottom: 80px;
 }
