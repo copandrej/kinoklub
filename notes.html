@@ -49,7 +49,7 @@
 <body>
 
     <!-- navbar + bg imh-->
-    
+
     <div class="events-bg">
         <div class="navbar navbar-parallax" id="fade-out">
             <h1>
@@ -80,19 +80,21 @@
 
     <div class="config">
         <span>NOTES AND STORIES</span>
-        <item class="conf-meni-item active" value="0">ALL</item>
-        <item class="conf-meni-item" value="1">NOTES AND STORIES</item>
-        <item class="conf-meni-item" value="2">ARTICLES</item>
-        <item class="conf-meni-item" value="3">PODCASTS</span>
+        <item class="conf-meni-item active" value="ALL" onclick="configurator()">ALL</item>
+        <item class="conf-meni-item" value="NOTES AND STORIES" onclick="configurator('NOTES AND STORIES')">NOTES AND
+            STORIES</item>
+        <item class="conf-meni-item" value="ARTICLES" onclick="configurator('ARTICLES')">ARTICLES</item>
+        <item class="conf-meni-item" value="PODCASTS" onclick="configurator('PODCASTS')">PODCASTS</span>
     </div>
-    <select class="form-select form-select-lg mx-auto"  style="width: 333px;" aria-label="Default select example">
-        <option selected>ALL</option>
-        <option value="1">NOTES AND STORIES</option>
-        <option value="2">ARTICLES</option>
-        <option value="3">PODCASTS</option>
-      </select>
+    <select id="mySelect" onchange="myFunction()" class="form-select form-select-lg mx-auto" style="width: 333px;"
+        aria-label="Default select example">
+        <option value="ALL" selected>ALL</option>
+        <option value="NOTES AND STORIES" onselect="configurator('NOTES AND STORIES')">NOTES AND STORIES</option>
+        <option value="ARTICLES" onselect="configurator('ARTICLES')">ARTICLES</option>
+        <option value="PODCASTS" onselect="configurator('PODCASTS')">PODCASTS</option>
+    </select>
     <!-- main content -->
-    <div class="jumbotron landing-main">
+    <div class="jumbotron landing-main" id="configurator">
         <div class="row">
             <div class="col-xl-8">
                 <img class="note-img" src="img/Rectangle 24.png">
@@ -184,11 +186,11 @@
             </div>
         </div>
         <!--row can be repeated more. Dynamic content from server-->
-        
+
     </div>
     <div class="discover" onclick="discMore()">
         <img style="width:70px;" src="img/plus.svg">DISCOVER MORE
-        </div>
+    </div>
     <!-- footer -->
     <footer class="row gen-leg">
         <div class="col-md-2 contact desktop-footer">
@@ -203,8 +205,7 @@
         <div class="col-md-1 socials desktop-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
-            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;"
-                    src="img/Vectorfb.png"></a>
+            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
         <div class="col-md-6 more desktop-footer">
             <form>
@@ -215,7 +216,7 @@
             <span>Kino Klub is a project of Aspekt Institute. ©2022</span>
 
         </div>
-    <!---mobile footer-->
+        <!---mobile footer-->
         <div class="more mobile-footer">
             <form>
                 <p>WANT TO KNOW MORE</p>
@@ -226,8 +227,7 @@
         <div class="socials mobile-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
-            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;"
-                    src="img/Vectorfb.png"></a>
+            <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
         <div class="contact mobile-footer">
             <p>GET IN TOUCH</p>
@@ -238,9 +238,12 @@
 
             <p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
         </div>
-</footer>
-<script src="js/script.js"></script>
-<script src="js/fade-out.js"></script>
+    </footer>
+    <!-- jqerry url-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/configurator.js">
+    </script>
+    <script src="js/fade-out.js"></script>
 </body>
 
 </html>

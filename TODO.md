@@ -8,7 +8,7 @@
 - mobile notes/events distance fix -- done
 - Fix image sizing at events and notes pages on mobile -- done
 - working sl/en buttons -- done
-- Add a configurator bar to notes page -- še delovanje
+- Add a configurator bar to notes page -- še kombinacija z discover more
 - notes fix mobile text possitioning
 - Fix mobile cards at events and notes pages
 - iphone paralex fix - test how it looks now
