@@ -11,9 +11,9 @@
 
 ## known issues
 
-- ob refreshu če si na sredini strani se pojavi nazaj fade-out meni (verjetno samo dam en robni pogoj?)
+- ob refreshu če si na sredini strani se pojavi nazaj fade-out meni (verjetno samo dam en robni pogoj?) -- fixed
 - slike za events niso preveč responsive za kar na mobile al pa full hd desktop, enako notes slike
-- scrolling ko je odprt meni?
+- scrolling ko je odprt meni? -- fixed
 - footer ima spodaj preveč prostora (igraj se z min height, margini etc.)
 
 

@@ -55,6 +55,10 @@ body {
     width: 100vw;
 }
 
+.fixed-position {
+    overflow: hidden
+ }
+
 /*KINO KLUB LOGO*/
 .logo {
     width: 200px;

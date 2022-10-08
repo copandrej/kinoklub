@@ -3,6 +3,8 @@ function anime() {
 	document.getElementById("spremembaa").classList.toggle("spremeni");
 	document.getElementById("spremembaaa").classList.toggle("spremeniaa");
 	document.getElementById("mobile-meni").classList.toggle("display-none");
+	document.querySelector("html").classList.toggle("fixed-position");
+
 
 }
 

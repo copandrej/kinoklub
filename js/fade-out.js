@@ -38,3 +38,4 @@ function scrollHandler() {
 }
 
 window.addEventListener('scroll', scrollHandler);
+window.addEventListener('load', scrollHandler);  /*bug fix for refresh menu re-appearing*/
