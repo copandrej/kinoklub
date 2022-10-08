@@ -3,6 +3,7 @@ function anime() {
 	document.getElementById("spremembaa").classList.toggle("spremeni");
 	document.getElementById("spremembaaa").classList.toggle("spremeniaa");
 	document.getElementById("mobile-meni").classList.toggle("display-none");
+	document.querySelector("html").classList.toggle("fixed-position");
 
 }
 
@@ -44,10 +45,12 @@ function configurator(cat = 'ALL') {
         if (stevec % 2 == 0) {
             string = `<div class="row">
 			<div class="col-xl-8">
+					<span class="category mobile-display">${noteCards[i].category}</span>
+
 					<img class="note-img" src="${noteCards[i].image}">
 				</div>
 				<div class="col-xl-4 title">
-					<span class="category">${noteCards[i].category}</span>
+					<span class="category desktop-display">${noteCards[i].category}</span>
 					<h3 class="title">
 					${noteCards[i].title}
 					</h3>
@@ -59,13 +62,15 @@ function configurator(cat = 'ALL') {
         else {
             string = `<div class="row reverse">
             <div class="col-xl-4 title">
-                <span class="category">${noteCards[i].category}</span>
+                <span class="category desktop-display">${noteCards[i].category}</span>
                 <h3 class="title">
 				${noteCards[i].title}
                 </h3>
                 <a class="notes-link" href="${noteCards[i].subpage}"><img src="img/Vectorvec.svg">READ MORE</a>
             </div>
             <div class="col-xl-8">
+					<span class="category mobile-display">${noteCards[i].category}</span>
+
                 <img class="note-img" style="float: right" src="${noteCards[i].image}">
             </div>
         </div>`;

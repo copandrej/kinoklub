@@ -1,20 +1,26 @@
 # TODO FRONTEND
 
-- notes fix mobile text possitioning
-- Fix mobile cards at events and notes pages (razmaki)
-- iphone paralex fix - test how it looks now
-- add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it
+- notes fix mobile text possitioning --končano
+- Fix mobile cards at events and notes pages (razmaki) (predvsem text possitioning in razmaki med karticami) -- končano
+- iphone paralex fix - test how it looks now -- pomoje je to zdej zrihtano? samo da pač ne bo paralex (še iščem rešitev mogoče)
+
+- add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it:
+    - footer je popolnoma ne responsive
+    - notes za manjše računalnike in tablice
+    - events za vse dimenzije
+    - configurator pri notes za srednje dimenzije
+
+
 - Change/refactor the code for mobile first design
 - Clean up the code
 - seo, social, special effects, etc. (added value)
 
 
+
 ## known issues
 
-- ob refreshu če si na sredini strani se pojavi nazaj fade-out meni (verjetno samo dam en robni pogoj?) -- fixed
-- slike za events niso preveč responsive za kar na mobile al pa full hd desktop, enako notes slike
-- scrolling ko je odprt meni? -- fixed
-- footer ima spodaj preveč prostora (igraj se z min height, margini etc.)
+- discover more ne dela dobro. Styli ne štimajo čist, včasih zjebe text ali pa ne izgine po kliku
+- footer ima spodaj preveč prostora na mobile (igraj se z min height, margini etc.)
 
 
 # TODO BACKEND

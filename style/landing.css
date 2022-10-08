@@ -124,6 +124,13 @@
     margin-right: 20px;
 
 }
+.mobile-display {
+    padding-bottom: 12px;
+    display: none;
+}
+.desktop-display {
+    display: block;
+}
 
 @media only screen and (max-width: 1700px) {
     .note-img {
@@ -160,7 +167,7 @@
     }
     .landing-main .row {
         padding-bottom: 40px;
-        padding-top: 40px;
+        padding-top: 50px;
         border-bottom: solid 1px;
         margin-left: 12px;
         margin-right: 12px;
@@ -172,5 +179,10 @@
     .landing-main {
         padding-top: 10px;
     }
-    
+    .mobile-display {
+        display: block;
+    }
+    .desktop-display {
+        display: none;
+    }
 }
