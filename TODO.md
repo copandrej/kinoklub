@@ -1,18 +1,9 @@
 # TODO FRONTEND
 
-- next events fix -- done
-- footer changes -- done
-- Fix footer mobile  -- recimo
-- change small meni background to black -- done
-- add discover more -- done
-- mobile notes/events distance fix -- done
-- Fix image sizing at events and notes pages on mobile -- done
-- working sl/en buttons -- done
-- Add a configurator bar to notes page -- še kombinacija z discover more
 - notes fix mobile text possitioning
-- Fix mobile cards at events and notes pages
+- Fix mobile cards at events and notes pages (razmaki)
 - iphone paralex fix - test how it looks now
-- add responsive design for all dimensions (footer, cards, menis, media quires when things go south)
+- add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it
 - Change/refactor the code for mobile first design
 - Clean up the code
 - seo, social, special effects, etc. (added value)

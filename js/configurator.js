@@ -77,6 +77,9 @@ function configurator(cat = 'ALL') {
 }
 
 
+/**
+ * colect from api
+ */
 const noteCards =
     [{
         title: "A story about a cinema bakery, right in the heart of Barcelona",

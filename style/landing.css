@@ -125,9 +125,14 @@
 
 }
 
+@media only screen and (max-width: 1700px) {
+    .note-img {
+        width: 100%;
+    }
+}
 @media only screen and (max-width: 800px) {
     .note-img {
-        width: 350px;
+        width: 100%;
         height: 350px;
         object-fit: cover;
     }
