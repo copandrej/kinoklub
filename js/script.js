@@ -12,8 +12,8 @@ function discMore() {
 	const arr = document.getElementsByClassName("disc-more");
 	/*loop over arr*/
 	for (let i = 0; i < arr.length; i++) {
-		arr[i].classList.toggle("display-none");
+		arr[i].classList.toggle("displayNone");
 	}
 
-	document.querySelector(".discover").classList.toggle("display-none");
+	document.querySelector(".discover").classList.toggle("displayNone");
 }

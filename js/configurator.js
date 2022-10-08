@@ -11,11 +11,11 @@ function discMore() {
 	const arr = document.getElementsByClassName("disc-more");
 	/*loop over arr*/
 	for (let i = 0; i < arr.length; i++) {
-		arr[i].classList.toggle("display-none");
+		arr[i].classList.toggle("displayNone");
 	}
 	maxStevilo += 5;
 	configurator('ALL');
-	document.querySelector(".discover").classList.toggle("display-none");
+	document.querySelector(".discover").classList.toggle("displayNone");
 }
 
 let maxStevilo = 5;

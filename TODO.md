@@ -18,7 +18,8 @@
 
 ## known issues
 
-- discover more ne dela dobro. Styli ne štimajo čist, včasih zjebe text ali pa ne izgine po kliku
+- discover more ne dela dobro. Styli ne štimajo čist, včasih zjebe text ali pa ne izgine po kliku -- fixed
+- pri notesih če je discover more ne zbriše pravilno bottom borderja
 - footer ima spodaj preveč prostora na mobile (igraj se z min height, margini etc.)
 
 

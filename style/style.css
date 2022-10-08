@@ -101,6 +101,9 @@ h1 {
     display: none;
 }
 
+.displayNone {
+    display: none;
+}
 .spremenia {
     -ms-transform: translate(0px, 10px) rotate(45deg);
     /* IE 9 */
