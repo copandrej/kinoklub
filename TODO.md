@@ -1,8 +1,7 @@
 # TODO FRONTEND
 
-- notes fix mobile text possitioning --končano
-- Fix mobile cards at events and notes pages (razmaki) (predvsem text possitioning in razmaki med karticami) -- končano
 - iphone paralex fix - test how it looks now -- pomoje je to zdej zrihtano? samo da pač ne bo paralex (še iščem rešitev mogoče)
+- fix known issues
 
 - add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it:
     - footer je popolnoma ne responsive
