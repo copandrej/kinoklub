@@ -2,14 +2,7 @@
 
 - fix known issues
 
-- add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it:
-    - 4k se še nekej stvari zjebe -- temporary fix za bg image -> black bg
-
 - Podrobnosti čez vse, natančni pxli, dodam placeholder dodatne sliek in besedil tam kjer pride, da zgleda res isto kot design:
-    - generična stran ima sedaj drugačn style širine
-    - eventsi nimajo še čist pravilnih razmakov med cardsi
-    - puščice pri eventsih so malo drugačne kot za readmore
-
 
 - Change/refactor the code for mobile first design and better practices
     - DRY code, comment

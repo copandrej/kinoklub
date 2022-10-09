@@ -18,7 +18,10 @@
 
     color: #000000;
 }
-
+.normal-page-con {
+    padding-left: 350px;
+    padding-right: 350px;
+}
 .normal-page-con .date {
     margin-top: 92px;
     font-family: 'Manrope-400';
@@ -38,6 +41,8 @@
     /* identical to box height */
 
     letter-spacing: -0.02em;
+
+    margin-bottom: 35px;
 
 }
 
@@ -61,9 +66,14 @@
 
 
 
+@media only screen and (max-width: 1650px) {
+    .normal-page-con {
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+}
 @media only screen and (max-width: 1150px) {
 
-    
     .content {
         margin: 50px;
     }
