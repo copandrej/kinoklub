@@ -181,6 +181,7 @@ h1 {
     width: 100%;
     min-height: 100% !important;
     background-position: center;
+    background-color: black;
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-position-y: -0px;
@@ -370,9 +371,20 @@ h3 {
 }
 
 .discover {
+    width: fit-content;
+    padding-left: 20px;
+
     cursor: pointer;
     margin-left: 57px;
     margin-bottom: 80px;
+    font-family: 'Manrope-600';
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
 }
 
 .discover a {
@@ -741,7 +753,7 @@ video {
     .leg-leg {
         padding-left: 0px;
         position: relative;
-        width: 100% !important;
+        width: 90vw !important;
         padding: 0px !important;
         margin: 0px !important;
         overflow: hidden !important;
@@ -908,5 +920,17 @@ video {
         color: #000000;
     }
 
+
+}
+
+@media only screen and (max-width: 335px) {
+    .more input[type=email] {
+        width: 175px;
+        height: 52px;
+        padding-left: 14px;
+    }
+    .form-select {
+        width: 270px!important;
+    }
 
 }

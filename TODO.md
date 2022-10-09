@@ -3,10 +3,7 @@
 - fix known issues
 
 - add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it:
-    - notes za manjše računalnike in tablice  (ne štime še u nulo)
-    - gumb discover more ni lepo responsiver
-    - events za vse dimenzije
-    - footer ima še prostor za izboljšavo
+    - 4k se še nekej stvari zjebe -- temporary fix za bg image -> black bg
 
 - Podrobnosti čez vse, natančni pxli, dodam placeholder dodatne sliek in besedil tam kjer pride, da zgleda res isto kot design:
     - generična stran ima sedaj drugačn style širine
@@ -15,7 +12,8 @@
 
 
 - Change/refactor the code for mobile first design and better practices
-- Clean up the code
+    - DRY code, comment
+    - Clean up the code
 - seo, social, special effects, etc. (added value)
 
 
