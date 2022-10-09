@@ -48,52 +48,69 @@
 
 <body>
 
-    <!-- navbar + bg imh-->
-
+    <!-- navbar + bg img-->
     <div class="events-bg">
         <div class="navbar navbar-parallax" id="fade-out">
+
+            <!-- logo -->
             <h1>
                 <a style="display: flex;" href="index.html"><img alt="Kino Klub" class="logo" src="img/KK-LOGO.png"></a>
             </h1>
+
+            <!-- navbar desktop -->
             <div class="navbar1-parallax">
                 <a class="link hover" href="notes.html">NOTES AND STORIES</a>
                 <a class="link hover" href="events.html">EVENT CALANDAR</a>
                 <a class="link hover" href="normal.html">PROJECTS</a>
                 <a class="link hover" href="normal.html">ABOUT</a>
             </div>
+
         </div>
     </div>
+
+    <!-- navbar mobile -->
     <div id="mobile-meni" class="mobile-meni display-none">
+
         <a href="notes.html">NOTES AND STORIES</a>
         <a href="events.html">EVENT CALANDAR</a>
         <a href="normal.html">PROJECTS</a>
         <a href="normal.html">ABOUT</a>
         <spn class="mobile-lan"><span>SL </span>/<span> EN</span></spn>
+
     </div>
+
+    <!-- hamburger menu -->
     <div class="knof" id="knof" onclick="anime()">
         <div id="sprememba" class="zg"></div>
         <div id="spremembaa" class="sr"></div>
         <div id="spremembaaa" class="sp"></div>
     </div>
 
-    <!-- config  content-->
-
+    <!-- configuration menu desktop-->
     <div class="config">
+
         <span>NOTES AND STORIES</span>
+
         <item class="conf-meni-item active" value="ALL" onclick="configurator()">ALL</item>
         <item class="conf-meni-item" value="NOTES AND STORIES" onclick="configurator('NOTES AND STORIES')">NOTES AND
             STORIES</item>
         <item class="conf-meni-item" value="ARTICLES" onclick="configurator('ARTICLES')">ARTICLES</item>
         <item class="conf-meni-item" value="PODCASTS" onclick="configurator('PODCASTS')">PODCASTS</span>
+
     </div>
+
+    <!-- configuration menu mobile-->
     <select id="mySelect" onchange="myFunction()" class="form-select form-select-lg mx-auto" style="width: 333px;"
         aria-label="Default select example">
+
         <option value="ALL" selected>ALL</option>
         <option value="NOTES AND STORIES" onselect="configurator('NOTES AND STORIES')">NOTES AND STORIES</option>
         <option value="ARTICLES" onselect="configurator('ARTICLES')">ARTICLES</option>
         <option value="PODCASTS" onselect="configurator('PODCASTS')">PODCASTS</option>
+
     </select>
-    <!-- main content -->
+
+    <!-- main content AJAX request from server for comments go to index page-->
     <div class="jumbotron landing-main" id="configurator">
         <div class="row">
             <div class="col-xl-8">
@@ -188,11 +205,16 @@
         <!--row can be repeated more. Dynamic content from server-->
 
     </div>
+
+    <!-- more button -->
     <div class="discover" onclick="discMore()">
         <img style="width:70px;" src="img/plus.svg">DISCOVER MORE
     </div>
+
     <!-- footer -->
     <footer class="row gen-leg">
+
+        <!---desktop footer-->
         <div class="col-md-2 contact desktop-footer">
             <p>GET IN TOUCH</p>
 
@@ -202,11 +224,13 @@
             <a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
 
         </div>
+
         <div class="col-md-1 socials desktop-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
             <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
+
         <div class="col-md-6 more desktop-footer">
             <form>
                 <p>WANT MORE FROM KINO KLUB?</p>
@@ -216,6 +240,8 @@
             <span>Kino Klub is a project of Aspekt Institute. ©2022</span>
 
         </div>
+
+
         <!---mobile footer-->
         <div class="more mobile-footer">
             <form>
@@ -224,26 +250,29 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
+
         <div class="socials mobile-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
             <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
+
         <div class="contact mobile-footer">
             <p>GET IN TOUCH</p>
             <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
             <a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
-
             <p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
         </div>
+
     </footer>
-    <!-- jqerry url-->
+
+    <!-- jqerry url for configurator and ajax-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/configurator.js">
-    </script>
+    <script src="js/configurator.js"></script>
     <script src="js/fade-out.js"></script>
+
 </body>
 
 </html>

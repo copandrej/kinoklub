@@ -5,11 +5,9 @@
 - Podrobnosti čez vse, natančni pxli, dodam placeholder dodatne sliek in besedil tam kjer pride, da zgleda res isto kot design:
 
 - Change/refactor the code for mobile first design and better practices
-    - DRY code, comment
-    - Clean up the code
-    
+
 - seo, social, special effects, etc. (added value):
-    - za dodatno vrednost poglejmo mal effecte k so na primeru sp.
+    - za dodatno vrednost poglejmo mal effecte k so na primeru sp. --ok
 
 
 ## known issues

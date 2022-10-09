@@ -84,14 +84,6 @@ h1 {
     background-color: transparent;
 }
 
-.display-none {
-    display: none;
-}
-
-.displayNone {
-    display: none;
-}
-
 .spremenia {
     -ms-transform: translate(0px, 10px) rotate(45deg);
     /* IE 9 */
@@ -106,6 +98,15 @@ h1 {
     -webkit-transform: translate(0px, -10px) rotate(-45deg);
     /* Safari */
     transform: translate(0px, -10px) rotate(-45deg);
+}
+
+/*display none classes*/
+.display-none {
+    display: none;
+}
+
+.displayNone {
+    display: none;
 }
 
 /*Outter and inner navbar, overwriting some default bootstrap styles*/
@@ -145,14 +146,17 @@ h1 {
 
 }
 
+/* currently not implemented
 .search-icon {
     position: relative;
     right: -70px;
     width: 20px;
     height: 20px;
 }
+*/
 
-/*paralex testing navbar is fixed*/
+
+/*paralex. navbar is also fixed*/
 .navbar-parallax {
     /*background-color: transparent;*/
     width: 100vw;
@@ -234,8 +238,7 @@ changes to the .hover:after bottom and height depending on text size*/
     transform-origin: bottom left;
 }
 
-/*banner is for A COMMUNITY OF FELLOW MOTION PICTURE LOVERS
-next events is for dynamic banner for link with next events*/
+/* next events is for dynamic banner for link with next events */
 .next-events {
     color: var(--secTxtColor) !important;
     position: absolute;
@@ -243,19 +246,6 @@ next events is for dynamic banner for link with next events*/
     left: 40px;
 }
 
-/* redudntan, for old-index.html
-.banner h2 {
-    font-family: 'Manrope-400';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 49px;
-    line-height: 115.6%;
-    /* identical to box height, or 57px 
-
-    letter-spacing: -0.06em;
-    margin-bottom: 0px;
-
-}*/
 .next-events p {
     font-family: 'Manrope-400';
     font-style: normal;
@@ -264,9 +254,9 @@ next events is for dynamic banner for link with next events*/
     line-height: 19px;
     letter-spacing: -0.02em;
     margin: 0px;
-
 }
 
+/*language buttons on main image and mobile menu*/
 .mobile-lan a,
 .lan a {
     text-decoration: none;
@@ -288,6 +278,7 @@ next events is for dynamic banner for link with next events*/
     font-family: 'Manrope-600';
 }
 
+/*different font weight for chose lan*/
 .chosen {
     color: #FFFFFF;
     font-family: 'Manrope-600' !important;
@@ -301,7 +292,7 @@ next events is for dynamic banner for link with next events*/
     padding-right: 130px;
 }
 
-/*overwriting deafult row styles. This is source of many bugs but cant temper with this right now*/
+/*overwriting deafult row styles. This is source of many bugs but i am afraid to temper with this right now*/
 .row {
     padding-top: 120px;
     padding-bottom: 100px;
@@ -318,6 +309,7 @@ h3 {
     letter-spacing: -0.06em;
 }
 
+/*configuration menu for notes and stories*/
 .config {
     margin-left: 40px;
     margin-right: 40px;
@@ -365,11 +357,13 @@ h3 {
     border-bottom: solid 1px;
 }
 
+/*active item in the config menu*/
 .active {
     color: #000000;
     border-bottom: solid 1px;
 }
 
+/*discover more button at the end of notes and events to open up more cards*/
 .discover {
     width: fit-content;
     padding-left: 20px;
@@ -489,7 +483,6 @@ footer a:hover {
 
 }
 
-
 .more input[type=email] {
     border-radius: 0;
     float: left;
@@ -526,10 +519,12 @@ footer a:hover {
     display: block;
 }
 
+/*for mobile a bit different footer so better to have two footers for responsivenes*/
 .mobile-footer {
     display: none;
 }
 
+/*col-lg at events page fix*/
 .col-lg {
     max-width: 590px;
 }

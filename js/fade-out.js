@@ -1,5 +1,6 @@
-
 //from: https://coolcssanimation.com/element-fade-out-on-scroll/
+//gets scroll info and adjjusts opacity of logo, navbar and hamburger bar acordingly
+
 const header = document.getElementById('fade-out');
 const knof = document.getElementById('knof');
 let disp = true;
@@ -22,7 +23,6 @@ function fadeOutOnScroll(element) {
 		element.style.opacity = opacity;
 		knof.style.opacity = opacity;
 
-
 	} else {
 		element.style.opacity = 0;
 		knof.style.opacity = 0;
@@ -33,9 +33,11 @@ function fadeOutOnScroll(element) {
 	}
 }
 
+/*mid function*/
 function scrollHandler() {
 	fadeOutOnScroll(header);
 }
 
+/*event listeners for scroll and fix for menu reappearing on refresh*/
 window.addEventListener('scroll', scrollHandler);
-window.addEventListener('load', scrollHandler);  /*bug fix for refresh menu re-appearing*/
+window.addEventListener('load', scrollHandler);

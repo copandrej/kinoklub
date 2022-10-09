@@ -48,36 +48,44 @@
 
 <body>
 
-    <!-- navbar-->
-
+    <!-- navbar -> for this page bg image is not needed-->
     <div class="bg-img-general">
         <div class="navbar">
+
             <h1>
                 <a style="display: flex;" href="index.html"><img alt="Kino Klub" class="logo" src="img/KK-LOGO.png"></a>
             </h1>
+
             <div class="navbar1">
                 <a class="link hover" href="notes.html">NOTES AND STORIES</a>
                 <a class="link hover" href="events.html">EVENT CALANDAR</a>
                 <a class="link hover" href="normal.html">PROJECTS</a>
                 <a class="link hover" href="normal.html">ABOUT</a>
             </div>
+
         </div>
     </div>
+
+    <!-- mobile navbar-->
     <div id="mobile-meni" class="mobile-meni display-none">
         <a href="notes.html">NOTES AND STORIES</a>
         <a href="events.html">EVENT CALANDAR</a>
         <a href="normal.html">PROJECTS</a>
         <a href="normal.html">ABOUT</a>
-        <span class="mobile-lan"><span>SL </span>/<span> EN</span></span>
+        <spn class="mobile-lan"><span>SL </span>/<span> EN</span></spn>
     </div>
-    <div class="knof  not-fixed" onclick="anime()">
+
+    <!-- hamburger menu-->
+    <div class="knof not-fixed" onclick="anime()">
         <div id="sprememba" class="zg"></div>
         <div id="spremembaa" class="sr"></div>
         <div id="spremembaaa" class="sp"></div>
     </div>
 
+
     <!-- main content -->
     <div class="jumbotron normal-page-con">
+
         <p class="date">24. JUNE</p>
         <h2>A conversation with Christopher Nolan</h2>
 
@@ -89,9 +97,10 @@
         <a style="margin-left: 20px;" href="https://www.facebook.com/kinokluborg/"><img style="padding: 10px;"
                 src="img/Vectormail.svg"></a>
 
+
         <div class="content">
             <!--
-                DYNAMIC CONTENT HERE FROM CMS
+                DYNAMIC CONTENT HERE FROM CMS style and images are pulled as well
             -->
             <!-- placeholder-->
             <p>
@@ -108,6 +117,8 @@
 
     <!-- footer -->
     <footer class="row gen-leg">
+
+        <!---desktop footer-->
         <div class="col-md-2 contact desktop-footer">
             <p>GET IN TOUCH</p>
 
@@ -117,11 +128,13 @@
             <a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
 
         </div>
+
         <div class="col-md-1 socials desktop-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
             <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
+
         <div class="col-md-6 more desktop-footer">
             <form>
                 <p>WANT MORE FROM KINO KLUB?</p>
@@ -131,6 +144,8 @@
             <span>Kino Klub is a project of Aspekt Institute. ©2022</span>
 
         </div>
+
+
         <!---mobile footer-->
         <div class="more mobile-footer">
             <form>
@@ -139,21 +154,25 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
+
         <div class="socials mobile-footer">
             <p>FOLLOW</p>
             <a href="https://www.instagram.com/kinoklub___/"><img src="img/Vectorinsta.svg"></a>
             <a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="img/Vectorfb.png"></a>
         </div>
+
         <div class="contact mobile-footer">
             <p>GET IN TOUCH</p>
             <a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
             <a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
             <a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
-
             <p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
         </div>
+
     </footer>
+
+    <!-- scripts (normal page does not need fade out script!)-->
     <script src="js/script.js"></script>
 </body>
 

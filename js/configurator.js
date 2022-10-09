@@ -1,32 +1,22 @@
-function anime() {
-	document.getElementById("sprememba").classList.toggle("spremenia");
-	document.getElementById("spremembaa").classList.toggle("spremeni");
-	document.getElementById("spremembaaa").classList.toggle("spremeniaa");
-	document.getElementById("mobile-meni").classList.toggle("display-none");
-	document.querySelector("html").classList.toggle("fixed-position");
-
-}
-
-function discMore() {
-	const arr = document.getElementsByClassName("disc-more");
-	/*loop over arr*/
-	for (let i = 0; i < arr.length; i++) {
-		arr[i].classList.toggle("displayNone");
-	}
-	maxStevilo += 5;
-	configurator('ALL');
-	document.querySelector(".discover").classList.toggle("displayNone");
-}
+/*
+main logic for configurator on notes page
+uses jqerry as needed
+Still a lot work needs to be done when server and ajax is implemented
+for example checking when discover more is needed
+*/
 
 let maxStevilo = 5;
 let globalStevec = 0;
 function configurator(cat = 'ALL') {
 
     const arr = document.getElementsByClassName("conf-meni-item");
+
     for (let i = 0; i < arr.length; i++) {
+
         arr[i].classList.remove("active");
         if (arr[i].innerText == cat)
             arr[i].classList.add("active");
+
     }
 
     globalStevec = 0;
@@ -36,13 +26,16 @@ function configurator(cat = 'ALL') {
 
     /* loop over noteCards arr*/
     for (i = 0; i < noteCards.length && globalStevec < maxStevilo; i++) {
-        if (noteCards[i].category != cat && cat != 'ALL') {
+
+        if (noteCards[i].category != cat && cat != 'ALL')
             continue;
-        }
+
         stevec++;
         globalStevec++;
         let string = "";
+
         if (stevec % 2 == 0) {
+
             string = `<div class="row">
 			<div class="col-xl-8">
 					<span class="category mobile-display">${noteCards[i].category}</span>
@@ -58,8 +51,10 @@ function configurator(cat = 'ALL') {
 				</div>
 			</div>
 				`;
+
         }
         else {
+
             string = `<div class="row reverse">
             <div class="col-xl-4 title">
                 <span class="category desktop-display">${noteCards[i].category}</span>
@@ -75,15 +70,19 @@ function configurator(cat = 'ALL') {
             </div>
         </div>`;
         }
+
         contentContainer.append(string);
+
     }
 
-    /*TODO check if discover more is needed and if it is needed, add it*/
+    /*
+        TODO check if discover more is needed and if it is needed, add it*/
 }
 
 
 /**
- * colect from api
+ * colect from api 
+ * this is placeholder for now
  */
 const noteCards =
     [{
@@ -128,12 +127,37 @@ const noteCards =
         image: "img/Rectangle 24.png",
         subpage: "normal.html"
     },];
+
 /*When window loads run configurator()*/
 window.addEventListener('load', (event) => {
     configurator();
 });
 
+/*and everytime link on configurator is pressed*/
 function myFunction() {
     var x = document.getElementById("mySelect").value;
     configurator(x);
+}
+
+
+//same functions as in script.js for loading purposes here repeated
+function anime() {
+    document.getElementById("sprememba").classList.toggle("spremenia");
+    document.getElementById("spremembaa").classList.toggle("spremeni");
+    document.getElementById("spremembaaa").classList.toggle("spremeniaa");
+    document.getElementById("mobile-meni").classList.toggle("display-none");
+
+    document.querySelector("html").classList.toggle("fixed-position");
+}
+
+
+function discMore() {
+    const arr = document.getElementsByClassName("disc-more");
+    /*loop over arr*/
+    for (let i = 0; i < arr.length; i++) {
+        arr[i].classList.toggle("displayNone");
+    }
+    maxStevilo += 5;
+    configurator('ALL');
+    document.querySelector(".discover").classList.toggle("displayNone");
 }

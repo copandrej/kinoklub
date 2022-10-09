@@ -1,8 +1,9 @@
 /*Style for events page*/
 .navbar-parallax {
-
-    background-color: #000000!;
+    background-color: #000000;
 }
+
+/*event cards*/
 .head-events {
     font-family: 'Manrope-500';
     font-style: normal;
@@ -12,9 +13,7 @@
     /* or 46px */
 
     letter-spacing: -0.02em;
-
     color: #000000;
-
     padding-top: 62px;
 }
 
@@ -26,7 +25,8 @@
     padding-top: 12px;
     padding-bottom: 40px;
 }
-/*center .event-img*/
+
+/*center .event-img -> IS THIS STILL NEEDED?*/
 .event-cards .col-md-4 {
     padding-top: 50px;
     padding-right: 0px;
@@ -37,6 +37,7 @@
     /*margin-left: 24px;*/
     margin-right: 50px;
 }
+
 .event-cards span {
     font-family: 'Manrope-500';
     font-style: normal;
@@ -44,11 +45,8 @@
     font-size: 20px;
     line-height: 27px;
     letter-spacing: -0.02em;
-
     color: #000000;
-
     opacity: 0.6;
-
 }
 
 .event-cards h4 {
@@ -57,10 +55,7 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 55px;
-    /* identical to box height */
-
     letter-spacing: -0.02em;
-
     color: #000000;
 }
 
@@ -69,7 +64,7 @@
     padding-right: 110px;
 }
 
-/*custom mobile selection*/
+/*custom mobile selection -> why is this here?*/
 .form-select {
     margin-top: 37px;
     margin-bottom: 37px;
@@ -85,23 +80,27 @@
         padding-left: 70px;
         padding-right: 70px;
     }
+
     .config {
         display: none
     }
+
     .form-select {
         display: block;
-        margin-left: 70px!important;
+        margin-left: 70px !important;
 
     }
 }
 
 @media only screen and (max-width: 850px) {
     .form-select {
-        margin-left: auto!important;
+        margin-left: auto !important;
     }
+
     .event-cards div div {
         margin-left: 24px;
     }
+
     .col-lg {
         padding-bottom: 50px;
     }
@@ -110,11 +109,13 @@
         padding-left: 70px;
         padding-right: 70px;
     }
+
     .events-bg {
-    height: 76px !important;
+        height: 76px !important;
     }
+
     .navbar-parallax {
-        background-position-x: 00px; 
+        background-position-x: 00px;
     }
 }
 
@@ -124,6 +125,7 @@
         height: 200px;
         object-fit: cover;
     }
+
     .events-jumbo {
         padding-left: 13px;
         padding-right: 13px;
