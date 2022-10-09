@@ -136,6 +136,9 @@
     .note-img {
         width: 100%;
     }
+    .notes-link {
+        position: relative;
+}
 }
 @media only screen and (max-width: 800px) {
     .note-img {

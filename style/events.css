@@ -34,7 +34,7 @@
 }
 
 .event-cards div div {
-    margin-left: 24px;
+    /*margin-left: 24px;*/
     margin-right: 50px;
 }
 .event-cards span {
@@ -85,15 +85,27 @@
         padding-left: 70px;
         padding-right: 70px;
     }
-}
-
-@media only screen and (max-width: 850px) {
     .config {
         display: none
     }
     .form-select {
         display: block;
+        margin-left: 70px!important;
+
     }
+}
+
+@media only screen and (max-width: 850px) {
+    .form-select {
+        margin-left: auto!important;
+    }
+    .event-cards div div {
+        margin-left: 24px;
+    }
+    .col-lg {
+        padding-bottom: 50px;
+    }
+
     .events-jumbo {
         padding-left: 13px;
         padding-right: 13px;

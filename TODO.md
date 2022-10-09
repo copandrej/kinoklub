@@ -1,29 +1,35 @@
 # TODO FRONTEND
 
-- iphone paralex fix - test how it looks now -- pomoje je to zdej zrihtano? samo da pač ne bo paralex (še iščem rešitev mogoče)
 - fix known issues
 
 - add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it:
-    - footer je popolnoma ne responsive
-    - notes za manjše računalnike in tablice
+    - najprej vsaj toliko da se ne polomi stran med resizanjem -- ok
+    - configurator pri notes za srednje dimenzije -- ok
+    - notes za manjše računalnike in tablice  (ne štime še u nulo)
+    - gumb discover more ni lepo responsiver
     - events za vse dimenzije
-    - configurator pri notes za srednje dimenzije
+    - footer ima še prostor za izboljšavo
 
 
-- Change/refactor the code for mobile first design
+- Podrobnosti čez vse, natančni pxli, dodam placeholder dodatne sliek in besedil tam kjer pride, da zgleda res isto kot design
+- Change/refactor the code for mobile first design and better practices
 - Clean up the code
 - seo, social, special effects, etc. (added value)
 
 
-
 ## known issues
 
-- discover more ne dela dobro. Styli ne štimajo čist, včasih zjebe text ali pa ne izgine po kliku -- fixed
-- pri notesih če je discover more ne zbriše pravilno bottom borderja
-- footer ima spodaj preveč prostora na mobile (igraj se z min height, margini etc.)
+- pri notesih za zadnjo karto treba zbrisat bottom border (sploh če je discover more)
+
+## opciske izbolpave
+
+-iphone paralex na landingu
+
 
 
 # TODO BACKEND
+Premisli a se lotim tega čisto drugače
+
 1. Strapi setup, lokalno z vsemi blueprinti. (lahko testno tudi na domeni)
 2. Povezovanje strapi-flask
 3. Logika za generiranje strani (for i čez vsebino etc.)
