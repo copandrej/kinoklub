@@ -3,15 +3,17 @@
 - fix known issues
 
 - add responsive design for all dimensions (footer, cards, menis, media quires when things go south) -- working on it:
-    - najprej vsaj toliko da se ne polomi stran med resizanjem -- ok
-    - configurator pri notes za srednje dimenzije -- ok
     - notes za manjše računalnike in tablice  (ne štime še u nulo)
     - gumb discover more ni lepo responsiver
     - events za vse dimenzije
     - footer ima še prostor za izboljšavo
 
+- Podrobnosti čez vse, natančni pxli, dodam placeholder dodatne sliek in besedil tam kjer pride, da zgleda res isto kot design:
+    - generična stran ima sedaj drugačn style širine
+    - eventsi nimajo še čist pravilnih razmakov med cardsi
+    - puščice pri eventsih so malo drugačne kot za readmore
 
-- Podrobnosti čez vse, natančni pxli, dodam placeholder dodatne sliek in besedil tam kjer pride, da zgleda res isto kot design
+
 - Change/refactor the code for mobile first design and better practices
 - Clean up the code
 - seo, social, special effects, etc. (added value)
@@ -20,12 +22,11 @@
 ## known issues
 
 - pri notesih za zadnjo karto treba zbrisat bottom border (sploh če je discover more)
+- pri 4k resoluciji zjebe naslovno sliko na landingu (daj black background?)
 
 ## opciske izbolpave
 
 -iphone paralex na landingu
-
-
 
 # TODO BACKEND
 Premisli a se lotim tega čisto drugače
