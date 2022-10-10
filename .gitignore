@@ -2,7 +2,6 @@
 /.idea
 /vendor
 .DS_Store
-/config
 /storage
 /modules
 license.key

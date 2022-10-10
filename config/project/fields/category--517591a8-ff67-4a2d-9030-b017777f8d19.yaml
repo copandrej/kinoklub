@@ -1,0 +1,45 @@
+columnSuffix: jfhayfau
+contentColumnType: string
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: category
+instructions: null
+name: Kategorija
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'notes and stories'
+        -
+          - value
+          - notesAndStories
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - artcicle
+        -
+          - value
+          - artcicle
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - podcast
+        -
+          - value
+          - podcast
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

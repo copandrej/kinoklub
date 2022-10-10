@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: notes
+name: Notes
+propagationMethod: all
+siteSettings:
+  548d1972-4fd4-483a-9f1e-722e249ba366: # Kino klub
+    enabledByDefault: true
+    hasUrls: true
+    template: notes/_entry
+    uriFormat: 'notes/{slug}'
+type: channel
