@@ -20,9 +20,8 @@
 -iphone paralex na landingu
 
 # TODO BACKEND
-Premisli a se lotim tega čisto drugače
 
-1. Strapi setup, lokalno z vsemi blueprinti. (lahko testno tudi na domeni)
-2. Povezovanje strapi-flask
-3. Logika za generiranje strani (for i čez vsebino etc.)
+1. Zrihtaj craft cms na domeni, naštudiraj migriranje nastavitev in vsebine. 
+2. Lokalno naredi "backend" z cms in templati
+3. Naredi migracijo na domeno
 4. Emaili + subscriptioni
