@@ -1,0 +1,31 @@
+dateModified: 1665386556
+email:
+  fromEmail: andrej7.cop@gmail.com
+  fromName: 'Kino Klub'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: false
+    name: assets
+    settings:
+      path: $CONTEXT_DOCUMENT_ROOT/kinoklub/assets
+    type: craft\fs\Local
+    url: null
+meta:
+  __names__:
+    3e497a85-ee4b-4a73-be35-9405f794f010: Common # Common
+    94810247-e488-4a6a-ba04-2c2e5a1c1a12: 'Kino Klub' # Kino Klub
+    c34d1ef1-6bbd-4ed2-9407-f49b727d0c91: img
+    d0ec1d41-a37f-46b1-9d4a-72038ccaa982: 'Kino Klub' # Kino Klub
+system:
+  edition: solo
+  live: true
+  name: 'Kino Klub'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

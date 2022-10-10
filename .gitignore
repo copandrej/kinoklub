@@ -1,3 +1,4 @@
+/.env
 /.idea
-/.vscode
-.editorconfig
+/vendor
+.DS_Store
