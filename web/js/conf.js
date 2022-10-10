@@ -14,7 +14,8 @@ window.addEventListener('load', (event) => {
 
         arr[i].classList.remove("active");
         ap[i].removeAttribute("selected");
-        if ((cat == '' || cat == null) && arr[i].innerText == 'ALL' || cat == ap[i].innerText) {
+        console.log(arr[i].getAttribute("value"));
+        if ((cat == '' || cat == null) && arr[i].getAttribute("value") == 'ALL' || cat == arr[i].getAttribute("value")) {
             arr[i].classList.add("active");
             ap[i].setAttribute("selected", "selected");
 

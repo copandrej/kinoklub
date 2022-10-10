@@ -13,6 +13,7 @@
 ## known issues
 
 - pri notesih za zadnjo karto treba zbrisat bottom border (sploh če je discover more)
+- na dimenziji med tablico in računanlnikom za kratek cajt zjebe social icone v nogi in notes carde
 
 ## opciske izbolpave
 
@@ -20,9 +21,6 @@
 
 # TODO BACKEND
 
-- pri slovenski zrihtat da se kažejo vsi asseti glede na root
-- zjean active config pri slovenski
-- pri notesih treba categorije prevest
 - next events slika prevedit v angleščino (treba rečt krivcu)
 - twig naj vleče eventse po datumih, ne pa po post date. Za landing naj izbere 4 najbližje evente. -- recimo (trenutno pač na roke prestaviš)
 
