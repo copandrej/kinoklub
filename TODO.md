@@ -7,15 +7,12 @@
 - Change/refactor the code for mobile first design and better practices
 
 - seo, social, special effects, etc. (added value):
-    - za dodatno vrednost poglejmo mal effecte k so na primeru sp. --ok
+    - za dodatno vrednost poglejmo mal effecte k so na primeru sp.
 
 
 ## known issues
 
-- slike na normal pagu se vrtijo :P 
-- za normal page je treba hardocat style da bodo in besedilo v skladu z designom.
 - pri notesih za zadnjo karto treba zbrisat bottom border (sploh če je discover more)
-- pri 4k resoluciji zjebe naslovno sliko na landingu (daj black background?)
 
 ## opciske izbolpave
 
@@ -23,12 +20,11 @@
 
 # TODO BACKEND
 
-1. Zrihtaj craft cms na domeni, naštudiraj migriranje nastavitev in vsebine. -- ok
-2. Lokalno naredi "backend" z cms in templati -- working on it
-- slike na normal pagu se vrtijo :P -- OK
-- za normal page je treba hardocat style da bodo in besedilo v skladu z designom. -- OK
-3. Dvojezičnost -- ok
-4. Configurator za notse / delujoč discover more -- ok
-5. twig naj vleče eventse po datumih, ne pa po post date. Za landing naj izbere 4 najbližje evente. -- recimo
-3. Naredi migracijo na domeno
-4. Emaili + subscriptioni (newsletter, ideja je že)
+- pri slovenski zrihtat da se kažejo vsi asseti glede na root
+- zjean active config pri slovenski
+- pri notesih treba categorije prevest
+- next events slika prevedit v angleščino (treba rečt krivcu)
+- twig naj vleče eventse po datumih, ne pa po post date. Za landing naj izbere 4 najbližje evente. -- recimo (trenutno pač na roke prestaviš)
+
+- Naredi migracijo na domeno (to zna bit še problem)
+- Emaili + subscriptioni (newsletter, ideja je že)

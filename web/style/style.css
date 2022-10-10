@@ -881,11 +881,11 @@ video {
     }
 
     .bg-img-parallax {
-        background-position-x: -900px;
+        /*background-position-x: -900px;*/
     }
 
     .navbar-parallax {
-        background-position-x: -900px !important;
+       /* background-position-x: -900px !important;*/
     }
 
 
