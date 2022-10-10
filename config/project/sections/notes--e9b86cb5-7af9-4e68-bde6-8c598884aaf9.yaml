@@ -1,12 +1,20 @@
-defaultPlacement: end
+defaultPlacement: beginning
 enableVersioning: true
 handle: notes
 name: Notes
 propagationMethod: all
 siteSettings:
-  548d1972-4fd4-483a-9f1e-722e249ba366: # Kino klub
+  7dff5ce0-6641-40f0-926b-8bd7f905d8bf: # Kino Klub SL
     enabledByDefault: true
     hasUrls: true
-    template: notes/_entry
-    uriFormat: 'notes/{slug}'
-type: channel
+    template: novica.twig
+    uriFormat: '{slug}'
+  548d1972-4fd4-483a-9f1e-722e249ba366: # Kino klub EN
+    enabledByDefault: true
+    hasUrls: true
+    template: note.twig
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: 822733de-629a-47d0-b731-eb7ef1ef8a2f
+type: structure

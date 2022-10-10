@@ -10,16 +10,16 @@ settings:
   allowSubfolders: false
   allowUploads: true
   allowedKinds: null
-  defaultUploadLocationSource: 'volume:39694638-7fd7-42d3-9c96-8b5b9e49dbc9' # Notes and stories
+  defaultUploadLocationSource: 'volume:369e78c2-5589-40bf-b0bd-f7c8b9b2e955' # img
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maxRelations: 1
   minRelations: 1
   previewMode: full
   restrictFiles: false
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:39694638-7fd7-42d3-9c96-8b5b9e49dbc9' # Notes and stories
+  restrictedLocationSource: 'volume:369e78c2-5589-40bf-b0bd-f7c8b9b2e955' # img
   restrictedLocationSubpath: null
   selectionCondition:
     __assoc__:

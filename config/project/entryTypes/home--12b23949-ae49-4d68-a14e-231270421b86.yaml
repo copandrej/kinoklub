@@ -1,0 +1,55 @@
+fieldLayouts:
+  d78a493b-4727-465f-bcca-1a371b8689f3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: cbf2433c-4e3d-4d38-a530-7fa63215cee3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6f7de5eb-1b48-4f02-8088-a464aeea88cd # Slika
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b8d3f30f-8387-4e52-a32b-1d9a5fcbe38b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cf818e90-86a5-48cd-803f-7ddbac044cb6
+        userCondition: null
+handle: home
+hasTitleField: false
+name: Home
+section: 4b30886b-a63c-4f1a-998a-b2ef3d2b9f95 # Home
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

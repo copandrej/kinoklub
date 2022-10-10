@@ -1,191 +1,244 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>Welcome to Craft CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <style>
-        html,
-        body {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            height: 100%;
-            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-        }
+<!doctype html>
+<html lang="en">
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: hsl(212, 60%, 97%);
-            color: hsl(209, 18%, 30%);
-            display: flex;
-        }
+	<head>
+		<!-- meta tags -->
+		<meta charset="utf-8">
+		<title>Kino Klub | Home</title>
+		<meta name="description" content="A community of fellow motion picture lovers. Join us.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        h1 {
-            margin-top: 0;
-        }
+		<!-- Facebook Meta Tags
+										    <meta property="og:image:height" content="1005">
+										    <meta property="og:image:width" content="1200">
+										    <meta property="og:title" content="Kino Klub">
+										    <meta property="og:description" content="A community of fellow motion picture lovers. Join us.">
+										    <meta property="og:image" content="https://copandrej.github.io/kinoklub/img/og-image.png">
+										    <meta property="og:url" content="https://kinoklub.si">-->
 
-        h2 {
-            margin-top: 24px;
-            font-size: 1em;
-        }
+		<!-- Twitter Meta Tags
+										    <meta name="twitter:card" content="summary_large_image">
+										    <meta property="twitter:image:height" content="1005">
+										    <meta property="twitter:image:width" content="1200">
+										    <meta property="twitter:domain" content="kinoklub.si">
+										    <meta property="twitter:url" content="https://kinoklub.si">
+										    <meta name="twitter:title" content="Kino Bled">
+										    <meta name="twitter:description" content="A community of fellow motion picture lovers. Join us.">
+										    <meta name="twitter:image" content="https://copandrej.github.io/kinoklub/img/og-image.png">-->
 
-        h2:first-child {
-            margin-top: 0;
-        }
+		<!--  All different favicons/icons/bookmark icons...-->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link
+		rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<!--<link rel="manifest" href="site.webmanifest">-->
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#ffffff">
+		<meta name="msapplication-TileColor" content="#000000">
+		<meta name="theme-color" content="#000000">
+		<!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
 
-        p {
-            line-height: 1.4em;
-            margin-bottom: 1.4em;
-        }
+		<!-- Styles -->
+		<link rel="stylesheet" href="{{alias('@web') }}/style/normalize.css"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/style.css">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css">
 
-        ul {
-            line-height: 1.3em;
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
+	</head>
 
-        ul li {
-            margin-bottom: 0.35em;
-        }
+	<body>
 
-        a {
-            color: #0B69A3;
-            text-decoration: none;
-        }
+		<!-- navbar + bg img-->
+		<div class="bg-img-parallax">
+			<div
+				class="navbar navbar-parallax" id="fade-out">
 
-        a:hover {
-            text-decoration: underline;
-        }
+				<!-- logo -->
+				<h1>
+					<a style="display: flex;" href="{{alias('@web') }}"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
+				</h1>
 
-        .go {
-            color: #0B69A3;
-        }
+				<!-- navbar desktop -->
+				<div class="navbar1-parallax">
+					<a class="link hover" href="notes">NOTES AND STORIES</a>
+					<a class="link hover" href="events">EVENT CALANDAR</a>
+					<a class="link hover" href="projects">PROJECTS</a>
+					<a class="link hover" href="about">ABOUT</a>
+				</div>
 
-        .go:after {
-            padding-left: 4px;
-            content: '→';
-            text-decoration: none !important;
-        }
+			</div>
 
-        small {
-            color: hsl(211, 11%, 59%);
-        }
+			<!-- next events info section -->
+			<div class="next-events">
 
-        code {
-            display: inline-block;
-            color: #EF4E4E;
-            padding: 0 2px;
-            background: hsl(212, 60%, 97%);
-            border-radius: 3px;
-            line-height: 1.3;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            font-size: 0.9em;
-        }
+				<img src="{{alias('@web') }}/img/next-events.png">
+				<h4>
 
-        #container {
-            flex-grow: 1;
-        }
+					{% set myEntryQuery = craft.entries()
+                        .section('events')
+                        .limit(4) %}
 
-        #modal {
-            background: #fff;
-        }
+					{# Fetch the entries #}
+					{% set events = myEntryQuery.all() %}
+					{# Display the entries #}
+					{% for event in events %}
 
-        #aside {
-            background: hsl(212, 60%, 97%);
-        }
+						<a class="hover" href="{{ event.slug }}">{{ event.title }}<span>{{ event.date|date("d/m")}}</span>
+						</a>
+					{% endfor %}
 
-        .content {
-            padding: 35px;
-            padding-left: calc(35px + env(safe-area-inset-left));
-            padding-right: calc(35px + env(safe-area-inset-right));
-        }
+				</h4>
 
-        @media (min-width:768px) {
-            #modal {
-                display: flex;
-            }
+				<p>Kino Klub is a project of Aspekt Institute. ©2022</p>
 
-            #main {
-                width: 50%;
-                overflow: auto;
-            }
+			</div>
 
-            #aside {
-                width: 50%;
-                overflow: auto;
-            }
-        }
+			<!-- language change -->
+			<lan class="lan">
+				<a href="{{alias('@web') }}/sl//">SL
+				</a>/<a class="chosen" href="{{alias('@web') }}">
+					EN</a>
+			</lan>
 
-        @media (min-width:768px) and (min-height: 376px) {
-            body {
-                background-color: hsl(212, 50%, 93%);
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
+		</div>
 
-            #container {
-                display: flex;
-                padding: 24px;
-                align-items: center;
-                justify-content: center;
-            }
+		<!-- navbar mobile -->
+		<div id="mobile-meni" class="mobile-meni display-none">
 
-            #modal {
-                height: 100%;
-                max-width: 800px;
-                max-height: 525px;
-                border-radius: 4px;
-                overflow: auto;
-                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-            }
+			<a href="notes">NOTES AND STORIES</a>
+			<a href="events">EVENT CALANDAR</a>
+			<a href="projects">PROJECTS</a>
+			<a href="about">ABOUT</a>
+			<spn class="mobile-lan">
+				<span><a style="display:inline;" href="{{alias('@web') }}/sl//">SL</a>
+				</span>/<span>
+					<a style="display:inline;" href="{{alias('@web') }}">
+					EN</a></span>
+			</spn>
 
-            #aside {
-                overflow: auto;
-            }
-        }
+		</div>
 
-    </style>
-</head>
-<body class="ltr">
-<div id="container">
-    <div id="modal">
-        <div id="main">
-            <div class="content">
-                <h1>Welcome</h1>
-                <p>Thanks for installing Craft CMS!</p>
-                <p>You’re looking at the <code>index.twig</code> template file located in your
-                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
-                    front end, you can replace this with something custom.</p>
-                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
-                    when you get a chance&mdash;especially
-                    <a href="https://craftcms.com/discord" target="_blank">Discord</a>
-                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
-                    The Craft community is full of smart, friendly, and helpful people!</p>
-                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
-            </div>
-        </div>
-        <div id="aside">
-            <div class="content">
-                <h2>Popular Resources</h2>
-                <ul>
-                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
-                    <li><a href="https://craftcms.com/docs/3.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
-                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
-                    <li><a href="https://twitter.com/hashtag/craftcms" target="_blank">#craftcms</a><br><small>See the latest tweets about Craft.</small></li>
-                    <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
-                    <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
-                    <li><a href="https://craftquest.io/" target="_blank">CraftQuest</a><br><small>Watch unlimited video lessons and courses.</small></li>
-                    <li><a href="http://craftlinklist.com/" target="_blank">Craft Link List</a><br><small>Stay in-the-know.</small></li>
-                    <li><a href="https://nystudio107.com/blog" target="_blank">nystudio107 Blog</a><br><small>Learn Craft and modern web development.</small></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
+		<!-- hamburger menu -->
+		<div class="knof" id="knof" onclick="anime()">
+			<div id="sprememba" class="zg"></div>
+			<div id="spremembaa" class="sr"></div>
+			<div id="spremembaaa" class="sp"></div>
+		</div>
+
+		{# Create an entry query with the 'section' and 'limit' parameters #}
+		{% set myEntryQuery = craft.entries()
+        .section('notes')
+        .limit(5) %}
+
+		{# Fetch the entries #}
+		{% set entries = myEntryQuery.all() %}
+		{# Display the entries #}
+
+		<!-- main content -->
+			<div class="jumbotron landing-main"> {% for entry in entries %}
+				{% set slika = entry.slika.one %}
+
+				{% if (loop.index is odd) %}
+					<div class="row">
+
+						<div class="col-xl-8">
+							<span class="category mobile-display">{{ entry.category }}</span>
+							<a href="{{ entry.slug }}">
+
+								<img loading="lazy" class="note-img" src="{{ slika.url }}"></a>
+						</div>
+
+						<div class="col-xl-4 title">
+							<span class="category desktop-display">{{ entry.category }}</span>
+							<h3 class="title">
+								{{ entry.title }}
+							</h3>
+							<a class="notes-link" href="{{ entry.slug }}"><img src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
+						</div>
+
+					</div>
+				{% endif %}
+
+				{% if (loop.index is even) %}
+					<div class="row reverse">
+
+						<div class="col-xl-4 title">
+							<span class="category desktop-display">{{ entry.category }}</span>
+							<h3 class="title">
+								{{ entry.title }}
+							</h3>
+							<a class="notes-link" href="{{ entry.slug }}"><img src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
+						</div>
+
+						<div class="col-xl-8">
+							<span class="category mobile-display">{{ entry.category }}</span>
+
+							<a href="{{ entry.slug }}"><img loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
+						</div>
+
+					</div>
+				{% endif %}
+			{% endfor %}
+
+		</div>
+
+		<!-- footer -->
+		<footer
+			class="row gen-leg">
+
+			<!---desktop footer-->
+			<div class="col-md-2 contact desktop-footer">
+				<p>GET IN TOUCH</p>
+
+				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
+
+			</div>
+
+			<div class="col-md-1 socials desktop-footer">
+				<p>FOLLOW</p>
+				<a href="https://www.instagram.com/kinoklub___/"><img src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
+				<a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
+			</div>
+
+			<div class="col-md-6 more desktop-footer">
+				<form>
+					<p>WANT MORE FROM KINO KLUB?</p>
+					<input type="email" placeholder="Email Address" required>
+					<input type="submit" value="Submit">
+				</form>
+				<span>Kino Klub is a project of Aspekt Institute. ©2022</span>
+
+			</div>
+
+
+			<!---mobile footer-->
+			<div class="more mobile-footer">
+				<form>
+					<p>WANT TO KNOW MORE</p>
+					<input type="email" placeholder="Email Address" required>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+
+			<div class="socials mobile-footer">
+				<p>FOLLOW</p>
+				<a href="https://www.instagram.com/kinoklub___/"><img src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
+				<a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
+			</div>
+
+			<div class="contact mobile-footer">
+				<p>GET IN TOUCH</p>
+				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
+				<p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
+			</div>
+
+		</footer>
+
+		<script src="{{alias('@web') }}/js/script.js"></script>
+		<script src="{{alias('@web') }}/js/fade-out.js"></script>
+
+	</body>
 </html>

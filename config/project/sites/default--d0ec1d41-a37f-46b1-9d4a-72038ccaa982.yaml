@@ -1,8 +1,0 @@
-baseUrl: $PRIMARY_SITE_URL
-handle: default
-hasUrls: true
-language: en-US
-name: 'Kino Klub'
-primary: true
-siteGroup: 94810247-e488-4a6a-ba04-2c2e5a1c1a12 # Kino Klub
-sortOrder: 1

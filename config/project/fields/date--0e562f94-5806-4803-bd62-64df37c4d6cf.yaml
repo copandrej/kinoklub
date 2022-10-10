@@ -1,0 +1,17 @@
+columnSuffix: wqdsojsv
+contentColumnType: datetime
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: date
+instructions: null
+name: Date
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+  showDate: true
+  showTime: false
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

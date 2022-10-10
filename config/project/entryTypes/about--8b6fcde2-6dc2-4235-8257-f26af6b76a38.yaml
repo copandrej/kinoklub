@@ -1,0 +1,79 @@
+fieldLayouts:
+  7ceeec06-b84d-4795-9544-328fa6741d0d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 016e086a-33ff-4ea1-b9fe-53e3654ec5ac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5d67afcb-a40e-4d38-8b10-4423c1ba48a4 # Naslov
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 10622180-a1e8-47ec-836e-40e7fa225747
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6f7de5eb-1b48-4f02-8088-a464aeea88cd # Slika
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f99cc62-69d1-446c-b787-f37ce88ca375
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f3d0073-5528-4253-b49e-0fc5e6d97441 # Rich text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7268c83f-cde2-4fcc-a5e7-18829ba1b908
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 07de3e28-c2b1-4720-b7b9-3d8639910992
+        userCondition: null
+handle: about
+hasTitleField: false
+name: About
+section: 4f541f05-c78e-43df-ba73-556c39ed5e4a # About
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

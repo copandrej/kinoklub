@@ -1,7 +1,14 @@
 {
   "require": {
+    "craftcms/ckeditor": "2.0.0",
     "craftcms/cms": "^4.2.1",
+    "craftcms/contact-form": "3.0.0",
+    "craftcms/mailgun": "3.0.0",
     "craftcms/redactor": "3.0.2",
+    "doublesecretagency/craft-siteswitcher": "2.3.0",
+    "ether/seo": "v4.0.3",
+    "jub/craft-newsletter": "2.1.0",
+    "vaersaagod/seomate": "2.0.3",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

@@ -1,34 +1,140 @@
-dateModified: 1665343887
+dateModified: 1665424303
+elementSources:
+  craft\elements\Entry:
+    -
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      disabled: false
+      key: singles
+      tableAttributes:
+        - link
+        - uri
+        - 'field:6f7de5eb-1b48-4f02-8088-a464aeea88cd' # Slika
+      type: native
+    -
+      disabled: false
+      key: 'section:4afffa94-3642-4081-8cf0-0b281a97608b' # Events
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - 'field:6f7de5eb-1b48-4f02-8088-a464aeea88cd' # Slika
+        - 'field:0e562f94-5806-4803-bd62-64df37c4d6cf' # Date
+        - 'field:1d09924c-7d8b-4c7b-bd9a-26a1510cd435' # Place
+        - uri
+      type: native
+    -
+      disabled: false
+      key: 'section:e9b86cb5-7af9-4e68-bde6-8c598884aaf9' # Notes
+      tableAttributes:
+        - postDate
+        - link
+        - 'field:6f7de5eb-1b48-4f02-8088-a464aeea88cd' # Slika
+        - 'field:517591a8-ff67-4a2d-9030-b017777f8d19' # Kategorija
+      type: native
 email:
   fromEmail: andrej7.cop@gmail.com
   fromName: 'Kino klub'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
-  assets:
-    hasUrls: false
-    name: assets
+  img:
+    hasUrls: true
+    name: img
     settings:
-      path: /home/kinobl03/beta.kinoklub.si/assets
+      path: /opt/lampp/htdocs/kinoklub/web/img
     type: craft\fs\Local
-    url: null
+    url: 'http://localhost/kinoklub/web/img'
 meta:
   __names__:
+    0e562f94-5806-4803-bd62-64df37c4d6cf: Date # Date
+    1d09924c-7d8b-4c7b-bd9a-26a1510cd435: Place # Place
+    3d596aee-6653-4770-a869-2adcf68e8a4f: Projects # Projects
+    4afffa94-3642-4081-8cf0-0b281a97608b: Events # Events
+    4b30886b-a63c-4f1a-998a-b2ef3d2b9f95: Home # Home
+    4f541f05-c78e-43df-ba73-556c39ed5e4a: About # About
     5d67afcb-a40e-4d38-8b10-4423c1ba48a4: Naslov # Naslov
     6f7de5eb-1b48-4f02-8088-a464aeea88cd: Slika # Slika
+    7dff5ce0-6641-40f0-926b-8bd7f905d8bf: 'Kino Klub SL' # Kino Klub SL
     7f3d0073-5528-4253-b49e-0fc5e6d97441: 'Rich text' # Rich text
-    548d1972-4fd4-483a-9f1e-722e249ba366: 'Kino klub' # Kino klub
+    8b6fcde2-6dc2-4235-8257-f26af6b76a38: About # About
+    12b23949-ae49-4d68-a14e-231270421b86: Home # Home
+    71f1e1a8-6334-4c4d-9bfc-4c60fea6a590: Projects # Projects
+    369e78c2-5589-40bf-b0bd-f7c8b9b2e955: img # img
+    548d1972-4fd4-483a-9f1e-722e249ba366: 'Kino klub EN' # Kino klub EN
     734bb3f1-97ed-4c94-8234-b4002833597e: Common # Common
     517591a8-ff67-4a2d-9030-b017777f8d19: Kategorija # Kategorija
-    39694638-7fd7-42d3-9c96-8b5b9e49dbc9: 'Notes and stories' # Notes and stories
     a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
-    d6dee1ef-d0f4-41e1-a5b4-bb5ddf838a1e: Vsebina # Vsebina
+    b6417f85-8d11-44f0-ab58-66f5733257d8: Events # Events
     e9b86cb5-7af9-4e68-bde6-8c598884aaf9: Notes # Notes
-    ec752501-2740-4382-afb1-396107a872da: Vnos # Vnos
+    ec752501-2740-4382-afb1-396107a872da: 'Notes and Stories' # Notes and Stories
 plugins:
+  newsletter:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+    settings:
+      description: ''
+      facebookAppId: ''
+      metaTemplate: ''
+      removeAlternateUrls: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage: ''
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' | {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: ''
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  site-switcher:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0
 system:
   edition: solo
   live: true

@@ -14,10 +14,10 @@ settings:
           - 'notes and stories'
         -
           - value
-          - notesAndStories
+          - 'NOTES AND STORIES'
         -
           - default
-          - ''
+          - '1'
     -
       __assoc__:
         -
@@ -25,7 +25,7 @@ settings:
           - artcicle
         -
           - value
-          - artcicle
+          - ARTICLES
         -
           - default
           - ''
@@ -36,7 +36,7 @@ settings:
           - podcast
         -
           - value
-          - podcast
+          - PODCASTS
         -
           - default
           - ''

@@ -50,30 +50,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d6dee1ef-d0f4-41e1-a5b4-bb5ddf838a1e # Vsebina
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3dec914b-786c-434e-8371-ea59e863b701
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 7f3d0073-5528-4253-b49e-0fc5e6d97441 # Rich text
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 254332f8-5a46-40b5-b146-48f360bfb2f8
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 517591a8-ff67-4a2d-9030-b017777f8d19 # Kategorija
             instructions: null
             label: null
@@ -87,9 +63,27 @@ fieldLayouts:
         name: Content
         uid: 4530a870-8e66-4589-899e-879ff79b6dbc
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7f3d0073-5528-4253-b49e-0fc5e6d97441 # Rich text
+            instructions: null
+            label: Text
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd80c569-ca2b-47aa-a524-85c8aa8b1aaf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Text
+        uid: 50d513a3-3b1e-4b9f-839d-eae6eacb898a
+        userCondition: null
 handle: default
 hasTitleField: true
-name: Vnos
+name: 'Notes and Stories'
 section: e9b86cb5-7af9-4e68-bde6-8c598884aaf9 # Notes
 sortOrder: 1
 titleFormat: null

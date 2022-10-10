@@ -1,0 +1,9 @@
+baseUrl: 'http://localhost/kinoklub/web/sl/'
+enabled: '1'
+handle: kinoKlubSl
+hasUrls: true
+language: sl-SI
+name: 'Kino Klub SL'
+primary: false
+siteGroup: a5095b5e-8a24-4f7f-bb02-26be023077b2 # Kino klub
+sortOrder: 2

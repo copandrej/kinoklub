@@ -1,0 +1,17 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projects
+name: Projects
+propagationMethod: all
+siteSettings:
+  7dff5ce0-6641-40f0-926b-8bd7f905d8bf: # Kino Klub SL
+    enabledByDefault: true
+    hasUrls: true
+    template: o-nas.twig
+    uriFormat: projects
+  548d1972-4fd4-483a-9f1e-722e249ba366: # Kino klub EN
+    enabledByDefault: true
+    hasUrls: true
+    template: about.twig
+    uriFormat: projects
+type: single

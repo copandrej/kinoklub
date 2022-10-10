@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<!-- meta tags -->
+		<meta charset="utf-8">
+		{% block content %}
+
+			<title>Kino Klub |
+								O NAS</title>
+			<meta name="description" content="A community of fellow motion picture lovers. Join us.">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- Facebook Meta Tags => adjust this dynamicaly to the current page TODO
+						    <meta property="og:image:height" content="1005">
+						    <meta property="og:image:width" content="1200">
+						    <meta property="og:title" content="Kino Klub">
+						    <meta property="og:description" content="A community of fellow motion picture lovers. Join us.">
+						    <meta property="og:image" content="https://copandrej.github.io/kinoklub/img/og-image.png">
+						    <meta property="og:url" content="https://kinoklub.si">-->
+
+			<!-- Twitter Meta Tags
+						    <meta name="twitter:card" content="summary_large_image">
+						    <meta property="twitter:image:height" content="1005">
+						    <meta property="twitter:image:width" content="1200">
+						    <meta property="twitter:domain" content="kinoklub.si">
+						    <meta property="twitter:url" content="https://kinoklub.si">
+						    <meta name="twitter:title" content="Kino Bled">
+						    <meta name="twitter:description" content="A community of fellow motion picture lovers. Join us.">
+						    <meta name="twitter:image" content="https://copandrej.github.io/kinoklub/img/og-image.png">-->
+
+			<!--  All different favicons/icons/bookmark icons...-->
+			<link rel="apple-touch-icon" sizes="180x180" href="{{alias('@web') }}/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="{{alias('@web') }}/favicon-32x32.png">
+			<link
+			rel="icon" type="image/png" sizes="16x16" href="{{alias('@web') }}/favicon-16x16.png">
+			<!--<link rel="manifest" href="site.webmanifest">-->
+			<link rel="mask-icon" href="{{alias('@web') }}/safari-pinned-tab.svg" color="#ffffff">
+			<meta name="msapplication-TileColor" content="#000000">
+			<meta name="theme-color" content="#000000">
+			<!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
+
+			<!-- Styles -->
+			<link rel="stylesheet" href="{{alias('@web') }}/style/normalize.css"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<link rel="stylesheet" href="{{alias('@web') }}/style/style.css">
+			<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css">
+			<link rel="stylesheet" href="{{alias('@web') }}/style/events.css">
+			<style>
+				{% set slika = entry.slika.one %}
+				.bg-img-general {
+					background-image: url({{slika.url}});
+					background-size: cover;
+				}
+			</style>
+
+		</head>
+
+		<body>
+
+			<!-- navbar -> for this page bg image is not needed-->
+			<div class="bg-img-general">
+				<div class="navbar">
+
+					<h1>
+						<a style="display: flex;" href="{{alias('@web') }}/sl/"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
+					</h1>
+
+					<!-- navbar desktop -->
+					<div class="navbar1">
+						<a class="link hover" href="novice">ZAPISKI IN ZGODBE</a>
+						<a class="link hover" href="dogodki">KOLEDAR DOGODKOV</a>
+						<a class="link hover" href="projects">PROJEKTI</a>
+						<a class="link hover" href="about">O NAS</a>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- navbar mobile -->
+			<div id="mobile-meni" class="mobile-meni display-none">
+
+				<a href="novice">ZAPISKI IN ZGODBE</a>
+				<a href="dogodki">KOLEDAR DOGODKOV</a>
+				<a href="projects">PROJEKTI</a>
+				<a href="about">O NAS</a>
+				<spn class="mobile-lan">
+					<span>SL
+					</span>/<span>
+						EN</span>
+				</spn>
+
+			</div>
+
+			<!-- hamburger menu-->
+			<div class="knof not-fixed" onclick="anime()">
+				<div id="sprememba" class="zg"></div>
+				<div id="spremembaa" class="sr"></div>
+				<div id="spremembaaa" class="sp"></div>
+			</div>
+
+
+			<!-- main content -->
+			<div class="jumbotron normal-page-con">
+
+				<p class="pt-5">LJUBLJANA , SLOVENIA</p>
+				<h2>{{entry.naslov}}</h2>
+
+				<div class="content">
+					<!--
+										                DYNAMIC CONTENT HERE FROM CMS style and images are pulled as well
+										            -->
+					<!-- placeholder-->
+				{{ entry.richText }}
+
+			</div>
+
+		{% endblock %}
+		</div>
+
+		<!-- footer -->
+			<footer
+			class="row gen-leg"> <!---desktop footer-->
+			<div class="col-md-2 contact desktop-footer">
+				<p>KONTAKTIRAJTE NAS</p>
+
+				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
+
+			</div>
+
+			<div class="col-md-1 socials desktop-footer">
+				<p>SLEDITE NAM</p>
+				<a href="https://www.instagram.com/kinoklub___/"><img src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
+				<a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
+			</div>
+
+			<div class="col-md-6 more desktop-footer">
+				<form>
+					<p>ŽELITE VEČ OD KINO KLUBA?</p>
+					<input type="email" placeholder="Email Naslov" required>
+					<input type="submit" value="Pošlji">
+				</form>
+				<span>Kino Klub je projekt Zavoda Aspekt. ©2022
+				</span>
+
+			</div>
+
+
+			<!---mobile footer-->
+			<div class="more mobile-footer">
+				<form>
+					<p>ŽELITE VEČ?</p>
+					<input type="email" placeholder="Email Address" required>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+
+			<div class="socials mobile-footer">
+				<p>SLEDITE NAM</p>
+				<a href="https://www.instagram.com/kinoklub___/"><img src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
+				<a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
+			</div>
+
+			<div class="contact mobile-footer">
+				<p>ONTAKTIRAJTE NAS</p>
+				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
+				<a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
+				<p class="leg-leg">Kino Klub je projekt Zavoda Aspekt. ©2022
+				</p>
+			</div>
+
+		</footer>
+
+
+		<!-- scripts (normal page does not need fade out script!)-->
+		<script src="{{alias('@web') }}/js/script.js"></script>
+	</body>
+
+</html>

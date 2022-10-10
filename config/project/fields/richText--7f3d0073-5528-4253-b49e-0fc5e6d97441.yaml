@@ -1,5 +1,5 @@
 columnSuffix: jjozyrht
-contentColumnType: text
+contentColumnType: mediumtext
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: richText
 instructions: null
@@ -8,7 +8,7 @@ searchable: false
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
-  columnType: text
+  columnType: mediumtext
   configSelectionMode: choose
   defaultTransform: ''
   manualConfig: ''
@@ -23,5 +23,5 @@ settings:
   showUnpermittedVolumes: false
   uiMode: enlarged
 translationKeyFormat: null
-translationMethod: none
+translationMethod: language
 type: craft\redactor\Field

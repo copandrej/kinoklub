@@ -1,0 +1,91 @@
+fieldLayouts:
+  04746af0-a397-4d4e-9ca4-7a1d51b91e74:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c6f57c79-8ff0-4810-899b-99abeacc8ae3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6f7de5eb-1b48-4f02-8088-a464aeea88cd # Slika
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1001e704-5a92-4d42-8b6b-eaec70bc9b0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7f3d0073-5528-4253-b49e-0fc5e6d97441 # Rich text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9e419e2-80f0-4ea0-a6e8-35faf19f373c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0e562f94-5806-4803-bd62-64df37c4d6cf # Date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 915def0a-0e74-453f-a443-8bb2794a3504
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 1d09924c-7d8b-4c7b-bd9a-26a1510cd435 # Place
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be940cd0-de47-43b5-ab95-0d4ee9424a03
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 2f1b373f-4111-48f7-8745-f95a36633305
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Events
+section: 4afffa94-3642-4081-8cf0-0b281a97608b # Events
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
