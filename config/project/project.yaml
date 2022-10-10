@@ -1,31 +1,37 @@
-dateModified: 1665386556
+dateModified: 1665343887
 email:
   fromEmail: andrej7.cop@gmail.com
-  fromName: 'Kino Klub'
+  fromName: 'Kino klub'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   assets:
     hasUrls: false
     name: assets
     settings:
-      path: $CONTEXT_DOCUMENT_ROOT/kinoklub/assets
+      path: /home/kinobl03/beta.kinoklub.si/assets
     type: craft\fs\Local
     url: null
 meta:
   __names__:
-    3e497a85-ee4b-4a73-be35-9405f794f010: Common # Common
-    94810247-e488-4a6a-ba04-2c2e5a1c1a12: 'Kino Klub' # Kino Klub
-    c34d1ef1-6bbd-4ed2-9407-f49b727d0c91: img
-    d0ec1d41-a37f-46b1-9d4a-72038ccaa982: 'Kino Klub' # Kino Klub
+    5d67afcb-a40e-4d38-8b10-4423c1ba48a4: Naslov # Naslov
+    6f7de5eb-1b48-4f02-8088-a464aeea88cd: Slika # Slika
+    7f3d0073-5528-4253-b49e-0fc5e6d97441: 'Rich text' # Rich text
+    548d1972-4fd4-483a-9f1e-722e249ba366: 'Kino klub' # Kino klub
+    734bb3f1-97ed-4c94-8234-b4002833597e: Common # Common
+    517591a8-ff67-4a2d-9030-b017777f8d19: Kategorija # Kategorija
+    39694638-7fd7-42d3-9c96-8b5b9e49dbc9: 'Notes and stories' # Notes and stories
+    a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
+    d6dee1ef-d0f4-41e1-a5b4-bb5ddf838a1e: Vsebina # Vsebina
+    e9b86cb5-7af9-4e68-bde6-8c598884aaf9: Notes # Notes
+    ec752501-2740-4382-afb1-396107a872da: Vnos # Vnos
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true
-  name: 'Kino Klub'
+  name: 'Kino klub'
   schemaVersion: 4.0.0.9
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true
