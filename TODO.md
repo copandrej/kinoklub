@@ -16,14 +16,20 @@
 - pri notesih za zadnjo karto treba zbrisat bottom border (sploh če je discover more)
 - na dimenziji med tablico in računanlnikom za kratek cajt zjebe social icone v nogi in notes carde
 - Mobile en/sl je treba popravit
+- vse slike morajo imeti alt. Tudi cms, mora imet možnost dodat alt
+- Slika na landingu mobile, nekaj čudno skače
 
 ## opciske izbolpave
 
--iphone paralex na landingu
+- iphone paralex na landingu
+- custom scroll bar
+- custom link barva na običnemu pagu?
+- active link v glavnem navbaru?
+- backlink iz podstrani na prejšne strani
 
 # TODO BACKEND
 
 - next events slika prevedit v angleščino (treba rečt krivcu)
-- twig naj vleče eventse po datumih, ne pa po post date. Za landing naj izbere 4 najbližje evente. -- recimo (trenutno pač na roke prestaviš)
-
-- Emaili + subscriptioni (newsletter, ideja je že)
+- Emaili + subscriptioni (newsletter, ideja je že) (plus async email form)
+- description + alt za seo nastavit na backendu tudi
+- za navaden page dinamično nastavljanje social share (title, description, image)
