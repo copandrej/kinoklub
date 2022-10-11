@@ -14,4 +14,7 @@ siteSettings:
     hasUrls: true
     template: note.twig
     uriFormat: '{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: 174ece1f-7f5c-4c21-a167-7ce75a0c12fc
+type: structure

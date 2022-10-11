@@ -1,5 +1,8 @@
 # Craft CMS for kino klub website
 
+## Beta: https://beta.kinoklub.si/
+
+
 static parts of the website are in the `web` folder. Templates are in `templates` folder. Craft generates dynamic content from templates with twig.
 
 
