@@ -1,86 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 	<head>
+
 		<!-- meta tags -->
-		<meta charset="utf-8">
-		<title>Kino Klub | Home</title>
-		<meta name="description" content="A community of fellow motion picture lovers. Join us.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% include "meta.twig" %}
 
-		<!-- Facebook Meta Tags
-										    <meta property="og:image:height" content="1005">
-										    <meta property="og:image:width" content="1200">
-										    <meta property="og:title" content="Kino Klub">
-										    <meta property="og:description" content="A community of fellow motion picture lovers. Join us.">
-										    <meta property="og:image" content="https://copandrej.github.io/kinoklub/img/og-image.png">
-										    <meta property="og:url" content="https://kinoklub.si">-->
-
-		<!-- Twitter Meta Tags
-										    <meta name="twitter:card" content="summary_large_image">
-										    <meta property="twitter:image:height" content="1005">
-										    <meta property="twitter:image:width" content="1200">
-										    <meta property="twitter:domain" content="kinoklub.si">
-										    <meta property="twitter:url" content="https://kinoklub.si">
-										    <meta name="twitter:title" content="Kino Bled">
-										    <meta name="twitter:description" content="A community of fellow motion picture lovers. Join us.">
-										    <meta name="twitter:image" content="https://copandrej.github.io/kinoklub/img/og-image.png">-->
-
-		<!--  All different favicons/icons/bookmark icons...-->
-		<link rel="apple-touch-icon" sizes="180x180" href="{{alias('@web') }}/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="{{alias('@web') }}/favicon-32x32.png">
-		<link
-		rel="icon" type="image/png" sizes="16x16" href="{{alias('@web') }}/favicon-16x16.png">
-		<!--<link rel="manifest" href="site.webmanifest">-->
-		<link rel="mask-icon" href="{{alias('@web') }}/safari-pinned-tab.svg" color="#ffffff">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="theme-color" content="#000000">
-		<!--<link rel="icon" type="image/svg+xml" href="{{alias('@web') }}/favicon.svg">-->
-
-		<!-- Styles -->
-		<link rel="stylesheet" href="{{alias('@web') }}/style/normalize.css"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/style.css">
 		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css">
-        <style>
-        {% set slika = entry.slika.one %}
-        .bg-img-parallax {
-            background-image: url({{slika.url}});
-            background-size: cover;
-        }
-        </style>
-
+		<style>
+			{% set slika = entry.slika.one %}
+			.bg-img-parallax {
+				background-image: url({{slika.url}});
+				background-size: cover;
+			}
+		</style>
 	</head>
 
-	<body>
 
+	<body>
 		<!-- navbar + bg img-->
-		<div class="bg-img-parallax">
-			<div
-				class="navbar navbar-parallax" id="fade-out">
+		<header class="bg-img-parallax">
+
+			<div class="navbar navbar-parallax" id="fade-out">
 
 				<!-- logo -->
 				<h1>
-					<a style="display: flex;" href="{{alias('@web') }}"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
+					<a style="display: flex;" href="{{alias('@web') }}">
+							<img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png">
+					</a>
 				</h1>
 
 				<!-- navbar desktop -->
-				<div class="navbar1-parallax">
-					<a class="link hover" href="notes">NOTES AND STORIES</a>
-					<a class="link hover" href="events">EVENT CALANDAR</a>
-					<a class="link hover" href="projects">PROJECTS</a>
-					<a class="link hover" href="about">ABOUT</a>
-				</div>
+					<nav class="navbar1-parallax">
+						<a class="link hover" href="notes">NOTES AND STORIES</a>
+						<a class="link hover" href="events">EVENT CALANDAR</a>
+						<a class="link hover" href="projects">PROJECTS</a>
+						<a class="link hover" href="about">ABOUT</a>
+					</nav>
 
 			</div>
 
 			<!-- next events info section -->
-			<div class="next-events">
+			<section class="next-events">
 
-				<img src="{{alias('@web') }}/img/next-events.png">
+				<img alt="Next events" src="{{alias('@web') }}/img/next-events.png">
+
 				<h4>
 
 					{% set myEntryQuery = craft.entries()
-                        .section('events')
-                        .limit(4) %}
+					.section('events')
+					.limit(4) %}
 
 					{# Fetch the entries #}
 					{% set events = myEntryQuery.all() %}
@@ -95,7 +63,7 @@
 
 				<p>Kino Klub is a project of Aspekt Institute. ©2022</p>
 
-			</div>
+			</section>
 
 			<!-- language change -->
 			<lan class="lan">
@@ -104,23 +72,25 @@
 					EN</a>
 			</lan>
 
-		</div>
+		</header>
 
 		<!-- navbar mobile -->
-		<div id="mobile-meni" class="mobile-meni display-none">
+		<nav id="mobile-meni" class="mobile-meni display-none">
 
 			<a href="notes">NOTES AND STORIES</a>
 			<a href="events">EVENT CALANDAR</a>
 			<a href="projects">PROJECTS</a>
 			<a href="about">ABOUT</a>
 			<spn class="mobile-lan">
-				<span><a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
+				<span>
+					<a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
 				</span>/<span>
 					<a style="display:inline;" href="{{alias('@web') }}">
-					EN</a></span>
+						EN</a>
+				</span>
 			</spn>
 
-		</div>
+		</nav>
 
 		<!-- hamburger menu -->
 		<div class="knof" id="knof" onclick="anime()">
@@ -128,7 +98,6 @@
 			<div id="spremembaa" class="sr"></div>
 			<div id="spremembaaa" class="sp"></div>
 		</div>
-
 		{# Create an entry query with the 'section' and 'limit' parameters #}
 		{% set myEntryQuery = craft.entries()
         .section('notes')
@@ -139,113 +108,55 @@
 		{# Display the entries #}
 
 		<!-- main content -->
-			<div class="jumbotron landing-main"> {% for entry in entries %}
+		<main class="jumbotron landing-main"> 
+			{% for entry in entries %}
 				{% set slika = entry.slika.one %}
-
 				{% if (loop.index is odd) %}
-					<div class="row">
+
+					<section class="row">
 
 						<div class="col-xl-8">
 							<span class="category mobile-display">{{ entry.category }}</span>
 							<a href="{{ entry.slug }}">
 
-								<img loading="lazy" class="note-img" src="{{ slika.url }}"></a>
+								<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
 						</div>
 
 						<div class="col-xl-4 title">
 							<span class="category desktop-display">{{ entry.category }}</span>
-							<h3 class="title">
-								{{ entry.title }}
-							</h3>
-							<a class="notes-link" href="{{ entry.slug }}"><img src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
+							<a style="text-decoration:none;" href="{{ entry.slug }}">
+								<h3 class="title">
+									{{ entry.title }}
+								</h3>
+							</a>
+							<a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
 						</div>
 
-					</div>
+					</section>
+
 				{% endif %}
 
 				{% if (loop.index is even) %}
-					<div class="row reverse">
+					<section class="row reverse">
 
 						<div class="col-xl-4 title">
 							<span class="category desktop-display">{{ entry.category }}</span>
-							<h3 class="title">
-								{{ entry.title }}
-							</h3>
-							<a class="notes-link" href="{{ entry.slug }}"><img src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
+							<a style="text-decoration:none;" href="{{ entry.slug }}">
+								<h3 class="title">
+									{{ entry.title }}
+								</h3>
+							</a>
+							<a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
 						</div>
 
 						<div class="col-xl-8">
 							<span class="category mobile-display">{{ entry.category }}</span>
 
-							<a href="{{ entry.slug }}"><img loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
+							<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
 						</div>
 
-					</div>
+					</section>
 				{% endif %}
 			{% endfor %}
-
-		</div>
-
-		<!-- footer -->
-		<footer
-			class="row gen-leg">
-
-			<!---desktop footer-->
-			<div class="col-md-2 contact desktop-footer">
-				<p>GET IN TOUCH</p>
-
-				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
-				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
-				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
-				<a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
-
-			</div>
-
-			<div class="col-md-1 socials desktop-footer">
-				<p>FOLLOW</p>
-				<a href="https://www.instagram.com/kinoklub___/"><img src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
-				<a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
-			</div>
-
-			<div class="col-md-6 more desktop-footer">
-				<form>
-					<p>WANT MORE FROM KINO KLUB?</p>
-					<input type="email" placeholder="Email Address" required>
-					<input type="submit" value="Submit">
-				</form>
-				<span>Kino Klub is a project of Aspekt Institute. ©2022</span>
-
-			</div>
-
-
-			<!---mobile footer-->
-			<div class="more mobile-footer">
-				<form>
-					<p>WANT TO KNOW MORE</p>
-					<input type="email" placeholder="Email Address" required>
-					<input type="submit" value="Submit">
-				</form>
-			</div>
-
-			<div class="socials mobile-footer">
-				<p>FOLLOW</p>
-				<a href="https://www.instagram.com/kinoklub___/"><img src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
-				<a href="https://www.facebook.com/kinokluborg/"><img style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
-			</div>
-
-			<div class="contact mobile-footer">
-				<p>GET IN TOUCH</p>
-				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
-				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
-				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>
-				<a target="_blank" href="https://goo.gl/maps/pvb5CryXmS3NckNF9">Cesta svobode 12a, 4260 Bled</a>
-				<p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
-			</div>
-
-		</footer>
-
-		<script src="{{alias('@web') }}/js/script.js"></script>
-		<script src="{{alias('@web') }}/js/fade-out.js"></script>
-
-	</body>
-</html>
+		</main>
+{% include "footer.twig" %}

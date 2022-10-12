@@ -1,0 +1,47 @@
+columnSuffix: ywvczpvb
+contentColumnType: text
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: seo
+instructions: null
+name: SEO
+searchable: false
+settings:
+  description: 'A community of fellow motion picture lovers. Join us.'
+  hideSocial: ''
+  robots:
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  socialImage:
+    - '446'
+  suffixAsPrefix: null
+  title:
+    -
+      __assoc__:
+        -
+          - key
+          - '2'
+        -
+          - locked
+          - '0'
+        -
+          - template
+          - ' {{ siteName }} '
+    -
+      __assoc__:
+        -
+          - key
+          - '1'
+        -
+          - locked
+          - '0'
+        -
+          - template
+          - '| {slug}'
+  titleSuffix: null
+translationKeyFormat: null
+translationMethod: language
+type: ether\seo\fields\SeoField

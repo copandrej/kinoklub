@@ -50,6 +50,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: d40a0d2e-948f-45fb-9b8f-0298315218b4 # Alt text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8e94e6be-2ced-4e88-9c35-53a9fbbd7dd0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 517591a8-ff67-4a2d-9030-b017777f8d19 # Kategorija
             instructions: null
             label: null

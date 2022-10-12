@@ -1,4 +1,4 @@
-dateModified: 1665432230
+dateModified: 1665582928
 elementSources:
   craft\elements\Entry:
     -
@@ -63,6 +63,7 @@ meta:
     7dff5ce0-6641-40f0-926b-8bd7f905d8bf: 'Kino Klub SL' # Kino Klub SL
     7f3d0073-5528-4253-b49e-0fc5e6d97441: 'Rich text' # Rich text
     8b6fcde2-6dc2-4235-8257-f26af6b76a38: About # About
+    8e58b19c-4a61-49ea-8793-d0659a904118: SEO # SEO
     12b23949-ae49-4d68-a14e-231270421b86: Home # Home
     71f1e1a8-6334-4c4d-9bfc-4c60fea6a590: Projects # Projects
     369e78c2-5589-40bf-b0bd-f7c8b9b2e955: img # img
@@ -71,6 +72,7 @@ meta:
     517591a8-ff67-4a2d-9030-b017777f8d19: Kategorija # Kategorija
     a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
     b6417f85-8d11-44f0-ab58-66f5733257d8: Events # Events
+    d40a0d2e-948f-45fb-9b8f-0298315218b4: 'Alt text' # Alt text
     e9b86cb5-7af9-4e68-bde6-8c598884aaf9: Notes # Notes
     ec752501-2740-4382-afb1-396107a872da: 'Notes and Stories' # Notes and Stories
 plugins:
@@ -87,12 +89,12 @@ plugins:
     enabled: true
     schemaVersion: 3.2.0
     settings:
-      description: ''
+      description: 'A community of fellow motion picture lovers. Join us.'
       facebookAppId: ''
       metaTemplate: ''
       removeAlternateUrls: ''
       robots:
-        - ''
+        - noindex
         - ''
         - ''
         - ''
@@ -101,19 +103,9 @@ plugins:
       robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
       sitemapLimit: '1000'
       sitemapName: sitemap
-      socialImage: ''
+      socialImage:
+        - '446'
       title:
-        -
-          __assoc__:
-            -
-              - key
-              - '1'
-            -
-              - locked
-              - '1'
-            -
-              - template
-              - '{title}'
         -
           __assoc__:
             -
@@ -124,7 +116,18 @@ plugins:
               - '1'
             -
               - template
-              - ' | {{ siteName }}'
+              - ' {{ siteName }} '
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '| {title}'
       titleSuffix: null
       twitterHandle: ''
   seomate:

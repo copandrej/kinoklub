@@ -1,0 +1,19 @@
+columnSuffix: ydkkjzzf
+contentColumnType: text
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: altText
+instructions: null
+name: 'Alt text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
