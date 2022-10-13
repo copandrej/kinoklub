@@ -77,8 +77,6 @@ function fadeOutOnScroll(element) {
 }
 
 
-
-
 // configurator (only needs to listen on one page, bloat?)
 window.addEventListener('load', (event) => {
     const queryString = window.location.search;
@@ -89,6 +87,20 @@ window.addEventListener('load', (event) => {
 
     const arr = document.getElementsByClassName("conf-meni-item");
     const ap = document.getElementsByClassName("conf-meni-option");
+
+    const thanks = urlParams.get('thanks')
+    console.log(thanks);
+
+    if (thanks != null) {
+        let mail = document.querySelector("#newsletter-email")
+        mail.classList.add("displayNone");
+        mail.nextElementSibling.classList.add("displayNone");
+        let arr= document.getElementsByClassName("thanks");
+
+        for (let i = 0; i < arr.length; i++)
+            arr[i].classList.remove("displayNone");
+        
+    }
 
     for (let i = 0; i < arr.length; i++) {
 

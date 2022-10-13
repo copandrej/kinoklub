@@ -44,7 +44,7 @@
 							{{ actionInput('newsletter/newsletter/subscribe') }}
 
 							{# User will be redirected to the redirect input url upon successful subscription #}
-							{{ redirectInput('?thanks') }}
+							{{ redirectInput('?thanks=true#newsletter-email') }}
 
 							<label for="newsletter-consent">
 								<input style="display: none;" type="checkbox" value="check" name="consent" id="newsletter-consent" checked {% if newsletterForm.hasErrors('consent') %} aria-invalid="true" aria-describedby="consent-error" {% endif %}>
@@ -57,6 +57,7 @@
 
 							<label for="newsletter-email">{{ ''|t }}<span aria-hidden="true"></span>
 							</label>
+							<h2 class="thanks displayNone">Thank you!</h2>
 							<input id="newsletter-email" required name="email" type="email" placeholder="Email Address" value="{{ newsletterForm.email }}" {% if newsletterForm.hasErrors('email') %} aria-invalid="true" aria-describedby="email-error" {% endif %}>
 
 							{% if newsletterForm.hasErrors('email') %}
@@ -92,7 +93,7 @@
 						{{ actionInput('newsletter/newsletter/subscribe') }}
 
 						{# User will be redirected to the redirect input url upon successful subscription #}
-						{{ redirectInput('') }}
+						{{ redirectInput('?thanks=true#newsletter-email') }}
 
 						<label for="newsletter-consent">
 							<input style="display: none;" type="checkbox" value="check" name="consent" id="newsletter-consent" checked {% if newsletterForm.hasErrors('consent') %} aria-invalid="true" aria-describedby="consent-error" {% endif %}>
@@ -101,6 +102,7 @@
 						{% if newsletterForm.hasErrors('consent') %}
 							<div id="consent-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('consent') }}</div>
 						{% endif %}
+						<h2 class="thanks displayNone">Thank you!</h2>
 
 						<label for="newsletter-email">{{ ''|t }}<span aria-hidden="true"></span>
 						</label>
@@ -111,7 +113,6 @@
 						{% endif %}
 
 						<input type="submit" value="Submit">{{ ''|t }}</input>
-
 					</form>
 				{% endif %}
 			</div>

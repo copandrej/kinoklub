@@ -74,7 +74,7 @@
 					{% set count = count + 1 %}
 
 					{% set slika = entry.slika.one %}
-					<section class="col-lg {% if count > 6 %}disc-more displayNone{% endif %}">
+					<div class="col-lg {% if count > 6 %}disc-more displayNone{% endif %}">
 						<a href="{{ entry.slug }}">
 							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="event-img">
 						</a>
@@ -85,11 +85,11 @@
 							<h4>{{ entry.title }}</h4>
 							</a>
 							<a class="notes-link" style="position: relative;" href="{{ entry.slug }}">
-								<img alt="Learn more" src="{{alias('@web') }}/img/Vectorevents.png">LEARN MORE
+								<img alt="Learn more" style="transform: translate(0px,0)!important;" src="{{alias('@web') }}/img/Vectorevents.svg">LEARN MORE
 							</a>
 						</div>
 
-					</section>
+					</div>
 				{% endfor %}
 			</div>
 		</main>

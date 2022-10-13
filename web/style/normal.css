@@ -1,4 +1,12 @@
 /*GENERIC NORMAL PAGE*/
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #535353;
+}
+
 .navbar-parallax {
     background-image: none;
     background-color: #000000 !important;
@@ -77,10 +85,17 @@
 }
 
 .normal-page-con .soc:hover {
-    transform: rotate(360deg);
-    transition: transform 0.4s ease-out;
+    /*transform: rotate(360deg);*/
+    animation: tilt-n-move-shaking  0.20s 2;
 }
 
+@keyframes tilt-n-move-shaking {
+    0% { transform:  rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform:  rotate(0deg); }
+    75% { transform:  rotate(-10deg); }
+    100% { transform:  rotate(0deg); }
+  }
 
 @media only screen and (max-width: 1650px) {
     .normal-page-con {

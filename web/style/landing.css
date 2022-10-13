@@ -140,6 +140,8 @@
 
     /*margin fix*/
     margin-right: -36px;
+
+    overflow: hidden;
 }
 
 .notes-link:hover {
@@ -147,10 +149,18 @@
     text-decoration: none;
 }
 
+.notes-link:hover img {
+    transform: translate(-25px)!important;
+    transition: transform 0.2s ease-out;
+
+}
+
 .notes-link img {
+    transform:  translate(-12px)!important;
+    transition: transform 0.2s ease-out;
     width: 47px;
     margin-right: 20px;
-
+    animation-play-state:  paused;
 }
 
 /*do not display on desktop*/

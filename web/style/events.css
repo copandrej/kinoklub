@@ -15,6 +15,7 @@
     letter-spacing: -0.02em;
     color: #000000;
     padding-top: 62px;
+    
 }
 
 .events-bg {
@@ -22,8 +23,42 @@
 }
 
 .event-cards {
-    padding-top: 12px;
-    padding-bottom: 40px;
+    padding-top: 52px;
+    padding-bottom: 120px;
+    
+}
+
+.event-cards div a:has(.event-img){
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    display: block;
+}
+
+.event-cards div a img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+
+    transition: -webkit-transform 500ms ease-out;
+    transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.event-cards div a img:hover {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+
+    transition: -webkit-transform 500ms ease-out;
+    transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
 }
 
 /*center .event-img -> IS THIS STILL NEEDED?*/
@@ -95,6 +130,12 @@
 @media only screen and (max-width: 850px) {
     .form-select {
         margin-left: auto !important;
+    }
+
+    .event-cards {
+        padding-top: 52px;
+        padding-bottom: 50px;
+        
     }
 
     .event-cards div div {

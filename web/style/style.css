@@ -22,12 +22,13 @@
     --mainBgColor: #000000;
     --mainTxtColor: #000000;
     --secTxtColor: #FFFFFF;
+    color-scheme: dark;
+
 }
 
 * {
     text-decoration: none;
 }
-
 html {
     font-size: 24px;
     line-height: 33px;
@@ -434,9 +435,18 @@ footer a:hover {
 }
 
 .gen-leg img:hover {
-    transform: rotate(360deg);
-    transition: transform 0.4s ease-out;
+    /*transform: rotate(360deg);
+    transition: transform 0.4s ease-out;*/
+    animation: tilt-n-move-shaking  0.15s 2;
 }
+
+@keyframes tilt-n-move-shaking {
+    0% { transform:  rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform:  rotate(0deg); }
+    75% { transform:  rotate(-10deg); }
+    100% { transform:  rotate(0deg); }
+  }
 
 .gen-leg {
     min-height: 440px;
@@ -585,6 +595,10 @@ svg,
 video {
     vertical-align: middle;
 }
+.dark {
+    background-color: #0d1117;
+    color-scheme: dark;
+  }
 
 /* ==========================================================================
   Media Queries for Responsive Design.
@@ -882,6 +896,7 @@ video {
 
     .bg-img-parallax {
         /*background-position-x: -900px;*/
+        background-attachment: scroll;
     }
 
     .navbar-parallax {

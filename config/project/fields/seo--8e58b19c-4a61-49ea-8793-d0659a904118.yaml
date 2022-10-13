@@ -40,7 +40,7 @@ settings:
           - '0'
         -
           - template
-          - '| {slug}'
+          - ' | {slug}'
   titleSuffix: null
 translationKeyFormat: null
 translationMethod: language
