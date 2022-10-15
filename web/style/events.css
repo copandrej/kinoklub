@@ -171,4 +171,12 @@
         padding-left: 13px;
         padding-right: 13px;
     }
+
+    .event-cards div a:has(.event-img){
+        height: auto;
+        width: auto;
+        overflow: hidden;
+        display: block;
+    }
+
 }
