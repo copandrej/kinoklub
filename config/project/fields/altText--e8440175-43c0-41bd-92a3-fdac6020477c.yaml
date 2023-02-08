@@ -1,8 +1,8 @@
-columnSuffix: ydkkjzzf
+columnSuffix: dikajjgv
 contentColumnType: text
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: altText
-instructions: null
+instructions: 'Alternativni text za slike, OBVEZNO!'
 name: 'Alt text'
 searchable: false
 settings:
@@ -15,5 +15,5 @@ settings:
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: none
+translationMethod: language
 type: craft\fields\PlainText

@@ -1,5 +1,20 @@
-dateModified: 1665589768
+dateModified: 1669487266
 elementSources:
+  craft\elements\Asset:
+    -
+      disabled: false
+      key: 'volume:369e78c2-5589-40bf-b0bd-f7c8b9b2e955' # img
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+        - currentUsage
+        - imageSize
+      type: native
+    -
+      key: 'folder:268f63d7-06c2-4f44-8979-7308f68780d8'
+      type: native
   craft\elements\Entry:
     -
       disabled: false
@@ -11,12 +26,17 @@ elementSources:
         - link
       type: native
     -
+      heading: ''
+      type: heading
+    -
       disabled: false
-      key: singles
+      key: 'section:e9b86cb5-7af9-4e68-bde6-8c598884aaf9' # Notes
       tableAttributes:
+        - postDate
         - link
-        - uri
         - 'field:6f7de5eb-1b48-4f02-8088-a464aeea88cd' # Slika
+        - 'field:517591a8-ff67-4a2d-9030-b017777f8d19' # Kategorija
+        - dateUpdated
       type: native
     -
       disabled: false
@@ -30,26 +50,48 @@ elementSources:
         - uri
       type: native
     -
+      heading: ''
+      type: heading
+    -
       disabled: false
-      key: 'section:e9b86cb5-7af9-4e68-bde6-8c598884aaf9' # Notes
+      key: 'single:4b30886b-a63c-4f1a-998a-b2ef3d2b9f95' # Home
       tableAttributes:
         - postDate
+        - expiryDate
         - link
-        - 'field:6f7de5eb-1b48-4f02-8088-a464aeea88cd' # Slika
-        - 'field:517591a8-ff67-4a2d-9030-b017777f8d19' # Kategorija
+      type: native
+    -
+      disabled: false
+      key: 'single:3d596aee-6653-4770-a869-2adcf68e8a4f' # Projects
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      disabled: false
+      key: 'single:4f541f05-c78e-43df-ba73-556c39ed5e4a' # About
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
       type: native
 email:
   fromEmail: andrej7.cop@gmail.com
-  fromName: 'Kino klub'
+  fromName: 'Kino Klub'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: '/usr/sbin/sendmail -bs'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   img:
     hasUrls: true
     name: img
     settings:
-      path: /opt/lampp/htdocs/kinoklub/web/img
+      path: '@webroot/img'
     type: craft\fs\Local
-    url: 'http://localhost/kinoklub/web/img'
+    url: '@web/img'
 meta:
   __names__:
     0e562f94-5806-4803-bd62-64df37c4d6cf: Date # Date
@@ -60,30 +102,64 @@ meta:
     4f541f05-c78e-43df-ba73-556c39ed5e4a: About # About
     5d67afcb-a40e-4d38-8b10-4423c1ba48a4: Naslov # Naslov
     6f7de5eb-1b48-4f02-8088-a464aeea88cd: Slika # Slika
-    7dff5ce0-6641-40f0-926b-8bd7f905d8bf: 'Kino Klub SL' # Kino Klub SL
+    7dff5ce0-6641-40f0-926b-8bd7f905d8bf: 'Kino Klub SI' # Kino Klub SI
     7f3d0073-5528-4253-b49e-0fc5e6d97441: 'Rich text' # Rich text
     8b6fcde2-6dc2-4235-8257-f26af6b76a38: About # About
-    8e58b19c-4a61-49ea-8793-d0659a904118: SEO # SEO
     12b23949-ae49-4d68-a14e-231270421b86: Home # Home
     71f1e1a8-6334-4c4d-9bfc-4c60fea6a590: Projects # Projects
     369e78c2-5589-40bf-b0bd-f7c8b9b2e955: img # img
-    548d1972-4fd4-483a-9f1e-722e249ba366: 'Kino klub EN' # Kino klub EN
+    548d1972-4fd4-483a-9f1e-722e249ba366: 'Kino Klub EN' # Kino Klub EN
     734bb3f1-97ed-4c94-8234-b4002833597e: Common # Common
+    9744b394-7f5b-4f3f-97ed-1061c9129eb2: seo # seo
     517591a8-ff67-4a2d-9030-b017777f8d19: Kategorija # Kategorija
     a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
     b6417f85-8d11-44f0-ab58-66f5733257d8: Events # Events
-    d40a0d2e-948f-45fb-9b8f-0298315218b4: 'Alt text' # Alt text
     e9b86cb5-7af9-4e68-bde6-8c598884aaf9: Notes # Notes
+    e8440175-43c0-41bd-92a3-fdac6020477c: 'Alt text' # Alt text
     ec752501-2740-4382-afb1-396107a872da: 'Notes and Stories' # Notes and Stories
+    fb8cea6e-566f-4bc2-9aa9-8b36e1f99879: Embed # Embed
 plugins:
+  assetusage:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      expandSingles: true
+      redirectToEntry: true
   newsletter:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      adapterType: juban\newsletter\adapters\Mailjet
+      adapterTypeSettings:
+        __assoc__:
+          -
+            - apiKey
+            - 5cde44fa54be9b8aa7e9e14185ba6926
+          -
+            - apiSecret
+            - 7b4fa5aac0f130f1512f3aa22dab185a
+          -
+            - listId
+            - '10265280'
+      recaptchaEnabled: true
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   seo:
     edition: standard
     enabled: true
@@ -94,17 +170,17 @@ plugins:
       metaTemplate: ''
       removeAlternateUrls: ''
       robots:
-        - noindex
+        - ''
         - ''
         - ''
         - ''
         - ''
         - ''
       robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
-      sitemapLimit: '1000'
+      sitemapLimit: '10000'
       sitemapName: sitemap
       socialImage:
-        - '446'
+        - '515'
       title:
         -
           __assoc__:
@@ -113,34 +189,27 @@ plugins:
               - '2'
             -
               - locked
-              - '1'
+              - '0'
             -
               - template
-              - ' {{ siteName }} '
+              - 'Kino Klub'
         -
           __assoc__:
             -
               - key
-              - '1'
+              - jjw
             -
               - locked
               - '0'
             -
               - template
-              - '| {title}'
+              - ' | A community of fellow motion picture lovers'
       titleSuffix: null
       twitterHandle: ''
-  seomate:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  site-switcher:
-    edition: standard
-    enabled: true
-    schemaVersion: 0.0.0
 system:
   edition: solo
   live: true
-  name: 'Kino klub'
+  name: 'Kino Klub'
+  retryDuration: null
   schemaVersion: 4.0.0.9
-  timeZone: America/Los_Angeles
+  timeZone: Europe/Ljubljana

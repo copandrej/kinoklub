@@ -44,13 +44,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8e58b19c-4a61-49ea-8793-d0659a904118 # SEO
+            fieldUid: 9744b394-7f5b-4f3f-97ed-1061c9129eb2 # seo
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9c49d2b7-6db9-433c-8786-557a2a9c8e00
+            uid: 7f6ae1a7-119d-4328-b9b7-45624bc4b89f
             userCondition: null
             warning: null
             width: 100

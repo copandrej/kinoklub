@@ -4,12 +4,12 @@ handle: home
 name: Home
 propagationMethod: all
 siteSettings:
-  7dff5ce0-6641-40f0-926b-8bd7f905d8bf: # Kino Klub SL
+  7dff5ce0-6641-40f0-926b-8bd7f905d8bf: # Kino Klub SI
     enabledByDefault: true
     hasUrls: true
     template: index-sl.twig
     uriFormat: __home__
-  548d1972-4fd4-483a-9f1e-722e249ba366: # Kino klub EN
+  548d1972-4fd4-483a-9f1e-722e249ba366: # Kino Klub EN
     enabledByDefault: true
     hasUrls: true
     template: index.twig

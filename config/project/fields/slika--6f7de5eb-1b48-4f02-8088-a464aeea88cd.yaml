@@ -32,6 +32,20 @@ settings:
       -
         - class
         - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\HasAltConditionRule
+              -
+                - uid
+                - e548b798-f7ef-40f9-a759-9c34eae3cb4b
+              -
+                - value
+                - false
   selectionLabel: null
   showSiteMenu: true
   showUnpermittedFiles: false

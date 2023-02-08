@@ -30,6 +30,29 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: Obvezno!
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: true
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 877fc5d5-f020-4d35-9093-6273ce8a747b
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: b3b3bb13-fa38-402b-a8fe-6cfdccf8437f
         userCondition: null
@@ -38,6 +61,6 @@ handle: img
 name: img
 sortOrder: 2
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: language
 transformFs: ''
 transformSubpath: ''

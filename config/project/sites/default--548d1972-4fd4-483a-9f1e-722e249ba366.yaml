@@ -1,9 +1,9 @@
-baseUrl: $PRIMARY_SITE_URL
-enabled: true
+baseUrl: '@web/en/'
+enabled: '1'
 handle: default
 hasUrls: true
 language: en-US
-name: 'Kino klub EN'
-primary: true
+name: 'Kino Klub EN'
+primary: false
 siteGroup: a5095b5e-8a24-4f7f-bb02-26be023077b2 # Kino klub
 sortOrder: 1

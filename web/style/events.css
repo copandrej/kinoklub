@@ -34,6 +34,13 @@
     overflow: hidden;
     display: block;
 }
+.event-img {
+    object-fit: none;
+    object-position: center;
+    height: inherit;
+    width: inherit;
+    transform-origin: center center;
+}
 
 .event-cards div a img {
     -webkit-transform: scale(1);

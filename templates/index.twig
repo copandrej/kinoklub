@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=2">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=6">
 		<style>
 			{% set slika = entry.slika.one %}
 			.bg-img-parallax {
@@ -24,7 +24,7 @@
 
 				<!-- logo -->
 				<h1>
-					<a style="display: flex;" href="{{alias('@web') }}">
+					<a style="display: flex;" href="{{alias('@web') }}/en/">
 							<img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png">
 					</a>
 				</h1>
@@ -67,11 +67,11 @@
 
 			<!-- language change -->
 			<lan class="lan">
-				<a href="{{alias('@web') }}/sl/">SL
-				</a>/<a class="chosen" href="{{alias('@web') }}">
+				<a href="{{alias('@web') }}">SL
+				</a>/<a class="chosen" href="{{alias('@web') }}/en/">
 					EN</a>
 			</lan>
-
+        <div class="overlayBox"></div>
 		</header>
 
 		<!-- navbar mobile -->
@@ -83,9 +83,9 @@
 			<a href="about">ABOUT</a>
 			<spn class="mobile-lan">
 				<span>
-					<a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
+					<a style="display:inline;" href="{{alias('@web') }}">SL</a>
 				</span>/<span>
-					<a style="display:inline;" href="{{alias('@web') }}">
+					<a style="display:inline;" href="{{alias('@web') }}/en/">
 						EN</a>
 				</span>
 			</spn>

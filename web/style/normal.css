@@ -40,10 +40,14 @@ a:hover {
     color: #000000;
 }
 
-.content img {
+.content img, .content iframe {
     width: 100%;
     margin-top: 80px;
     margin-bottom: 80px;
+}
+.content iframe {
+    width: 100%!important;
+    height: 51vw!important;
 }
 
 .normal-page-con {
@@ -118,7 +122,7 @@ a:hover {
         line-height: 55px;
     }
 
-    .content img {
+    .content img, .content iframe {
         width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
