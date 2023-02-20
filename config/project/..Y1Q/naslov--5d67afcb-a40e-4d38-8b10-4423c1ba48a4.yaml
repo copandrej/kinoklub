@@ -1,19 +1,19 @@
-columnSuffix: zvnlzusu
-contentColumnType: string(100)
+columnSuffix: fijiecvz
+contentColumnType: text
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
-handle: place
+handle: naslov
 instructions: null
-name: Place
+name: Naslov
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 25
+  charLimit: null
   code: false
   columnType: null
   initialRows: 4
   multiline: false
-  placeholder: null
+  placeholder: test
   uiMode: normal
 translationKeyFormat: null
-translationMethod: site
+translationMethod: language
 type: craft\fields\PlainText

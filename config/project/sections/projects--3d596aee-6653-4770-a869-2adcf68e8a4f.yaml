@@ -1,4 +1,4 @@
-defaultPlacement: end
+defaultPlacement: beginning
 enableVersioning: true
 handle: projects
 name: Projects
@@ -8,10 +8,13 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: o-nas.twig
-    uriFormat: projects
+    uriFormat: '{slug}'
   548d1972-4fd4-483a-9f1e-722e249ba366: # Kino Klub EN
     enabledByDefault: true
     hasUrls: true
     template: about.twig
-    uriFormat: projects
-type: single
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: e3cba8a1-cc2e-4700-9a51-42510539ad04
+type: structure

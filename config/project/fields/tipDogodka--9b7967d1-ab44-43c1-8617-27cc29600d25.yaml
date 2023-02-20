@@ -1,0 +1,78 @@
+columnSuffix: kqwedric
+contentColumnType: string
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: tipDogodka
+instructions: null
+name: 'Tip dogodka'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Others
+        -
+          - value
+          - ostalo
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Workshop
+        -
+          - value
+          - workshop
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Live
+        -
+          - value
+          - live
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Festival
+        -
+          - value
+          - festival
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Screening
+        -
+          - value
+          - screening
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Gaming
+        -
+          - value
+          - gaming
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

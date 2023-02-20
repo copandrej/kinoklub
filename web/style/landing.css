@@ -65,27 +65,27 @@
 
 /*img dims for notes&stories cards -> animated to zoom when hovered*/
 .note-img {
-    width: 990px;
+    width: 908px;
     height: 600px;
     object-fit: cover;
     cursor: pointer;
 
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+    transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
     transform-origin: center center;
 }
 
 .note-img:hover {
-    -webkit-transform: scale(1.04);
-    -ms-transform: scale(1.04);
-    transform: scale(1.04);
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
 
-    transition: -webkit-transform 500ms ease-out;
-    transition: transform 500ms ease-out;
-    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+    transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
     -webkit-transform-origin: center center;
     -ms-transform-origin: center center;
     transform-origin: center center;
@@ -105,9 +105,9 @@
 }
 
 .title {
-    font-family: 'Manrope-600';
+    font-family: 'Manrope-700';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 40px;
     line-height: 55px;
     letter-spacing: -0.02em;

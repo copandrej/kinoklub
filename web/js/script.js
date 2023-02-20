@@ -46,6 +46,8 @@ function scrollHandler() {
 
 const header = document.getElementById('fade-out');
 const knof = document.getElementById('knof');
+const banner = document.getElementById('chi');
+
 let disp = true;
 
 function fadeOutOnScroll(element) {
@@ -54,24 +56,30 @@ function fadeOutOnScroll(element) {
     }
 
     let opacity = 1;
-    opacity = 1 - Math.max(window.pageYOffset - 300, 0) / 300;
+    let opacity_2 =1;
+    opacity = 1 - Math.max(window.pageYOffset - 350, 0) / 300;
+    opacity_2 = 1 - Math.max(window.pageYOffset - 200, 0) / 300;
 
     if (!disp) {
         element.style.visibility = 'visible';
         knof.style.visibility = 'visible';
+        banner.style.visibility = 'visible';
         disp = false;
     }
 
     if (opacity >= 0) {
         element.style.opacity = opacity;
         knof.style.opacity = opacity;
+        banner.style.opacity = opacity_2;
 
     } else {
         element.style.opacity = 0;
         knof.style.opacity = 0;
+        banner.style.opacity = 0;
 
         element.style.visibility = 'hidden';
         knof.style.visibility = 'hidden';
+        banner.style.visibility = 'hidden';
         disp = false;
     }
 }

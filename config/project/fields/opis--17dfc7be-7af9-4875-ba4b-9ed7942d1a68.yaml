@@ -1,13 +1,13 @@
-columnSuffix: zvnlzusu
-contentColumnType: string(100)
+columnSuffix: whvrioli
+contentColumnType: text
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
-handle: place
+handle: opis
 instructions: null
-name: Place
+name: Opis
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 25
+  charLimit: null
   code: false
   columnType: null
   initialRows: 4

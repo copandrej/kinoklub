@@ -14,20 +14,30 @@
 
 		<!-- navbar + bg img-->
 		<header class="events-bg">
-			<div
-				class="navbar navbar-parallax" id="fade-out">
+			<div class="navbar navbar-parallax" id="fade-out">
 
 				<!-- logo -->
 				<h1>
-					<a style="display: flex;" href="{{alias('@web') }}"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
+					<a style="display: flex;" href="{{alias('@web') }}/en/">
+							<img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png">
+					</a>
 				</h1>
 
 				<!-- navbar desktop -->
 				<nav class="navbar1-parallax">
-					<a class="link hover" href="notes">NOTES AND STORIES</a>
-					<a class="link hover" href="events">EVENT CALANDAR</a>
-					<a class="link hover" href="projects">PROJECTS</a>
-					<a class="link hover" href="about">ABOUT</a>
+					<a class="link hover" href="projects">Projects</a>
+					<a class="link hover" href="notes">Stories & Postcards</a>
+					<a class="link hover" href="events">Event Calendar</a>
+					<a class="link hover" href="about">About</a>
+					<lan class="nav-lan">
+						<a href="{{alias('@web') }}">
+							SL
+						</a>
+						/
+						<a class="chosen" href="{{alias('@web') }}/en/">
+							EN
+						</a>
+					</lan>
 				</nav>
 
 			</div>
@@ -36,15 +46,18 @@
 		<!-- navbar mobile -->
 		<nav id="mobile-meni" class="mobile-meni display-none">
 
-			<a href="notes">NOTES AND STORIES</a>
-			<a href="events">EVENT CALANDAR</a>
-			<a href="projects">PROJECTS</a>
-			<a href="about">ABOUT</a>
+			<!--<a href="notes">NOTES AND STORIES</a>-->
+			<a href="projects">Projects</a>
+			<a href="notes">Stories & Postcards</a>
+			<a href="events">Event Calendar</a>
+			<a href="about">About</a>
 			<spn class="mobile-lan">
-				<span><a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
+				<span>
+					<a style="display:inline;" href="{{alias('@web') }}">SL</a>
 				</span>/<span>
-					<a style="display:inline;" href="{{alias('@web') }}">
-					EN</a></span>
+					<a style="display:inline;" href="{{alias('@web') }}/en/">
+						EN</a>
+				</span>
 			</spn>
 
 		</nav>
@@ -59,13 +72,12 @@
 		<!-- configuration menu desktop-->
 		<nav class="config">
 
-			<span>NOTES AND STORIES</span>
+			{# <span>NOTES AND STORIES</span> #}
 
 			<a class="conf-meni-item active" value="ALL" href="?">ALL</a>
-			<a class="conf-meni-item" value="NOTES AND STORIES" href="?cat=NOTES AND STORIES">NOTES AND
-												                        STORIES</a>
-			<a class="conf-meni-item" value="ARTICLES" href="?cat=ARTICLES">ARTICLES</a>
-			<a class="conf-meni-item" value="PODCASTS" href="?cat=PODCASTS">PODCASTS</a>
+			<a class="conf-meni-item" value="postcards" href="?cat=postcards">postcards</a>
+			<a class="conf-meni-item" value="articles" href="?cat=articles">articles</a>
+			<a class="conf-meni-item" value="video" href="?cat=video">video</a>
 
 		</nav>
 
@@ -73,9 +85,9 @@
 		<select id="mySelect" onchange="onchange=window.location=this.value" class="form-select form-select-lg mx-auto" style="width: 333px;" aria-label="Default select example">
 
 			<option class="conf-meni-option" value="?cat=">ALL</option>
-			<option class="conf-meni-option" value="?cat=NOTES AND STORIES">NOTES AND STORIES</option>
-			<option class="conf-meni-option" value="?cat=ARTICLES">ARTICLES</option>
-			<option class="conf-meni-option" value="?cat=PODCASTS">PODCASTS</option>
+			<option class="conf-meni-option" value="?cat=postcards">postcards</option>
+			<option class="conf-meni-option" value="?cat=articles">articles</option>
+			<option class="conf-meni-option" value="?cat=video">video</option>
 
 		</select>
 
@@ -90,7 +102,7 @@
 
 		<!-- main content -->
 		{% set count = 0 %}
-			<main class="jumbotron landing-main"> {% for entry in entries %}
+			<main style="padding-top:0;"class="jumbotron landing-main"> {% for entry in entries %}
 				{% set cat = craft.app.request.getParam('cat') %}
 				{% if cat == '' or cat == entry.category %}
 					{% set count = count + 1 %}
@@ -113,7 +125,7 @@
 									{{ entry.title }}
 								</h3>
 							</a>
-								<a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
+								{# <a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a> #}
 							</div>
 
 						</section>
@@ -129,7 +141,7 @@
 									{{ entry.title }}
 								</h3>
 							</a>
-								<a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
+								{# <a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a> #}
 							</div>
 
 							<div class="col-xl-8">
@@ -147,8 +159,8 @@
 
 		<!-- more button -->
         {% if count > 5 %}
-		<div class="discover" onclick="discMore1()">
-			<img alt="Discover more" style="width:70px;" src="{{alias('@web') }}/img/plus.svg">DISCOVER MORE
-		</div>
+		<a class="discover btn-discover" onclick="discMore1()">discover more</a>
+
+			{# <img alt="Discover more" style="width:70px;" src="{{alias('@web') }}/img/plus.svg">DISCOVER MORE #}
         {% endif %}
 {% include "footer.twig" %}

@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: slika
-instructions: 'Po objavi prosim preveri če slika povsod zgleda vredu.'
+instructions: null
 name: Slika
 searchable: false
 settings:

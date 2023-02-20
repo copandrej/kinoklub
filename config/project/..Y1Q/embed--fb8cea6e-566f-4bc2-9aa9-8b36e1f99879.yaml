@@ -1,0 +1,12 @@
+columnSuffix: jgdpyjbv
+contentColumnType: text
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: embed
+instructions: null
+name: Embed
+searchable: false
+settings:
+  url: ''
+translationKeyFormat: null
+translationMethod: none
+type: wrav\oembed\fields\OembedField

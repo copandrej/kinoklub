@@ -19,15 +19,26 @@
 
 				<!-- logo -->
 				<h1>
-					<a style="display: flex;" href="{{alias('@web') }}/"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
+					<a style="display: flex;" href="{{alias('@web') }}/">
+						<img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png">
+					</a>
 				</h1>
 
 				<!-- navbar desktop -->
 				<nav class="navbar1-parallax">
-					<a class="link hover" href="novice">ZAPISKI IN ZGODBE</a>
-					<a class="link hover" href="dogodki">KOLEDAR DOGODKOV</a>
-					<a class="link hover" href="projects">PROJEKTI</a>
-					<a class="link hover" href="about">O NAS</a>
+					<a class="link hover" href="projekti">Projekti</a>
+					<a class="link hover" href="novice">Zgodbe</a>
+					<a class="link hover" href="dogodki">Koledar dogodkov</a>
+					<a class="link hover" href="about">O nas</a>
+					<lan class="nav-lan">
+						<a class="chosen"  href="{{alias('@web') }}">
+							SL
+						</a>
+						/
+						<a href="{{alias('@web') }}/en/">
+							EN
+						</a>
+					</lan>
 				</nav>
 
 			</div>
@@ -38,7 +49,7 @@
 
 			<a href="novice">ZAPISKI IN ZGODBE</a>
 			<a href="dogodki">KOLEDAR DOGODKOV</a>
-			<a href="projects">PROJEKTI</a>
+			<a href="projekti">Projekti</a>
 			<a href="about">O NAS</a>
 			<spn class="mobile-lan">
 				<span><a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
@@ -59,22 +70,22 @@
 		<!-- configuration menu desktop-->
 		<nav class="config">
 
-			<span>ZAPISKI IN ZGODBE</span>
+			{# <span>NOTES AND STORIES</span> #}
 
-			<a class="conf-meni-item active" value="ALL" href="?">VSE</a>
-			<a class="conf-meni-item" value="NOTES AND STORIES" href="?cat=NOTES AND STORIES">ZAPISKI IN ZGODBE</a>
-			<a class="conf-meni-item" value="ARTICLES" href="?cat=ARTICLES">ČLANKI</a>
-			<a class="conf-meni-item" value="PODCASTS" href="?cat=PODCASTS">PODCAST-i</a>
+			<a class="conf-meni-item active" value="ALL" href="?">vsi</a>
+			<a class="conf-meni-item" value="postcards" href="?cat=postcards">kartice</a>
+			<a class="conf-meni-item" value="articles" href="?cat=articles">članki</a>
+			<a class="conf-meni-item" value="video" href="?cat=video">video</a>
 
 		</nav>
 
 		<!-- configuration menu mobile-->
 		<select id="mySelect" onchange="onchange=window.location=this.value" class="form-select form-select-lg mx-auto" style="width: 333px;" aria-label="Default select example">
 
-			<option class="conf-meni-option" value="?cat=">VSE</option>
-			<option class="conf-meni-option" value="?cat=NOTES AND STORIES">ZAPISKI IN ZGODBE</option>
-			<option class="conf-meni-option" value="?cat=ARTICLES">ČLANKI</option>
-			<option class="conf-meni-option" value="?cat=PODCASTS">PODCAST-i</option>
+			<option class="conf-meni-option" value="?cat=">vsi</option>
+			<option class="conf-meni-option" value="?cat=postcards">kartice</option>
+			<option class="conf-meni-option" value="?cat=articles">članki</option>
+			<option class="conf-meni-option" value="?cat=video">video</option>
 
 		</select>
 
@@ -89,15 +100,15 @@
 
 		<!-- main content -->
 		{% set count = 0 %}
-			<main class="jumbotron landing-main"> {% for entry in entries %}
+			<main style="padding-top:0;"class="jumbotron landing-main"> {% for entry in entries %}
 				{% set cat = craft.app.request.getParam('cat') %}
 				{% if cat == '' or cat == entry.category %}
-				{% if entry.category == 'NOTES AND STORIES' %}
-				{% set kateg = 'ZAPISKI IN ZGODBE' %}
-				{% elseif entry.category == 'ARTICLES' %}
-				{% set kateg = 'ČLANKI' %}
-				{% elseif entry.category == 'PODCASTS' %}
-				{% set kateg = 'PODCAST-i' %}
+				{% if entry.category == 'postcards' %}
+				{% set kateg = 'kartice' %}
+				{% elseif entry.category == 'articles' %}
+				{% set kateg = 'članki' %}
+				{% elseif entry.category == 'video' %}
+				{% set kateg = 'video' %}
 				{% endif %}
 
 					{% set count = count + 1 %}
@@ -120,7 +131,7 @@
 									{{ entry.title }}
 								</h3>
 							</a>
-								<a class="notes-link" href="{{ entry.slug }}"><img alt="Preberi več" src="{{alias('@web') }}/img/Vectorvec.svg">PREBERI VEČ</a>
+								{# <a class="notes-link" href="{{ entry.slug }}"><img alt="Preberi več" src="{{alias('@web') }}/img/Vectorvec.svg">PREBERI VEČ</a> #}
 							</div>
 
 						</section>
@@ -136,7 +147,7 @@
 									{{ entry.title }}
 								</h3>
 							</a>
-								<a class="notes-link" href="{{ entry.slug }}"><img alt="Preberi več" src="{{alias('@web') }}/img/Vectorvec.svg">PREBERI VEČ</a>
+								{# <a class="notes-link" href="{{ entry.slug }}"><img alt="Preberi več" src="{{alias('@web') }}/img/Vectorvec.svg">PREBERI VEČ</a> #}
 							</div>
 
 							<div class="col-xl-8">
@@ -154,8 +165,8 @@
 
 		<!-- more button -->
 		{% if count > 5 %}
-			<div class="discover" onclick="discMore()">
-				<img alt="Odpri več" style="width:70px;" src="{{alias('@web') }}/img/plus.svg">ODPRI VEČ
-			</div>
+					
+			<a class="discover btn-discover" onclick="discMore1()">odpri več</a>
+
 		{% endif %}
 {% include "footer-sl" %}

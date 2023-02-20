@@ -1,0 +1,14 @@
+columnSuffix: bkxzxceq
+contentColumnType: time
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: time
+instructions: null
+name: Time
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Time

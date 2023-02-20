@@ -7,83 +7,71 @@
 
 		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=6">
 		<style>
-        {% set slika = entry.slika.one %}
-        .bg-img-parallax {
-            background-image: url({{slika.url}});
-            background-size: cover;
-        }
-        </style>
+			{% set slika = entry.slika.one %}
+			.bg-img-parallax {
+				background-image: url({{slika.url}});
+				background-size: cover;
+			}
+		</style>
 
 	</head>
-
 	<body>
-
 		<!-- navbar + bg img-->
 		<header class="bg-img-parallax">
-			<div class="navbar navbar-parallax" id="fade-out">
+
+			<div
+				class="navbar navbar-parallax" id="fade-out">
 
 				<!-- logo -->
 				<h1>
-					<a style="display: flex;" href="{{alias('@web') }}/"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
+					<a style="display: flex;" href="{{alias('@web') }}/">
+						<img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png">
+					</a>
 				</h1>
 
 				<!-- navbar desktop -->
 				<nav class="navbar1-parallax">
-					<a class="link hover" href="novice">ZAPISKI IN ZGODBE</a>
-					<a class="link hover" href="dogodki">KOLEDAR DOGODKOV</a>
-					<a class="link hover" href="projects">PROJEKTI</a>
-					<a class="link hover" href="about">O NAS</a>
+					<a class="link hover" href="projekti">Projekti</a>
+					<a class="link hover" href="novice">Zgodbe</a>
+					<a class="link hover" href="dogodki">Koledar dogodkov</a>
+					<a class="link hover" href="about">O nas</a>
+					<lan class="nav-lan">
+						<a class="chosen"  href="{{alias('@web') }}">
+							SL
+						</a>
+						/
+						<a href="{{alias('@web') }}/en/">
+							EN
+						</a>
+					</lan>
 				</nav>
 
 			</div>
 
-			<!-- next events info section -->
-			<section class="next-events">
+			<div class="par">
+				<div class="chi">
+					<p id="chi">skupnost ljubiteljev filma</p>
+				</div>
+			</div>
 
-				<img alt="Next events" src="{{alias('@web') }}/img/next-events.png">
-				<h4>
-
-					{% set myEntryQuery = craft.entries()
-                        .section('events')
-                        .limit(4) %}
-
-					{# Fetch the entries #}
-					{% set events = myEntryQuery.all() %}
-					{# Display the entries #}
-					{% for event in events %}
-
-						<a class="hover" href="{{ event.slug }}">{{ event.title }}<span>{{ event.date|date("d/m")}}</span>
-						</a>
-					{% endfor %}
-
-				</h4>
-
-				<p>Kino Klub je projekt Zavoda Aspekt. ©2022
-				</p>
-
-			</section>
-
-			<!-- language change -->
-			<lan class="lan">
-				<a class="chosen" href="#">SL
-				</a>/<a href="{{alias('@web') }}/en/">
-					EN</a>
-			</lan>
-        <div class="overlayBox"></div>
 		</header>
 
 		<!-- navbar mobile -->
-		<nav id="mobile-meni" class="mobile-meni display-none">
+		<nav
+			id="mobile-meni" class="mobile-meni display-none">
 
-			<a href="novice">ZAPISKI IN ZGODBE</a>
-			<a href="dogodki">KOLEDAR DOGODKOV</a>
-			<a href="projects">PROJEKTI</a>
-			<a href="about">O NAS</a>
+			<!--<a href="notes">NOTES AND STORIES</a>-->
+			<a href="projekti">Projekti</a>
+			<a href="novice">Zgodbe</a>
+			<a href="dogodki">Koledar dogodkov</a>
+			<a href="about">O nas</a>
 			<spn class="mobile-lan">
-				<span><a style="display:inline;" href="{{alias('@web') }}">SL</a>
+				<span>
+					<a style="display:inline;" href="{{alias('@web') }}">SL</a>
 				</span>/<span>
 					<a style="display:inline;" href="{{alias('@web') }}/en/">
-					EN</a></span>
+						EN</a>
+				</span>
 			</spn>
 
 		</nav>
@@ -98,69 +86,152 @@
 		{# Create an entry query with the 'section' and 'limit' parameters #}
 		{% set myEntryQuery = craft.entries()
         .section('notes')
-        .limit(5) %}
+        .limit(3) %}
 
 		{# Fetch the entries #}
 		{% set entries = myEntryQuery.all() %}
 		{# Display the entries #}
 
-		<!-- main content -->
-		<main class="jumbotron landing-main"> 
-			{% for entry in entries %}
-				{% set slika = entry.slika.one %}
+		<!-- main content 
+				tukaj dodaš še za events
+				-->
+			<main>
+				<div class="jumbotron events"> <h4>prihajajoči dogodki</h4>
+				<h5>in projekcije</h5>
 
-				{% if entry.category == 'NOTES AND STORIES' %}
-				{% set kateg = 'ZAPISKI IN ZGODBE' %}
-				{% elseif entry.category == 'ARTICLES' %}
-				{% set kateg = 'ČLANKI' %}
-				{% elseif entry.category == 'PODCASTS' %}
-				{% set kateg = 'PODCAST-i' %}
-				{% endif %}
-				
-				{% if (loop.index is odd) %}
-					<div class="row">
+				<div class="row pt-2">
+					{% set myEntryQuery = craft.entries()
+					.section('events')
+					.limit(6) %}
 
-						<div class="col-xl-8">
-							<span class="category mobile-display">{{ kateg }}</span>
-							<a href="{{ entry.slug }}">
+					{# Fetch the entries #}
+					{% set events = myEntryQuery.all() %}
+					{# Display the entries #}
+					{% for event in events %}
+						<div class="col-xl-5 pb-4 pt-5">
 
-								<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
+							<h3>
+								<a href="{{ event.slug }}">{{ event.title }}</a>
+							</h3>
+							{# date and time: #}
+							<span>{{ event.date|date("d/m/y") }},
+								{{event.time|date("H:i") }},
+								{{event.place}}
+							</span>
+
 						</div>
+					{% endfor %}
+				</div>
+				<a class="btn-discover" href="dogodki">
+					več dogodkov
+				</a>
+			</div>
+			<div class="banenr">
+				<img style="width:100%;" alt="banner" src="{{alias('@web') }}/img/banner.png">
+			</div>
+			<div class="jumbotron landing-main">
+				<h4>pretekle in prihodnje</h4>
+				<h5>zgodbe in karte</h5>
 
-						<div class="col-xl-4 title">
-							<span class="category desktop-display">{{ kateg }}</span>
-							<a style="text-decoration:none;" href="{{ entry.slug }}">
-								<h3 class="title">
-									{{ entry.title }}
-								</h3>
-							</a>
-							<a class="notes-link" href="{{ entry.slug }}"><img alt="Preberi več" src="{{alias('@web') }}/img/Vectorvec.svg">PREBERI VEČ</a>
+
+				{% for entry in entries %}
+					{% set slika = entry.slika.one %}
+					{% if (loop.index is odd) %}
+
+						<section class="row">
+
+							<div class="col-xl-7">
+								<span class="category mobile-display">{{ entry.category }}</span>
+								<a href="{{ entry.slug }}">
+
+									<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
+							</div>
+
+							<div class="col-xl-4 title ml-1" style="margin-left: 58px;">
+								<span class="category desktop-display">{{ entry.category }}</span>
+								<a style="text-decoration:none;" href="{{ entry.slug }}">
+									<h3 class="title">
+										{{ entry.title }}
+									</h3>
+								</a>
+							</div>
+
+						</section>
+
+					{% endif %}
+
+					{% if (loop.index is even) %}
+						<section class="row reverse">
+
+							<div class="col-xl-5 title" style="pardding-right: 58px;">
+								<span class="category desktop-display">{{ entry.category }}</span>
+								<a style="text-decoration:none;" href="{{ entry.slug }}">
+									<h3 class="title">
+										{{ entry.title }}
+									</h3>
+								</a>
+							</div>
+
+							<div class="col-xl-7">
+								<span class="category mobile-display">{{ entry.category }}</span>
+
+								<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
+							</div>
+
+						</section>
+					{% endif %}
+				{% endfor %}
+				<a style="height: 86px;" class="btn-discover" href="novice">
+					več
+				</a>
+			</div>
+			<div class="jumbotron form">
+				<h4>postani naš član</h4>
+				<h5>in pridobi brezplačne projekcije</h5>
+				{% if craft.app.plugins.plugin('newsletter') is not null %}
+					{# If there were any validation errors, a `newsletterForm` variable will be passed to the template, which contains the posted values and validation errors. If that’s not set, we’ll default to a new newsletterForm. #}
+					{% set newsletterForm = newsletterForm ?? create('juban\\newsletter\\models\\NewsletterForm') %}
+
+					{# success notification #}
+					{% if success is defined and success %}
+						<div role="alert">
+							<p>{{ 'Your newsletter subscription has been taken into account. Thank you.'|t }}</p>
 						</div>
+					{% endif %}
 
-					</div>
-				{% endif %}
+					<form action="" method="post" accept-charset="UTF-8">
+						{{ csrfInput() }}
 
-				{% if (loop.index is even) %}
-					<div class="row reverse">
+						{# Subscription process is handled by the newsletter plugin controller #}
+						{{ actionInput('newsletter/newsletter/subscribe') }}
 
-						<div class="col-xl-4 title">
-							<span class="category desktop-display">{{ kateg }}</span>
-							<a style="text-decoration:none;" href="{{ entry.slug }}">
-								<h3 class="title">
-									{{ entry.title }}
-								</h3>
-							</a>
-							<a class="notes-link" href="{{ entry.slug }}"><img alt="Preberi več" src="{{alias('@web') }}/img/Vectorvec.svg">PREBERI VEČ</a>
-						</div>
+						{{ actionInput('newsletter/newsletter/subscribe') }}
 
-						<div class="col-xl-8">
-							<span class="category mobile-display">{{ kateg }}</span>
+						{# User will be redirected to the redirect input url upon successful subscription #}
+						{{ redirectInput('?thanks#newsletter-email') }}
 
-							<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
-						</div>
+						<label for="newsletter-consent">
+							<input style="display: none;" type="checkbox" value="check" name="consent" id="newsletter-consent" checked {% if newsletterForm.hasErrors('consent') %} aria-invalid="true" aria-describedby="consent-error" {% endif %}>
+							{{''|t}}
+						</label>
 
-					</div>
-				{% endif %}
-			{% endfor %}
-		</main>
-{% include "footer-sl" %}
+						{% if newsletterForm.hasErrors('consent') %}
+							<div id="consent-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('consent') }}</div>
+						{% endif %}
+
+						<label for="newsletter-email">{{ ''|t }}<span aria-hidden="true"></span>
+						</label>
+						<h2 class="thanks displayNone">Hvala!</h2>
+						<input id="newsletter-email" required name="email" type="email" placeholder="e-mail*" value="{{ newsletterForm.email }}" {% if newsletterForm.hasErrors('email') %} aria-invalid="true" aria-describedby="email-error" {% endif %}>
+
+						{% if newsletterForm.hasErrors('email') %}
+							<div id="email-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('email') }}</div>
+						{% endif %}
+
+						<input type="submit" value="naroči se">{{ ''|t }}</input>
+
+				</form>
+			{% endif %}
+		</div>
+	</body>
+</html></main>{% include "footer-sl" %}

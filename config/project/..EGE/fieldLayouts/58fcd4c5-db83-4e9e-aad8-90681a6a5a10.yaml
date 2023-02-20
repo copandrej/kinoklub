@@ -1,0 +1,22 @@
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        attribute: addresses
+        elementCondition: null
+        id: null
+        instructions: null
+        label: null
+        orientation: null
+        requirable: false
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\users\AddressesField
+        uid: 59785fa2-960b-4fdb-80d0-9bcad4f34931
+        userCondition: null
+        warning: null
+        width: 100
+    name: content
+    uid: 897ab11e-5c8a-4fa5-9f6d-6f9c8987d46e
+    userCondition: null

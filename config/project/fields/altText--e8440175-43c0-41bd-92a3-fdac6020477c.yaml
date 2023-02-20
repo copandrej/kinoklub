@@ -2,7 +2,7 @@ columnSuffix: dikajjgv
 contentColumnType: text
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: altText
-instructions: 'Alternativni text za slike, OBVEZNO!'
+instructions: 'Alternativni text za slike'
 name: 'Alt text'
 searchable: false
 settings:

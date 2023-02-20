@@ -77,7 +77,31 @@ fieldLayouts:
             uid: 915def0a-0e74-453f-a443-8bb2794a3504
             userCondition: null
             warning: null
-            width: 50
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 637e8647-69ab-4ca9-8697-2fc85ae48e53 # Time
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f4a8fedf-8168-49a6-aa7f-df911e1c0b9f
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 9b7967d1-ab44-43c1-8617-27cc29600d25 # Tip dogodka
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 43992e1d-e4c3-429a-ad68-d9618d2dd172
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: 1d09924c-7d8b-4c7b-bd9a-26a1510cd435 # Place
@@ -89,7 +113,7 @@ fieldLayouts:
             uid: be940cd0-de47-43b5-ab95-0d4ee9424a03
             userCondition: null
             warning: null
-            width: 50
+            width: 25
           -
             elementCondition: null
             fieldUid: 9744b394-7f5b-4f3f-97ed-1061c9129eb2 # seo

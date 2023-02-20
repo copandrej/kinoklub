@@ -2,7 +2,7 @@
   "require": {
     "born05/craft-assetusage": "3.0.0",
     "carlcs/craft-redactorcustomstyles": "4.0.3",
-    "craftcms/cms": "4.3.8.1",
+    "craftcms/cms": "4.3.10",
     "craftcms/contact-form": "3.0.0",
     "craftcms/redactor": "3.0.2",
     "doublesecretagency/craft-siteswitcher": "2.3.0",

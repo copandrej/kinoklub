@@ -1,118 +1,32 @@
 
 		<!-- footer -->
-		<footer class="row gen-leg">
+		<footer class="row gen-leg justify-content-center">
 
 			<!---desktop footer-->
-			<address class="col-md-2 contact desktop-footer">
-				<p>GET IN TOUCH</p>
-				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
-				<a target="_blank" href="tel:+386 68 944 090">+386 68 944 090</a><!--
-				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>-->
-				<a target="_blank" href="https://goo.gl/maps/yB15m8rXYfuwZoox8">Prešernova cesta 52, 4260 Bled</a>
+			<div class="contact col-md-3">
+				<a href="events">Event Calendar</a><br>
+				<a href="projects">Projects</a><br>
+				<a href="about">About</a>
+			</div>
+
+			<address class="contact col-md-3">
+				<a target="_blank" href="mailto:info@kinoklub.si">e-mail  / info@kinoklub.si</a><br>
+				<a target="_blank" href="tel:+386 68 944 090">t / (+386) 68 944 090</a><br>
+				<a target="_blank" href="https://goo.gl/maps/yB15m8rXYfuwZoox8">a / Prešernova cesta 52, 4260 Bled</a>
 			</address>
 
-			<div class="col-md-1 socials desktop-footer">
-				<p>FOLLOW</p>
+			<div class="col-md-2 socials">
+				<div class="icons">
 				<a target="_blank" href="https://www.instagram.com/kinoklub___/"><img alt="Instagram" src="{{alias('@web') }}/img/Vectorinsta.svg"></a>
 				<a target="_blank" href="https://www.facebook.com/kinokluborg/"><img alt="Facebook" style="margin-left: 17px;" src="{{alias('@web') }}/img/Vectorfb.png"></a>
+				</div>
+				<p>Aspekt Institute ©2022</p>
 			</div>
 
-			<div class="col-md-6 more desktop-footer">
-
-				{# @var craft \craft\web\twig\variables\CraftVariable #}
-				{# @var newsletterForm \juban\newsletter\models\NewsletterForm #}
-
-					{% if craft.app.plugins.plugin('newsletter') is not null %}
-						{# If there were any validation errors, a `newsletterForm` variable will be passed to the template, which contains the posted values and validation errors. If that’s not set, we’ll default to a new newsletterForm. #}
-						{% set newsletterForm = newsletterForm ?? create('juban\\newsletter\\models\\NewsletterForm') %}
-
-						{# success notification #}
-						{% if success is defined and success %}
-							<div role="alert"> <p>{{ 'Your newsletter subscription has been taken into account. Thank you.'|t }}</p>
-							</div>
-						{% endif %}
-
-						<form action="" method="post" accept-charset="UTF-8">
-							<p>WANT TO KNOW MORE</p>
-							{{ csrfInput() }}
-
-							{# Subscription process is handled by the newsletter plugin controller #}
-							{{ actionInput('newsletter/newsletter/subscribe') }}
-
-							{{ actionInput('newsletter/newsletter/subscribe') }}
-
-							{# User will be redirected to the redirect input url upon successful subscription #}
-							{{ redirectInput('?thanks=true#newsletter-email') }}
-
-							<label for="newsletter-consent">
-								<input style="display: none;" type="checkbox" value="check" name="consent" id="newsletter-consent" checked {% if newsletterForm.hasErrors('consent') %} aria-invalid="true" aria-describedby="consent-error" {% endif %}>
-								{{''|t}}
-							</label>
-
-							{% if newsletterForm.hasErrors('consent') %}
-								<div id="consent-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('consent') }}</div>
-							{% endif %}
-
-							<label for="newsletter-email">{{ ''|t }}<span aria-hidden="true"></span>
-							</label>
-							<h2 class="thanks displayNone">Thank you!</h2>
-							<input id="newsletter-email" required name="email" type="email" placeholder="Email Address" value="{{ newsletterForm.email }}" {% if newsletterForm.hasErrors('email') %} aria-invalid="true" aria-describedby="email-error" {% endif %}>
-
-							{% if newsletterForm.hasErrors('email') %}
-								<div id="email-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('email') }}</div>
-							{% endif %}
-
-							<input type="submit" value="Submit">{{ ''|t }}</input>
-
-						</form>
-					{% endif %}
-				<span>Kino Klub is a project of Aspekt Institute. ©2022</span>
-			</div>
-
-
-			<!---mobile footer-->
+		
+			<!---mobile footer
 			<div class="more mobile-footer">
-				{% if craft.app.plugins.plugin('newsletter') is not null %}
-					{# If there were any validation errors, a `newsletterForm` variable will be passed to the template, which contains the posted values and validation errors. If that’s not set, we’ll default to a new newsletterForm. #}
-					{% set newsletterForm = newsletterForm ?? create('juban\\newsletter\\models\\NewsletterForm') %}
-
-					{# success notification #}
-					{% if success is defined and success %}
-						<div role="alert">
-							<p>{{ 'Your newsletter subscription has been taken into account. Thank you.'|t }}</p>
-						</div>
-					{% endif %}
-
-					<form action="" method="post" accept-charset="UTF-8">
-						<p>WANT TO KNOW MORE</p>
-						{{ csrfInput() }}
-
-						{# Subscription process is handled by the newsletter plugin controller #}
-						{{ actionInput('newsletter/newsletter/subscribe') }}
-
-						{# User will be redirected to the redirect input url upon successful subscription #}
-						{{ redirectInput('?thanks=true#newsletter-email') }}
-
-						<label for="newsletter-consent">
-							<input style="display: none;" type="checkbox" value="check" name="consent" id="newsletter-consent" checked {% if newsletterForm.hasErrors('consent') %} aria-invalid="true" aria-describedby="consent-error" {% endif %}>
-
-						</label>
-						{% if newsletterForm.hasErrors('consent') %}
-							<div id="consent-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('consent') }}</div>
-						{% endif %}
-						<h2 class="thanks displayNone">Thank you!</h2>
-
-						<label for="newsletter-email">{{ ''|t }}<span aria-hidden="true"></span>
-						</label>
-						<input id="newsletter-email" required name="email" type="email" placeholder="Email Address" value="{{ newsletterForm.email }}" {% if newsletterForm.hasErrors('email') %} aria-invalid="true" aria-describedby="email-error" {% endif %}>
-
-						{% if newsletterForm.hasErrors('email') %}
-							<div id="email-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('email') }}</div>
-						{% endif %}
-
-						<input type="submit" value="Submit">{{ ''|t }}</input>
-					</form>
-				{% endif %}
+				
 			</div>
 
 			<div class="socials mobile-footer">
@@ -124,12 +38,11 @@
 			<address class="contact mobile-footer">
 				<p>GET IN TOUCH</p>
 				<a target="_blank" href="mailto:info@kinoklub.si">info@kinoklub.si</a>
-				<a target="_blank" href="tel:+386 68 944 090">+386 68 944 090</a><!--
-				<a target="_blank" href="tel:(+386) 41 677 889">(+386) 41 677 889</a>-->
+				<a target="_blank" href="tel:+386 68 944 090">+386 68 944 090</a>
 				<a target="_blank" href="https://goo.gl/maps/yB15m8rXYfuwZoox8">Prešernova cesta 52, 4260 Bled</a>
 				<p class="leg-leg">Kino Klub is a project of Aspekt Institute. ©2022</p>
-			</address>
-
+			</address>-->
+			
 		</footer>
 
 		<script src="{{alias('@web') }}/js/script.js"></script>

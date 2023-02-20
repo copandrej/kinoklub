@@ -104,6 +104,9 @@
 .events-jumbo {
     padding-left: 110px;
     padding-right: 110px;
+
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 /*custom mobile selection -> why is this here?*/

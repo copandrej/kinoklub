@@ -32,13 +32,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 5d67afcb-a40e-4d38-8b10-4423c1ba48a4 # Naslov
+            fieldUid: 17dfc7be-7af9-4875-ba4b-9ed7942d1a68 # Opis
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ad4c0915-47f3-4a56-88b2-f02f8c2ca51f
+            uid: 9faa7b5e-afd4-4c12-b0cc-8b7b825ffbfc
             userCondition: null
             warning: null
             width: 100
@@ -47,7 +47,7 @@ fieldLayouts:
             fieldUid: 6f7de5eb-1b48-4f02-8088-a464aeea88cd # Slika
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 69f88fdf-a63f-40ae-8a9b-23c5d7789c04
@@ -59,7 +59,7 @@ fieldLayouts:
             fieldUid: 7f3d0073-5528-4253-b49e-0fc5e6d97441 # Rich text
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a4323606-ee41-4c89-a993-ab8c61a3d96b
@@ -69,9 +69,9 @@ fieldLayouts:
         name: Content
         uid: c368cc9c-ccdc-4a92-a3b1-c27f0fddc317
         userCondition: null
-handle: projects
-hasTitleField: false
-name: Projects
+handle: project
+hasTitleField: true
+name: Project
 section: 3d596aee-6653-4770-a869-2adcf68e8a4f # Projects
 sortOrder: 1
 titleFormat: '{section.name|raw}'

@@ -30,57 +30,40 @@
 				</h1>
 
 				<!-- navbar desktop -->
-					<nav class="navbar1-parallax">
-						<a class="link hover" href="notes">NOTES AND STORIES</a>
-						<a class="link hover" href="events">EVENT CALANDAR</a>
-						<a class="link hover" href="projects">PROJECTS</a>
-						<a class="link hover" href="about">ABOUT</a>
-					</nav>
+				<nav class="navbar1-parallax">
+					<a class="link hover" href="projects">Projects</a>
+					<a class="link hover" href="notes">Stories & Postcards</a>
+					<a class="link hover" href="events">Event Calendar</a>
+					<a class="link hover" href="about">About</a>
+					<lan class="nav-lan">
+						<a href="{{alias('@web') }}">
+							SL
+						</a>
+						/
+						<a class="chosen" href="{{alias('@web') }}/en/">
+							EN
+						</a>
+					</lan>
+				</nav>
 
 			</div>
+		
+		<div class="par">
+			<div class="chi">
+				<p id="chi">a community of fellow motion picture lovers</p>
+			</div>
+		</div>
 
-			<!-- next events info section -->
-			<section class="next-events">
-
-				<img alt="Next events" src="{{alias('@web') }}/img/next-events.png">
-
-				<h4>
-
-					{% set myEntryQuery = craft.entries()
-					.section('events')
-					.limit(4) %}
-
-					{# Fetch the entries #}
-					{% set events = myEntryQuery.all() %}
-					{# Display the entries #}
-					{% for event in events %}
-
-						<a class="hover" href="{{ event.slug }}">{{ event.title }}<span>{{ event.date|date("d/m")}}</span>
-						</a>
-					{% endfor %}
-
-				</h4>
-
-				<p>Kino Klub is a project of Aspekt Institute. ©2022</p>
-
-			</section>
-
-			<!-- language change -->
-			<lan class="lan">
-				<a href="{{alias('@web') }}">SL
-				</a>/<a class="chosen" href="{{alias('@web') }}/en/">
-					EN</a>
-			</lan>
-        <div class="overlayBox"></div>
 		</header>
 
 		<!-- navbar mobile -->
 		<nav id="mobile-meni" class="mobile-meni display-none">
 
-			<a href="notes">NOTES AND STORIES</a>
-			<a href="events">EVENT CALANDAR</a>
-			<a href="projects">PROJECTS</a>
-			<a href="about">ABOUT</a>
+			<!--<a href="notes">NOTES AND STORIES</a>-->
+			<a href="projects">Projects</a>
+			<a href="notes">Stories & Postcards</a>
+			<a href="events">Event Calendar</a>
+			<a href="about">About</a>
 			<spn class="mobile-lan">
 				<span>
 					<a style="display:inline;" href="{{alias('@web') }}">SL</a>
@@ -98,38 +81,74 @@
 			<div id="spremembaa" class="sr"></div>
 			<div id="spremembaaa" class="sp"></div>
 		</div>
+
 		{# Create an entry query with the 'section' and 'limit' parameters #}
 		{% set myEntryQuery = craft.entries()
         .section('notes')
-        .limit(5) %}
+        .limit(3) %}
 
 		{# Fetch the entries #}
 		{% set entries = myEntryQuery.all() %}
 		{# Display the entries #}
 
-		<!-- main content -->
-		<main class="jumbotron landing-main"> 
+		<!-- main content 
+		tukaj dodaš še za events
+		-->
+		<main>
+		<div class="jumbotron events">
+			<h4>next events</h4>
+			<h5>and screenings</h5>
+
+			<div class="row pt-2">
+				{% set myEntryQuery = craft.entries()
+					.section('events')
+					.limit(6) %}
+
+					{# Fetch the entries #}
+					{% set events = myEntryQuery.all() %}
+					{# Display the entries #}
+					{% for event in events %}
+					<div class="col-xl-5 pb-4 pt-5">
+
+						<h3><a href="{{ event.slug }}">{{ event.title }}</a></h3>
+						{# date and time: #}
+						<span>{{ event.date|date("d/m/y") }}, {{event.time|date("H:i") }}, {{event.place}} </span>
+
+					</div>
+					{% endfor %}
+			</div>
+			<a class="btn-discover" href="events">
+				more events
+			</a>
+		</div>
+		<div class="banenr">
+			<img style="width:100%;" alt="banner" src="{{alias('@web') }}/img/banner.png">
+		</div>
+		<div class="jumbotron landing-main">
+			<h4>past and future</h4>
+			<h5>stories and postcards</h5>
+
+
 			{% for entry in entries %}
 				{% set slika = entry.slika.one %}
 				{% if (loop.index is odd) %}
 
 					<section class="row">
 
-						<div class="col-xl-8">
+						<div class="col-xl-7">
 							<span class="category mobile-display">{{ entry.category }}</span>
 							<a href="{{ entry.slug }}">
 
 								<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
 						</div>
 
-						<div class="col-xl-4 title">
+						<div class="col-xl-4 title ml-1" style="margin-left: 58px;">
 							<span class="category desktop-display">{{ entry.category }}</span>
 							<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
 								</h3>
 							</a>
-							<a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
 						</div>
 
 					</section>
@@ -139,17 +158,16 @@
 				{% if (loop.index is even) %}
 					<section class="row reverse">
 
-						<div class="col-xl-4 title">
+						<div class="col-xl-5 title" style="pardding-right: 58px;">
 							<span class="category desktop-display">{{ entry.category }}</span>
 							<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
 								</h3>
 							</a>
-							<a class="notes-link" href="{{ entry.slug }}"><img alt="Read more" src="{{alias('@web') }}/img/Vectorvec.svg">READ MORE</a>
 						</div>
 
-						<div class="col-xl-8">
+						<div class="col-xl-7">
 							<span class="category mobile-display">{{ entry.category }}</span>
 
 							<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
@@ -158,5 +176,56 @@
 					</section>
 				{% endif %}
 			{% endfor %}
+			<a style="eight: 86px;"class="btn-discover" href="notes">
+				discover more
+			</a>
+			</div>
+			<div class="jumbotron form">
+			<h4>become our member</h4>
+			<h5>and get screenings for free</h5>
+			{% if craft.app.plugins.plugin('newsletter') is not null %}
+						{# If there were any validation errors, a `newsletterForm` variable will be passed to the template, which contains the posted values and validation errors. If that’s not set, we’ll default to a new newsletterForm. #}
+						{% set newsletterForm = newsletterForm ?? create('juban\\newsletter\\models\\NewsletterForm') %}
+
+						{# success notification #}
+						{% if success is defined and success %}
+							<div role="alert"> <p>{{ 'Your newsletter subscription has been taken into account. Thank you.'|t }}</p>
+							</div>
+						{% endif %}
+
+						<form action="" method="post" accept-charset="UTF-8">
+							{{ csrfInput() }}
+
+							{# Subscription process is handled by the newsletter plugin controller #}
+							{{ actionInput('newsletter/newsletter/subscribe') }}
+
+							{{ actionInput('newsletter/newsletter/subscribe') }}
+
+							{# User will be redirected to the redirect input url upon successful subscription #}
+							{{ redirectInput('?thanks#newsletter-email') }}
+
+							<label for="newsletter-consent">
+								<input style="display: none;" type="checkbox" value="check" name="consent" id="newsletter-consent" checked {% if newsletterForm.hasErrors('consent') %} aria-invalid="true" aria-describedby="consent-error" {% endif %}>
+								{{''|t}}
+							</label>
+
+							{% if newsletterForm.hasErrors('consent') %}
+								<div id="consent-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('consent') }}</div>
+							{% endif %}
+
+							<label for="newsletter-email">{{ ''|t }}<span aria-hidden="true"></span>
+							</label>
+							<h2 class="thanks displayNone">Thank you!</h2>
+							<input id="newsletter-email" required name="email" type="email" placeholder="e-mail*" value="{{ newsletterForm.email }}" {% if newsletterForm.hasErrors('email') %} aria-invalid="true" aria-describedby="email-error" {% endif %}>
+
+							{% if newsletterForm.hasErrors('email') %}
+								<div id="email-error" role="alert" class="text-sm text-error font-bold">{{ newsletterForm.getFirstError('email') }}</div>
+							{% endif %}
+
+							<input type="submit" value="subscribe">{{ ''|t }}</input>
+
+						</form>
+					{% endif %}
+			</div>
 		</main>
 {% include "footer.twig" %}

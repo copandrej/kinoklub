@@ -1,0 +1,27 @@
+columnSuffix: jjozyrht
+contentColumnType: mediumtext
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: richText
+instructions: null
+name: 'Rich text'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: mediumtext
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: null
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: language
+type: craft\redactor\Field

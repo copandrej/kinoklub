@@ -7,15 +7,15 @@
 		
 		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=2">
 		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=2">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=4">
-
+		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=2">
 	</head>
 
 	<body>
 
-		<!-- navbar -> for this page bg image is not needed-->
+		<!-- navbar + bg img-->
 		<header class="events-bg">
-			<div class="navbar navbar-parallax" id="fade-out">
+			<div
+				class="navbar navbar-parallax" id="fade-out">
 
 				<!-- logo -->
 				<h1>
@@ -64,8 +64,7 @@
 
 		</nav>
 
-
-		<!-- hamburger menu-->
+		<!-- hamburger menu -->
 		<div class="knof" id="knof" onclick="anime()">
 			<div id="sprememba" class="zg"></div>
 			<div id="spremembaa" class="sr"></div>
@@ -73,54 +72,40 @@
 		</div>
 
 
-		{# Create an entry query with the 'section' and 'limit' parameters #}
-		{% set myEntryQuery = craft.entries()
-        .section('events')
-        .limit(30) %}
+		<main style="margin-left:109px; margin-top:101px;">
+			<h3>Projekti</h3>
+			<div class="jumbotron projects">
+				<p>Odkrijte nekaj projektov, za katere se zavzemamo. Projekti temeljijo na delu, ki ga opravljamo in smo ga opravljali v preteklosti in sedanjosti.</p>
 
-		{# Fetch the entries #}
-		{% set entries = myEntryQuery.all() %}
-		{# Display the entries #}
 
-		<!-- event cards, cards can be repeated. Bundle together 3 events in a row div -->
-		<main class="jumbotron events-jumbo">
-			<h3 class="head-events">Prihajajoči dogodki</h3>
+				{% set myEntryQuery = craft.entries()
+                .section('projects')
+                .limit(25) %}
+				{# Fetch the entries #}
+				{% set entries = myEntryQuery.all() %}
+				{# Display the entries #}
 
-			<!-- events are cards that position themselves automatically. request them more from server if needed-->
-			{% set count = 0 %}
-
-			<div class="row event-cards">
-				{% for entry in entries %}
+				<!-- main content -->
+				{% set count = 0 %}
+					{% for entry in entries %}
 					{% set count = count + 1 %}
 
 					{% set slika = entry.slika.one %}
-					<div class="col-lg {% if count > 6 %}disc-more displayNone{% endif %}">
-						<a href="{{ entry.slug }}">
+
+						<div class="row"> <a href="{{ entry.slug }}">
 							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="event-img">
 						</a>
-
-						<div>
-							<a style="text-decoration:none;" href="{{ entry.slug }}">
+						<a style="text-decoration:none;" href="{{ entry.slug }}">
 							<h4>{{ entry.title }}</h4>
-							</a>
-							<span>
-								{{ entry.date|date("D d/m/Y") }},
-								{{ entry.time|date("H:i") }},
-								{{ entry.place }}
-							</span>
-							{# <a class="notes-link" style="position: relative;" href="{{ entry.slug }}">
-								<img alt="Learn more" style="transform: translate(0px,0)!important;" src="{{alias('@web') }}/img/Vectorevents.svg">PREBERI VEČ
-							</a> #}
-						</div>
-
+						</a>
+						<p>{{ entry.opis }}</p>
 					</div>
-				{% endfor %}
-			</div>
-		</main>
 
-		<!-- more button -->
-		{% if count > 5 %}
-			<a class="discover btn-discover"  style="margin-left:109px;" onclick="discMore()">odpri več</a>
+                    {% endfor %}
+				</div>
 
-		{% endif %}
-{% include "footer-sl" %}
+			</main>
+
+			{% include "footer.twig" %}</body>
+	</body>
+</html>

@@ -1,5 +1,5 @@
 columnSuffix: zvnlzusu
-contentColumnType: string(100)
+contentColumnType: string(120)
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: place
 instructions: null
@@ -7,7 +7,7 @@ name: Place
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 25
+  charLimit: 30
   code: false
   columnType: null
   initialRows: 4
@@ -15,5 +15,5 @@ settings:
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\PlainText

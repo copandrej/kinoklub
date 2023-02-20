@@ -25,36 +25,52 @@
 				    <div class="navbar navbar-parallax" id="fade-out" style="background-color:transparent!important;">
 
 
-					<h1>
-						<a style="display: flex;" href="{{alias('@web') }}/"><img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png"></a>
-					</h1>
+					<!-- logo -->
+				<h1>
+					<a style="display: flex;" href="{{alias('@web') }}/">
+						<img alt="Kino Klub" class="logo" src="{{alias('@web') }}/img/KK-LOGO.png">
+					</a>
+				</h1>
 
-					<!-- navbar desktop -->
-					<nav class="navbar1">
-						<a class="link hover" href="novice">ZAPISKI IN ZGODBE</a>
-						<a class="link hover" href="dogodki">KOLEDAR DOGODKOV</a>
-						<a class="link hover" href="projects">PROJEKTI</a>
-						<a class="link hover" href="about">O NAS</a>
-					</nav>
+				<!-- navbar desktop -->
+				<nav class="navbar1-parallax">
+					<a class="link hover" href="projekti">Projekti</a>
+					<a class="link hover" href="novice">Zgodbe</a>
+					<a class="link hover" href="dogodki">Koledar dogodkov</a>
+					<a class="link hover" href="about">O nas</a>
+					<lan class="nav-lan">
+						<a class="chosen"  href="{{alias('@web') }}">
+							SL
+						</a>
+						/
+						<a href="{{alias('@web') }}/en/">
+							EN
+						</a>
+					</lan>
+				</nav>
 
-				</div>
+			</div>
 			</header>
 
 			<!-- navbar mobile -->
-			<nav id="mobile-meni" class="mobile-meni display-none">
+		<nav
+			id="mobile-meni" class="mobile-meni display-none">
 
-				<a href="novice">ZAPISKI IN ZGODBE</a>
-				<a href="dogodki">KOLEDAR DOGODKOV</a>
-				<a href="projects">PROJEKTI</a>
-				<a href="about">O NAS</a>
-				<spn class="mobile-lan">
-				<span><a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
+			<!--<a href="notes">NOTES AND STORIES</a>-->
+			<a href="projekti">Projekti</a>
+			<a href="novice">Zgodbe</a>
+			<a href="dogodki">Koledar dogodkov</a>
+			<a href="about">O nas</a>
+			<spn class="mobile-lan">
+				<span>
+					<a style="display:inline;" href="{{alias('@web') }}">SL</a>
 				</span>/<span>
-					<a style="display:inline;" href="{{alias('@web') }}">
-					EN</a></span>
+					<a style="display:inline;" href="{{alias('@web') }}/en/">
+						EN</a>
+				</span>
 			</spn>
 
-			</nav>
+		</nav>
 
 			<!-- hamburger menu-->
 			<div class="knof" id="knof" onclick="anime()">

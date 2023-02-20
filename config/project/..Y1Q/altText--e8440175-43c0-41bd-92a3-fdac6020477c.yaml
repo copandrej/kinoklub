@@ -1,13 +1,13 @@
-columnSuffix: zvnlzusu
-contentColumnType: string(100)
+columnSuffix: dikajjgv
+contentColumnType: text
 fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
-handle: place
-instructions: null
-name: Place
+handle: altText
+instructions: 'Alternativni text za slike, OBVEZNO!'
+name: 'Alt text'
 searchable: false
 settings:
   byteLimit: null
-  charLimit: 25
+  charLimit: null
   code: false
   columnType: null
   initialRows: 4
@@ -15,5 +15,5 @@ settings:
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: site
+translationMethod: language
 type: craft\fields\PlainText
