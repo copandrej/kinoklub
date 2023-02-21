@@ -560,6 +560,37 @@ opacity: 0.7;
     text-decoration: none;
 }
 
+
+/*Projects style changes*/
+.proj-napis {
+    font-family: 'Manrope-600';
+    font-style: normal;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+
+    color: #000000;
+
+    max-width: 1200px;
+}
+.project-img {
+    object-fit: cover;
+    object-position: center;
+    height: 600px;
+    width: 100%;
+}
+.project-row {
+    padding-bottom: 0;
+    padding-top: 124px;
+}
+.project-row h4, .project-row p, .proj-more {
+    margin-top: 30px;
+}
+
+.project-row p {
+    padding-right: 30%;
+}
+
 /*some general footer style -> now can be combined because everywhere the same footer*/
 footer {
     text-align: center;

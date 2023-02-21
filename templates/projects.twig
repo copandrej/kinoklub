@@ -73,7 +73,7 @@
 		<main>
 			<h3 style="margin-left:109px; margin-top:101px;">Projects</h3>
 			<div class="jumbotron projects">
-				<p>Discover some of the projects that we stand by with. The projects are based on the work we do and did in the past and current lives...</p>
+				<p class="proj-napis">Discover some of the projects that we stand by with. The projects are based on the work we do and did in the past and current lives...</p>
 
 
 				{% set myEntryQuery = craft.entries()
@@ -90,14 +90,14 @@
 
 					{% set slika = entry.slika.one %}
 
-						<div class="row"> <a href="{{ entry.slug }}">
-							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="event-img">
+						<div class="row project-row"> <a href="{{ entry.slug }}">
+							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="project-img">
 						</a>
 						<a style="text-decoration:none;" href="{{ entry.slug }}">
 							<h4>{{ entry.title }}</h4>
 						</a>
 						<p>{{ entry.opis }}</p>
-						<a class="btn-discover r-more" href="{{ entry.slug }}">
+						<a class="btn-discover r-more proj-more" href="{{ entry.slug }}">
 							read more
 						</a>
 					</div>

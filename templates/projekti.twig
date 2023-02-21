@@ -72,10 +72,10 @@
 		</div>
 
 
-		<main style="margin-left:109px; margin-top:101px;">
-			<h3>Projekti</h3>
+		<main>
+			<h3  style="margin-left:109px; margin-top:101px;">Projekti</h3>
 			<div class="jumbotron projects">
-				<p>Odkrijte nekaj projektov, za katere se zavzemamo. Projekti temeljijo na delu, ki ga opravljamo in smo ga opravljali v preteklosti in sedanjosti.</p>
+				<p class="proj-napis">Odkrijte nekaj projektov, za katere se zavzemamo. Projekti temeljijo na delu, ki ga opravljamo in smo ga opravljali v preteklosti in sedanjosti.</p>
 
 
 				{% set myEntryQuery = craft.entries()
@@ -92,13 +92,16 @@
 
 					{% set slika = entry.slika.one %}
 
-						<div class="row"> <a href="{{ entry.slug }}">
-							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="event-img">
+						<div class="row project-row"> <a href="{{ entry.slug }}">
+							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="project-img">
 						</a>
 						<a style="text-decoration:none;" href="{{ entry.slug }}">
 							<h4>{{ entry.title }}</h4>
 						</a>
 						<p>{{ entry.opis }}</p>
+						<a class="btn-discover r-more proj-more" href="{{ entry.slug }}">
+							preberi več
+						</a>
 					</div>
 
                     {% endfor %}
