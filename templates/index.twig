@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=6">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8">
 		<style>
 			{% set slika = entry.slika.one %}
 			.bg-img-parallax {
@@ -107,8 +107,10 @@
 					{# Fetch the entries #}
 					{% set events = myEntryQuery.all() %}
 					{# Display the entries #}
+					{% set count = 0 %}
 					{% for event in events %}
-					<div class="col-xl-5 pb-4 pt-5">
+					{% set count = count + 1 %}
+					<div class="col-xl-5 pb-4 pt-5 event-div {% if count > 4 %}mob-disp{% endif %}">
 
 						<h3><a href="{{ event.slug }}">{{ event.title }}</a></h3>
 						{# date and time: #}
@@ -121,7 +123,7 @@
 				more events
 			</a>
 		</div>
-		<div class="banenr">
+		<div class="banner">
 			<img style="width:100%;" alt="banner" src="{{alias('@web') }}/img/banner.png">
 		</div>
 		<div class="jumbotron landing-main">
@@ -136,14 +138,14 @@
 					<section class="row">
 
 						<div class="col-xl-7">
-							<span class="category mobile-display">{{ entry.category }}</span>
+							{# <span class="category mobile-display">{{ entry.category }}</span> #}
 							<a href="{{ entry.slug }}">
 
 								<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
 						</div>
 
 						<div class="col-xl-4 title ml-1" style="margin-left: 58px;">
-							<span class="category desktop-display">{{ entry.category }}</span>
+							<span class="category">{{ entry.category }}</span>
 							<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -159,7 +161,7 @@
 					<section class="row reverse">
 
 						<div class="col-xl-5 title" style="pardding-right: 58px;">
-							<span class="category desktop-display">{{ entry.category }}</span>
+							{# <span class="category">{{ entry.category }}</span> #}
 							<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -168,7 +170,7 @@
 						</div>
 
 						<div class="col-xl-7">
-							<span class="category mobile-display">{{ entry.category }}</span>
+							<span class="category">{{ entry.category }}</span>
 
 							<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
 						</div>
@@ -176,7 +178,7 @@
 					</section>
 				{% endif %}
 			{% endfor %}
-			<a style="eight: 86px;"class="btn-discover" href="notes">
+			<a class="btn-discover mt-3" href="notes">
 				discover more
 			</a>
 			</div>

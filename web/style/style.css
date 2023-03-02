@@ -113,7 +113,7 @@ h1 {
 }
 
 .displayNone {
-    display: none!important;
+    display: none !important;
 }
 
 /*Outter and inner navbar, overwriting some default bootstrap styles*/
@@ -367,6 +367,7 @@ changes to the .hover:after bottom and height depending on text size*/
     border: 1px solid #171616;
 
 }
+
 /*different font weight for chose lan*/
 .chosen {
     color: #FFFFFF;
@@ -403,6 +404,7 @@ h3 {
     padding: 0;
     margin: 0;
 }
+
 h3 a {
     text-decoration: none;
     color: black;
@@ -424,18 +426,19 @@ h3 a:hover {
 
 .events span {
     font-family: 'Manrope-500';
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
-line-height: 44px;
-/* identical to box height */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
 
-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
 
-color: #000000;
+    color: #000000;
 
-opacity: 0.7;
+    opacity: 0.7;
 }
+
 .jumbotron h4 {
     font-family: 'Manrope-600';
     font-style: normal;
@@ -444,9 +447,9 @@ opacity: 0.7;
     line-height: 115.6%;
     margin-bottom: 0;
     /* or 69px */
-    
+
     letter-spacing: -0.02em;
-    
+
     color: #000000;
 }
 
@@ -573,18 +576,47 @@ opacity: 0.7;
 
     max-width: 1200px;
 }
+
 .project-img {
     object-fit: cover;
     object-position: center;
     height: 600px;
     width: 100%;
 }
+
 .project-row {
     padding-bottom: 0;
     padding-top: 124px;
 }
-.project-row h4, .project-row p, .proj-more {
+
+.proj-more {
     margin-top: 30px;
+}
+
+.project-row h4 {
+    margin-top: 30px;
+    font-family: 'Manrope-600';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    color: #000000;
+}
+
+.project-row p {
+    margin-top: 30px;
+    font-family: 'Manrope-500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+
+    color: #000000;
 }
 
 .project-row p {
@@ -604,11 +636,11 @@ footer {
     font-style: normal;
     font-size: 24px;
     line-height: 33px;
-/* identical to box height */
+    /* identical to box height */
 
-letter-spacing: -0.02em;
+    letter-spacing: -0.02em;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .contact {
@@ -631,6 +663,7 @@ footer a:hover {
     color: #cacaca;
     text-decoration: none;
 }
+
 /*
 .gen-leg img:hover {
     /*transform: rotate(360deg);
@@ -651,7 +684,7 @@ footer a:hover {
     padding: 0px;
     width: 100%;
     margin: 0;
-    margin-top:70px;
+    margin-top: 45px;
 
 }
 
@@ -678,14 +711,17 @@ footer a:hover {
     margin-left: 150px;
     /*min-width: 100px;*/
 }
+
 .icons {
     height: 85px;
     width: 100%;
     display: block;
 }
+
 .icons a {
     float: left;
 }
+
 .socials p {
     font-family: 'Manrope-700';
     font-style: normal;
@@ -762,13 +798,12 @@ form {
     letter-spacing: -0.02em;
 
     color: #171616;
-    /* border-radius: 3px; */
+    border-radius: 3px;
     transition: 100ms;
 
 }
 
-.form input[type=submit]:hover
-{
+.form input[type=submit]:hover {
     background: black;
     color: white;
 }
@@ -988,95 +1023,73 @@ video {
         overflow-x: hidden !important;
     }
 
-    .socials,
-    .more,
+    /*footer mobile:*/
+    .makeSomething {
+        font-family: 'Manrope-700' !important;
+        font-size: 30px !important;
+        line-height: 115.6% !important;
+        letter-spacing: -0.02em !important;
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .gen-leg hr {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 153px;
+        height: 1px;
+        display: block !important;
+
+        /* border-top: 1px solid #FFFFFF; */
+        opacity: 1;
+    }
+
+    .gen-leg {
+        padding-top: 106px;
+    }
+
     .contact,
-    .contact span {
-        float: left;
-        margin-left: 21px !important;
-        margin-top: 73px;
-        text-align: left;
-        display: block;
+    .socials {
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-top: 58px !important;
+        margin-bottom: 24px !important;
+
+    }
+
+    .contact a,
+    .socials a {
+        font-family: 'Manrope-600';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
         width: 100%;
-        padding-right: 0px !important;
-        padding-left: 0 !important;
-        margin-right: 0px !important;
-
-    }
-
-    .socials p,
-    .more p,
-    .contact p {
-        font-family: 'Manrope-400';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 33px;
-        /* identical to box height */
-
+        text-align: center;
         letter-spacing: -0.02em;
-    }
-
-    .leg-leg {
-        padding-left: 0px;
-        position: relative;
-        width: 90vw !important;
-        padding: 0px !important;
-        margin: 0px !important;
-        overflow: hidden !important;
-        margin-top: 50px !important;
-        font-family: 'Manrope-400' !important;
-        font-style: normal !important;
-        font-weight: 400 !important;
-        font-size: 16px !important;
-        line-height: 22px !important;
-        /* identical to box height */
-
-        letter-spacing: -0.02em;
-
         color: #FFFFFF;
+    }
 
+    .icons {
+        display: none;
+    }
+
+    .socials p {
+
+        font-family: 'Manrope-400';
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
         opacity: 0.7;
-    }
+        width: 100%;
+        margin: 0;
 
-    .contact {
-        max-width: 100% !important;
-        margin-left: 21px !important;
-        margin-top: 77px !important;
-        margin-bottom: 36px !important;
-    }
-
-    .contact a {
-        display: block;
-        font-family: 'Manrope-400';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        /* identical to box height */
-
-        letter-spacing: -0.02em;
-
-        color: #FFFFFF;
-
-    }
-
-    .more {
-        padding-right: 141px;
-        margin-left: 27px;
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .more input[type=email] {
-        width: 218px;
-        height: 52px;
-        padding-left: 14px;
-    }
-
-    .more input[type=submit] {
-        width: 104px;
-        height: 52px;
+        margin-bottom: 48px !important;
     }
 
     .reverse {
@@ -1084,18 +1097,36 @@ video {
     }
 
     footer {
-        padding-left: 120px !important;
+        padding-left: 0px !important;
     }
 
+    .btn-discover {
+        font-family: 'Manrope-500';
+        font-size: 24px;
+        line-height: 33px;
+        height: fit-content;
+        padding: 14px 35px;
+    }
+
+    .form input[type=submit] {
+        font-family: 'Manrope-500';
+        font-size: 24px;
+        line-height: 33px;
+        height: fit-content;
+        width: auto;
+        padding: 14px 35px;
+    }
+
+    .form {
+        padding-bottom: 36px;
+        min-height: auto;
+    }
 }
+
 
 @media only screen and (max-width: 850px) {
     .col-lg {
         padding: 0px;
-    }
-
-    footer {
-        padding-left: 0px !important;
     }
 
     .logo {
@@ -1157,12 +1188,11 @@ video {
         background-attachment: scroll;
     }
 
-    .navbar-parallax {
-        /* background-position-x: -900px !important;*/
+    /* .navbar-parallax {
+       background-position-x: -900px !important;
     }
+*/
 
-
-    .jumbotron,
     .events-jumbo {
         padding-left: 13px;
         padding-right: 13px;
@@ -1188,7 +1218,79 @@ video {
         color: #000000;
     }
 
+    #chi {
+        font-family: 'Manrope-400';
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+        letter-spacing: -0.02em;
 
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .jumbotron h4 {
+        font-family: 'Manrope-700';
+        font-size: 30px;
+        line-height: 115.6%;
+        letter-spacing: -0.02em;
+    }
+
+    .jumbotron h5 {
+        font-family: 'Manrope-400';
+        font-size: 30px;
+        line-height: 115.6%;
+        letter-spacing: -0.02em;
+        opacity: 0.7;
+    }
+
+    .jumbotron {
+        padding-top: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h3 a {
+        font-family: 'Manrope-600';
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: -0.02em;
+    }
+
+    h3 {
+        line-height: 33px;
+
+    }
+
+    .events span {
+        font-family: 'Manrope-500';
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: -0.02em;
+    }
+
+    .event-div {
+        padding-top: 27px !important;
+        padding-bottom: 0 !important;
+        height: fit-content;
+    }
+
+    .events .row {
+        min-height: auto;
+        padding-bottom: 56px;
+    }
+
+    .events {
+        padding-bottom: 91px;
+    }
+
+    .title {
+        height: auto !important;
+    }
+
+    .row {
+        min-height: auto;
+    }
 }
 
 @media only screen and (max-width: 335px) {
