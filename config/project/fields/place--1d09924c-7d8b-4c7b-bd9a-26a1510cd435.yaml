@@ -4,7 +4,7 @@ fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: place
 instructions: null
 name: Place
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: 25

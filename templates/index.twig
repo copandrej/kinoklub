@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8.1">
 		<style>
 			{% set slika = entry.slika.one %}
 			.bg-img-parallax {
@@ -145,7 +145,7 @@
 						</div>
 
 						<div class="col-xl-4 title ml-1" style="margin-left: 58px;">
-							<span class="category">{{ entry.category }}</span>
+							<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 							<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -161,7 +161,7 @@
 					<section class="row reverse">
 
 						<div class="col-xl-5 title" style="pardding-right: 58px;">
-							{# <span class="category">{{ entry.category }}</span> #}
+							<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 							<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -170,7 +170,7 @@
 						</div>
 
 						<div class="col-xl-7">
-							<span class="category">{{ entry.category }}</span>
+							{# <span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span> #}
 
 							<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
 						</div>

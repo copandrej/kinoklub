@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8.1">
 		<style>
 			{% set slika = entry.slika.one %}
 			.bg-img-parallax {
@@ -61,10 +61,10 @@
 			id="mobile-meni" class="mobile-meni display-none">
 
 			<!--<a href="notes">NOTES AND STORIES</a>-->
-			<a href="projekti">Projekti</a>
-			<a href="novice">Zgodbe</a>
-			<a href="dogodki">Koledar dogodkov</a>
-			<a href="about">O nas</a>
+				<a href="projekti">Projekti</a>
+				<a href="novice">Zgodbe</a>
+				<a href="dogodki">Koledar dogodkov</a>
+				<a href="about">O nas</a>
 			<spn class="mobile-lan">
 				<span>
 					<a style="display:inline;" href="{{alias('@web') }}">SL</a>
@@ -150,7 +150,7 @@
 							</div>
 
 							<div class="col-xl-4 title ml-1" style="margin-left: 58px;">
-								<span class="category">{{ entry.category }}</span>
+								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 									<h3 class="title">
 										{{ entry.title }}
@@ -166,7 +166,7 @@
 						<section class="row reverse">
 
 							<div class="col-xl-5 title" style="pardding-right: 58px;">
-								<span class="category">{{ entry.category }}</span>
+								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 									<h3 class="title">
 										{{ entry.title }}

@@ -4,7 +4,7 @@ fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: category
 instructions: null
 name: Kategorija
-searchable: false
+searchable: true
 settings:
   options:
     -

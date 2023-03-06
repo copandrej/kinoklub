@@ -74,17 +74,21 @@
 
 			{# <span>NOTES AND STORIES</span> #}
 
-			<a class="conf-meni-item active" value="ALL" href="?">ALL</a>
+			<a class="conf-meni-item active" value="ALL" href="?">all</a>
 			<a class="conf-meni-item" value="postcards" href="?cat=postcards">postcards</a>
 			<a class="conf-meni-item" value="articles" href="?cat=articles">articles</a>
 			<a class="conf-meni-item" value="video" href="?cat=video">video</a>
 
 		</nav>
+		<form method="get" class="search-form mx-auto">
+			<input class="search" id="search" name="search" type="text" placeholder="search..." value="" />
+			<input type="submit" hidden />
+		</form>
 
 		<!-- configuration menu mobile-->
 		<select id="mySelect" onchange="onchange=window.location=this.value" class="form-select form-select-lg mx-auto" style="width: 333px;" aria-label="Default select example">
 
-			<option class="conf-meni-option" value="?cat=">ALL</option>
+			<option class="conf-meni-option" value="?cat=">all</option>
 			<option class="conf-meni-option" value="?cat=postcards">postcards</option>
 			<option class="conf-meni-option" value="?cat=articles">articles</option>
 			<option class="conf-meni-option" value="?cat=video">video</option>
@@ -92,8 +96,10 @@
 		</select>
 
 		{# Create an entry query with the 'section' and 'limit' parameters #}
+		{% set search = craft.app.request.getQueryParam('search') %}
 		{% set myEntryQuery = craft.entries()
     .section('notes')
+	.search(search)
     .limit(25) %}
 
 		{# Fetch the entries #}
@@ -112,14 +118,14 @@
 						<section class="row {% if count > 5 %}displayNone disc-more{% endif %}">
 
 							<div class="col-xl-8">
-								<span class="category mobile-display">{{ entry.category }}</span>
-								<a href="{{ entry.slug }}">
+								{# <span class="category mobile-display">{{ entry.category }}</span> #}
+								{# <a href="{{ entry.slug }}"> #}
 
 									<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
 							</div>
 
 							<div class="col-xl-4 title">
-								<span class="category desktop-display">{{ entry.category }}</span>
+								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -135,7 +141,7 @@
 						<section class="row reverse {% if count > 5 %}displayNone disc-more{% endif %}">
 
 							<div class="col-xl-4 title">
-								<span class="category desktop-display">{{ entry.category }}</span>
+								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -145,7 +151,7 @@
 							</div>
 
 							<div class="col-xl-8">
-								<span class="category mobile-display">{{ entry.category }}</span>
+								{# <span class="category mobile-display">{{ entry.category }}</span> #}
 
 								<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
 							</div>

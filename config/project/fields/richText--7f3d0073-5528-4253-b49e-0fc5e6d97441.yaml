@@ -4,9 +4,9 @@ fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
 handle: richText
 instructions: null
 name: 'Rich text'
-searchable: false
+searchable: true
 settings:
-  availableTransforms: '*'
+  availableTransforms: ''
   availableVolumes: '*'
   columnType: mediumtext
   configSelectionMode: choose

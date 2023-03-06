@@ -7,7 +7,7 @@
 		
 		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=2">
 		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=2">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=4">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=4.5">
 	
 	</head>
 
@@ -78,17 +78,72 @@
 
 		{# Fetch the entries #}
 		{% set entries = myEntryQuery.all() %}
+		{% set date = craft.app.request.getQueryParam('date') %}
+		{% set type = craft.app.request.getQueryParam('type') %}
+		{% set loc = craft.app.request.getQueryParam('loc') %}
 		{# Display the entries #}
 
 		<!-- event cards, cards can be repeated. Bundle together 3 events in a row div -->
 		<main class="jumbotron events-jumbo">
-			<h3 class="head-events">Upcoming Events</h3>
+			<h3 class="head-events" style="display:inline-block">Upcoming Events</h3>
+			<form method="get" style="display:inline-block; margin:0;">
+
+				<select id="mySelect" name="date" value="{{date}}" onchange="this.form.submit()" class="form-select form-select-lg events-form" aria-label="Default">
+
+					<option class="conf-meni-option" value="" disabled selected hidden>date</option>
+					<option class="conf-meni-option" value="">all</option>
+					{% set existingDates = [] %}
+					{% for entry in entries %}
+						{% if entry.date|date("d/m/Y") not in existingDates %}
+						 {% set existingDates = existingDates|merge([entry.date|date("d/m/Y")]) %}
+							{% if entry.date|date("d/m/Y") == date %}
+							<option class="conf-meni-option" value="{{ entry.date|date("d/m/Y") }}" selected>{{ entry.date|date("d/m/Y") }}</option>
+						{% else %}
+							<option class="conf-meni-option" value="{{ entry.date|date("d/m/Y") }}">{{ entry.date|date("d/m/Y") }}</option>
+						{% endif %}
+						{% endif %}
+							
+					{% endfor %}
+
+				</select>
+
+				<select id="mySelect" name="type" onchange="this.form.submit()" class="form-select form-select-lg events-form" aria-label="Default select example">
+					<option class="conf-meni-option" value="" disabled selected hidden>event type</option>
+					<option class="conf-meni-option" value="others">others</option>
+					<option class="conf-meni-option" value="workshop">workshop</option>
+					<option class="conf-meni-option" value="live">live</option>
+					<option class="conf-meni-option" value="festival">festival</option>
+					<option class="conf-meni-option" value="screening">screening</option>
+					<option class="conf-meni-option" value="gaming">gaming</option>
+
+				</select>
+
+				<select id="mySelect" name="loc" onchange="this.form.submit()" value="1. loc" class="form-select form-select-lg events-form" aria-label="Default select example">
+
+					<option class="conf-meni-option" value="" disabled selected hidden>location</option>
+					<option class="conf-meni-option" value="">all</option>
+
+					{% set existingPlaces = [] %}
+					{% for entry in entries %}
+					{% if entry.place not in existingPlaces %}
+						 {% set existingPlaces = existingPlaces|merge([entry.place]) %}
+						{% if entry.place == loc %}
+							<option class="conf-meni-option" value="{{ entry.place }}" selected>{{ entry.place }}</option>
+						{% else %}
+							<option class="conf-meni-option" value="{{ entry.place }}">{{ entry.place }}</option>
+						{% endif %}
+						{% endif %}
+					{% endfor %}
+
+				</select>
+		</form>
 
 			<!-- events are cards that position themselves automatically. request them more from server if needed-->
 		{% set count = 0 %}
 
 			<div class="row event-cards">
 				{% for entry in entries %}
+				{% if (entry.date|date("d/m/Y") == date or date == "") and (entry.place == loc or loc == "") and (entry.tipDogodka == type or type == "") %}
 					{% set count = count + 1 %}
 
 					{% set slika = entry.slika.one %}
@@ -112,6 +167,7 @@
 						</div>
 
 					</div>
+				{% endif %}
 				{% endfor %}
 			</div>
 		</main>

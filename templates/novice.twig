@@ -45,12 +45,11 @@
 		</header>
 
 		<!-- navbar mobile -->
-		<nav id="mobile-meni" class="mobile-meni display-none">
-
-			<a href="novice">ZAPISKI IN ZGODBE</a>
-			<a href="dogodki">KOLEDAR DOGODKOV</a>
+		<nav id="mobile-meni" class="mobile-meni display-none">	
 			<a href="projekti">Projekti</a>
-			<a href="about">O NAS</a>
+			<a href="novice">Zgodbe</a>
+			<a href="dogodki">Koledar dogodkov</a>
+			<a href="about">O nas</a>
 			<spn class="mobile-lan">
 				<span><a style="display:inline;" href="{{alias('@web') }}/sl/">SL</a>
 				</span>/<span>
@@ -78,6 +77,10 @@
 			<a class="conf-meni-item" value="video" href="?cat=video">video</a>
 
 		</nav>
+		<form method="get" class="search-form mx-auto">
+			<input class="search" id="search" name="search" type="text" placeholder="išči" value="" />
+			<input type="submit" hidden />
+		</form>
 
 		<!-- configuration menu mobile-->
 		<select id="mySelect" onchange="onchange=window.location=this.value" class="form-select form-select-lg mx-auto" style="width: 333px;" aria-label="Default select example">
@@ -90,9 +93,11 @@
 		</select>
 
 		{# Create an entry query with the 'section' and 'limit' parameters #}
+		{% set search = craft.app.request.getQueryParam('search') %}
 		{% set myEntryQuery = craft.entries()
-    .section('notes')
-    .limit(25) %}
+		.section('notes')
+		.search(search)
+		.limit(25) %}
 
 		{# Fetch the entries #}
 		{% set entries = myEntryQuery.all() %}
@@ -118,14 +123,14 @@
 						<section class="row {% if count > 5 %}displayNone disc-more{% endif %}">
 
 							<div class="col-xl-8">
-								<span class="category mobile-display">{{ kateg }}</span>
+								{# <span class="category mobile-display">{{ kateg }}</span> #}
 								<a href="{{ entry.slug }}">
 
 									<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
 							</div>
 
 							<div class="col-xl-4 title">
-								<span class="category desktop-display">{{ kateg }}</span>
+								<span class="category">{{ kateg }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -141,7 +146,7 @@
 						<section class="row reverse {% if count > 5 %}displayNone disc-more{% endif %}">
 
 							<div class="col-xl-4 title">
-								<span class="category desktop-display">{{ kateg }}</span>
+								<span class="category">{{ kateg }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 								<h3 class="title">
 									{{ entry.title }}
@@ -151,7 +156,7 @@
 							</div>
 
 							<div class="col-xl-8">
-								<span class="category mobile-display">{{ kateg }}</span>
+								{# <span class="category mobile-display">{{ kateg }}</span> #}
 
 								<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
 							</div>
