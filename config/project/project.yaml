@@ -1,4 +1,4 @@
-dateModified: 1678105621
+dateModified: 1678117651
 elementSources:
   craft\elements\Asset:
     -
@@ -174,7 +174,7 @@ plugins:
     schemaVersion: 2.3.0
   redactor-custom-styles:
     edition: standard
-    enabled: false
+    enabled: true
     schemaVersion: 1.0.0
   seo:
     edition: standard

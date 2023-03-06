@@ -93,11 +93,15 @@ window.addEventListener('load', (event) => {
 
     const cat = urlParams.get('cat')
 
+
     const arr = document.getElementsByClassName("conf-meni-item");
     const ap = document.getElementsByClassName("conf-meni-option");
 
     const thanks = urlParams.get('thanks')
-    console.log(thanks);
+
+    const type = urlParams.get('type');
+    if (type == null) type = "";
+    document.getElementById("mySelect_type").value = type;
 
     if (thanks != null) {
         let mail = document.querySelector("#newsletter-email")
@@ -121,6 +125,9 @@ window.addEventListener('load', (event) => {
             ap[i].setAttribute("selected", "selected");
         }
     }
+
+
+
 });
 
 /*Discover more function for notes. This is to be adjusted when dynamic content from server. This is placeholder for now*/

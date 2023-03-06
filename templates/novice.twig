@@ -6,7 +6,7 @@
 		{% include "meta.twig" %}
 		
 		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=2">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=2">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=52">
 		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=2">
 	</head>
 
@@ -77,8 +77,10 @@
 			<a class="conf-meni-item" value="video" href="?cat=video">video</a>
 
 		</nav>
+		{% set search = craft.app.request.getQueryParam('search') %}
+
 		<form method="get" class="search-form mx-auto">
-			<input class="search" id="search" name="search" type="text" placeholder="išči" value="" />
+			<input class="search" id="search" name="search" type="text" placeholder="išči" value="{{search}}" />
 			<input type="submit" hidden />
 		</form>
 
@@ -93,7 +95,6 @@
 		</select>
 
 		{# Create an entry query with the 'section' and 'limit' parameters #}
-		{% set search = craft.app.request.getQueryParam('search') %}
 		{% set myEntryQuery = craft.entries()
 		.section('notes')
 		.search(search)

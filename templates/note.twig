@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 	
-		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=5">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=55">
 		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=2">
 		<style>
 			{% block content %}
@@ -81,16 +81,20 @@
 
 			<!-- main content -->
 			<main class="jumbotron normal-page-con">
+				<div class="back mob-disp" onclick="history.back()"><img alt="back-icon" src="{{alias('@web') }}/img/puscica-levo.svg">back</div>
+				<p class="date mob-disp">{{ entry.date|date("mm d, Y") }}</p>
 
-				<p class="date">{{ entry.date|date("d / m") }}</p>
 				<h2>{{ entry.title }}</h2>
+				<p class="date desk-disp">{{ entry.date|date("mm d, Y") }}</p>
 
 				<!-- social share icons-->
-				<span>SHARE</span>
-				<a target="_blank" href="https://www.facebook.com/sharer.php?u={{entry.url}}"><img alt="Facebook share icon" class="soc" style="padding: 10px;" src="{{alias('@web') }}/img/Vectorfb-black.svg"></a>
-				<a target="_blank" style="margin-left: 20px;" href="https://twitter.com/share?url={{entry.url}}&text={{ entry.title }}&hashtags=kinoklub"><img alt="Twitter share icon" class="soc" style="padding: 10px;" src="{{alias('@web') }}/img/Vectortwiter-black.svg"></a>
-				<a target="_blank" style="margin-left: 20px;" href="mailto:?subject={{siteName}} | {{ entry.title }}&body=Check out this site:{{entry.url}}"><img alt="Email share icon" class="soc" style="padding: 10px;" src="{{alias('@web') }}/img/Vectormail.svg"></a>
-
+				<div style="display:inline-block;">
+					<span>SHARE</span>
+					<a target="_blank" href="https://www.facebook.com/sharer.php?u={{entry.url}}"><img alt="Facebook share icon" style="padding: 10px;" src="{{alias('@web') }}/img/Vectorfb-black.svg"></a>
+					<a target="_blank" style="margin-left: 20px;" href="https://twitter.com/share?url={{entry.url}}&text={{ entry.title }}&hashtags=kinoklub"><img alt="Twitter share icon" style="padding: 10px;" src="{{alias('@web') }}/img/Vectortwiter-black.svg"></a>
+					<a target="_blank" style="margin-left: 20px;" href="mailto:?subject={{siteName}} | {{ entry.title }}&body=Check out this site:{{entry.url}}"><img alt="Email share icon" style="padding: 10px;" src="{{alias('@web') }}/img/Vectormail.svg"></a>
+				</div>
+				
 				<!-- content -->
 				<article class="content">
 
