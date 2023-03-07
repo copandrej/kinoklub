@@ -56,30 +56,30 @@ function fadeOutOnScroll(element) {
     }
 
     let opacity = 1;
-    let opacity_2 =1;
+    let opacity_2 = 1;
     opacity = 1 - Math.max(window.pageYOffset - 350, 0) / 300;
     opacity_2 = 1 - Math.max(window.pageYOffset - 200, 0) / 300;
 
     if (!disp) {
         element.style.visibility = 'visible';
         knof.style.visibility = 'visible';
-        banner.style.visibility = 'visible';
+        if (banner) banner.style.visibility = 'visible';
         disp = false;
     }
 
     if (opacity >= 0) {
         element.style.opacity = opacity;
         knof.style.opacity = opacity;
-        banner.style.opacity = opacity_2;
+        if (banner) banner.style.opacity = opacity_2;
 
     } else {
         element.style.opacity = 0;
         knof.style.opacity = 0;
-        banner.style.opacity = 0;
+        if (banner) banner.style.opacity = 0;
 
         element.style.visibility = 'hidden';
         knof.style.visibility = 'hidden';
-        banner.style.visibility = 'hidden';
+        if (banner) banner.style.visibility = 'hidden';
         disp = false;
     }
 }
@@ -97,28 +97,29 @@ window.addEventListener('load', (event) => {
     const arr = document.getElementsByClassName("conf-meni-item");
     const ap = document.getElementsByClassName("conf-meni-option");
 
-    const thanks = urlParams.get('thanks')
 
-    const type = urlParams.get('type');
+    let type = urlParams.get('type');
     if (type == null) type = "";
-    document.getElementById("mySelect_type").value = type;
+    const mySelect = document.getElementById("mySelect_type")
+    if (mySelect != null) mySelect.value = type;
 
+    const thanks = urlParams.get('thanks')
     if (thanks != null) {
         let mail = document.querySelector("#newsletter-email")
         mail.classList.add("displayNone");
         mail.nextElementSibling.classList.add("displayNone");
-        let arr= document.getElementsByClassName("thanks");
+        let arr = document.getElementsByClassName("thanks");
 
         for (let i = 0; i < arr.length; i++)
             arr[i].classList.remove("displayNone");
-        
+
     }
 
     for (let i = 0; i < arr.length; i++) {
 
         arr[i].classList.remove("active");
         ap[i].removeAttribute("selected");
-        console.log(arr[i].getAttribute("value"));
+        // console.log(arr[i].getAttribute("value"));
 
         if ((cat == '' || cat == null) && arr[i].getAttribute("value") == 'ALL' || cat == arr[i].getAttribute("value")) {
             arr[i].classList.add("active");
