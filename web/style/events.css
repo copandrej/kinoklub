@@ -102,8 +102,8 @@
 }
 
 .events-jumbo {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 108px;
+    padding-right: 108px;
 
     padding-bottom: 0px;
     padding-top: 0px;
@@ -121,17 +121,39 @@
 
 .events-form {
     width: fit-content;
+    max-width: 240px;
     display:inline-block!important;
     margin-left: 10px;
     border: 0;
 
+}
+.configurator {
+    display:inline-block; 
+    margin:0; 
+    margin-left:200px
 }
 .events-form:focus {
     border: 0;
     box-shadow: none;
 }
 
+.event-col {
+    margin-bottom: 88px;
+} 
+@media only screen and (max-width: 1800px) {
+    .events-jumbo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
 @media only screen and (max-width: 1150px) {
+    .configurator {
+        display:inline-block; 
+        margin:0; 
+        margin-left:0px
+    }
 
     .events-jumbo {
         padding-left: 70px;
@@ -153,7 +175,9 @@
     .form-select {
         margin-left: auto !important;
     }
-
+    .event-col {
+        margin-bottom: 0px;
+    } 
     .event-cards {
         padding-top: 52px;
         padding-bottom: 50px;
@@ -162,6 +186,7 @@
 
     .event-cards div div {
         /* margin-left: 24px; */
+        margin-right: 0px;
     }
 
     .col-lg {
@@ -179,6 +204,12 @@
 
     .navbar-parallax {
         background-position-x: 00px;
+    }
+
+    .event-cards h4 {
+        font-family: 'Manrope-600';
+        font-size: 30px;
+        line-height: 41px;
     }
 }
 
