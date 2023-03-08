@@ -184,7 +184,7 @@
 			</div>
 			<div class="jumbotron form">
 			<h4>become our member</h4>
-			<h5>and get screenings for free</h5>
+			<h5>and get free screenings</h5>
 			{% if craft.app.plugins.plugin('newsletter') is not null %}
 						{# If there were any validation errors, a `newsletterForm` variable will be passed to the template, which contains the posted values and validation errors. If that’s not set, we’ll default to a new newsletterForm. #}
 						{% set newsletterForm = newsletterForm ?? create('juban\\newsletter\\models\\NewsletterForm') %}

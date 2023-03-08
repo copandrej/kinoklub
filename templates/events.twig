@@ -147,7 +147,7 @@
 					{% set count = count + 1 %}
 
 					{% set slika = entry.slika.one %}
-					<div class="col-lg event-col{% if count > 6 %}disc-more displayNone{% endif %}">
+					<div class="col-lg event-col{% if count > 6 %} disc-more displayNone{% endif %}">
 						<a href="{{ entry.slug }}">
 							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="event-img">
 						</a>
@@ -171,7 +171,7 @@
 				{% endfor %}
 			</div>
 			<!-- more button -->
-        {% if count > 5 %}
+        {% if count > 6 %}
 		<a class="discover btn-discover" style="margin:0;"  onclick="discMore()">discover more</a>
         {% endif %}
 		</main>
