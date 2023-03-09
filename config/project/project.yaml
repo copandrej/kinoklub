@@ -1,4 +1,4 @@
-dateModified: 1678117651
+dateModified: 1678264734
 elementSources:
   craft\elements\Asset:
     -
@@ -157,25 +157,10 @@ plugins:
             - listId
             - '10265280'
       recaptchaEnabled: true
-  oembed:
-    edition: standard
-    enabled: false
-    schemaVersion: 1.0.1
-    settings:
-      enableCache: '1'
-      enableGdpr: ''
-      enableNotifications: ''
-      facebookKey: ''
-      notificationEmail: ''
-      previewHidden: ''
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  redactor-custom-styles:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   seo:
     edition: standard
     enabled: true
