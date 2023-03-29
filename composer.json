@@ -1,11 +1,11 @@
 {
   "require": {
     "born05/craft-assetusage": "3.0.0",
-    "craftcms/cms": "4.3.11",
-    "craftcms/redactor": "3.0.2",
+    "craftcms/cms": "4.4.5",
+    "craftcms/redactor": "3.0.4",
     "ether/seo": "v4.0.3",
     "jub/craft-newsletter": "2.1.0",
-    "verbb/expanded-singles": "2.0.0",
+    "verbb/expanded-singles": "2.0.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
