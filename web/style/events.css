@@ -35,7 +35,7 @@
     display: block;
 }
 .event-img {
-    object-fit: none;
+    object-fit: cover;
     object-position: center;
     height: inherit;
     width: inherit;
