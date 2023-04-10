@@ -104,15 +104,16 @@
 
 				<div class="row pt-2">
 					{% set myEntryQuery = craft.entries()
-					.section('events')
-					.limit(6) %}
+					.section('events') %}
 
 					{# Fetch the entries #}
 					{% set events = myEntryQuery.all() %}
 					{# Display the entries #}
 					{% set count = 0 %}
 					{% for event in events %}
+					{% if "now"|date('Y-m-d') <= event.date|date('Y-m-d') %}
 					{% set count = count + 1 %}
+					{% if count <= 6 %}
 						<div class="col-xl-5 pb-4 pt-5 event-div {% if count > 4 %}mob-disp{% endif %}">
 
 							<h3>
@@ -125,6 +126,8 @@
 							</span>
 
 						</div>
+					{% endif %}
+					{% endif %}
 					{% endfor %}
 				</div>
 				<a class="btn-discover mt-3" href="dogodki">
