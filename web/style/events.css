@@ -150,6 +150,14 @@
     }
 }
 
+@media only screen and (max-width: 1580px) {
+
+    .event-cards div a:has(.event-img){
+        height: 400px;
+        width: 400px;
+    }
+}
+
 
 @media only screen and (max-width: 1150px) {
     .configurator {
@@ -175,6 +183,10 @@
 }
 
 @media only screen and (max-width: 850px) {
+    .event-cards div a:has(.event-img){
+        height: 500px;
+        width: 500px;
+    }
     .form-select {
         margin-left: auto !important;
     }
@@ -213,6 +225,12 @@
         font-family: 'Manrope-600';
         font-size: 30px;
         line-height: 41px;
+    }
+    .events-form {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0;
+        width: 100%;
     }
 }
 
