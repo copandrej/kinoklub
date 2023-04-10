@@ -85,7 +85,7 @@
 
 		<!-- event cards, cards can be repeated. Bundle together 3 events in a row div -->
 		<main class="jumbotron events-jumbo">
-			<h3 class="head-events" style="display:inline-block">Events {{ "now"|date("mm") }}</h3>
+			<h3 class="head-events" style="display:inline-block">Upcoming Events</h3>
 			<form class="configurator" method="get">
 
 				<select id="mySelect" name="date" value="{{date}}" onchange="this.form.submit()" class="form-select form-select-lg events-form" aria-label="Default">
@@ -94,12 +94,12 @@
 					<option class="conf-meni-option" value="">all</option>
 					{% set existingDates = [] %}
 					{% for entry in entries %}
-						{% if entry.date|date("d/m/Y") not in existingDates %}
-						 {% set existingDates = existingDates|merge([entry.date|date("d/m/Y")]) %}
-							{% if entry.date|date("d/m/Y") == date %}
-							<option class="conf-meni-option" value="{{ entry.date|date("d/m/Y") }}" selected>{{ entry.date|date("d/m/Y") }}</option>
+						{% if entry.date|date("mm") not in existingDates and ("now"|date('Y-m-d') <= entry.date|date('Y-m-d'))%}
+						 {% set existingDates = existingDates|merge([entry.date|date("mm")]) %}
+							{% if entry.date|date("mm") == date %}
+							<option class="conf-meni-option" value="{{ entry.date|date("mm") }}" selected>{{ entry.date|date("mm") }}</option>
 						{% else %}
-							<option class="conf-meni-option" value="{{ entry.date|date("d/m/Y") }}">{{ entry.date|date("d/m/Y") }}</option>
+							<option class="conf-meni-option" value="{{ entry.date|date("mm") }}">{{ entry.date|date("mm") }}</option>
 						{% endif %}
 						{% endif %}
 							
@@ -143,7 +143,7 @@
 
 			<div class="row event-cards">
 				{% for entry in entries %}
-				{% if (entry.date|date("d/m/Y") == date or date == "") and (entry.place == loc or loc == "") and (entry.tipDogodka == type or type == "") %}
+				{% if (entry.date|date("mm") == date or date == "") and (entry.place == loc or loc == "") and (entry.tipDogodka == type or type == "") and ("now"|date('Y-m-d') <= entry.date|date('Y-m-d')) %}
 					{% set count = count + 1 %}
 
 					{% set slika = entry.slika.one %}
