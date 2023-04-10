@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8.2">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8.3">
 		<style>
 			{% set slika = entry.slika.one %}
 			{% set bannerMobile = entry.bannerMobile.one %}
@@ -148,14 +148,14 @@
 
 						<section class="row">
 
-							<div class="col-xl-7">
+							<div class="col-xl-8">
 								{# <span class="category mobile-display">{{ entry.category }}</span> #}
 								<a href="{{ entry.slug }}">
 
 									<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
 							</div>
 
-							<div class="col-xl-4 title ml-1" style="margin-left: 58px;">
+							<div class="col-xl-4 title">
 								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 									<h3 class="title">
@@ -171,7 +171,7 @@
 					{% if (loop.index is even) %}
 						<section class="row reverse">
 
-							<div class="col-xl-5 title" style="pardding-right: 58px;">
+							<div class="col-xl-4 title">
 								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
 									<h3 class="title">
@@ -181,7 +181,7 @@
 							</div>
 
 							<div
-								class="col-xl-7">
+								class="col-xl-8">
 								{# <span class="category mobile-display">{{ entry.category }}</span> #}
 
 								<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
