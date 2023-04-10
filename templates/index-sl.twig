@@ -5,9 +5,12 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8.1">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=8.2">
 		<style>
 			{% set slika = entry.slika.one %}
+			{% set bannerMobile = entry.bannerMobile.one %}
+			{% set bannerDesktop = entry.bannerDesktop.one %}
+
 			.bg-img-parallax {
 				background-image: url({{slika.url}});
 				background-size: cover;
@@ -50,7 +53,7 @@
 
 			<div class="par">
 				<div class="chi">
-					<p id="chi">skupnost ljubiteljev filma</p>
+					<p id="chi">Fura nas skupnost.</p>
 				</div>
 			</div>
 
@@ -128,8 +131,11 @@
 					več dogodkov
 				</a>
 			</div>
-			<div class="banner">
-				<img style="width:100%;" alt="banner" src="{{alias('@web') }}/img/banner.png">
+			<div class="bannerDesktop">
+				<img alt="bannerDesktop" src="{{ bannerDesktop.url }}">
+			</div>
+			<div class="bannerMobile">
+				<img alt="bannerMobile" src="{{ bannerMobile.url }}">
 			</div>
 			<div class="jumbotron landing-main">
 				<h4>pretekle in prihodnje</h4>

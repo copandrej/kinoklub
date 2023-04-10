@@ -1,0 +1,61 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: bannerDesktop
+instructions: null
+name: Banner_desktop
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:369e78c2-5589-40bf-b0bd-f7c8b9b2e955' # img
+  defaultUploadLocationSubpath: null
+  localizeRelations: true
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:369e78c2-5589-40bf-b0bd-f7c8b9b2e955' # img
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\HasAltConditionRule
+              -
+                - uid
+                - 4a9e9d93-9ca2-4628-9dce-96771bebf60a
+              -
+                - value
+                - false
+  selectionLabel: null
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

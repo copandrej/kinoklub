@@ -1,4 +1,4 @@
-dateModified: 1679465166
+dateModified: 1680155252
 elementSources:
   craft\elements\Asset:
     -
@@ -114,12 +114,14 @@ meta:
     9b7967d1-ab44-43c1-8617-27cc29600d25: 'Tip dogodka' # Tip dogodka
     12b23949-ae49-4d68-a14e-231270421b86: Home # Home
     17dfc7be-7af9-4875-ba4b-9ed7942d1a68: Opis # Opis
+    47ab79f6-6159-4ddf-a6e3-22bee591def8: Banner_desktop # Banner_desktop
     71f1e1a8-6334-4c4d-9bfc-4c60fea6a590: Project # Project
     369e78c2-5589-40bf-b0bd-f7c8b9b2e955: img # img
     548d1972-4fd4-483a-9f1e-722e249ba366: 'Kino Klub EN' # Kino Klub EN
     637e8647-69ab-4ca9-8697-2fc85ae48e53: Time # Time
     734bb3f1-97ed-4c94-8234-b4002833597e: Common # Common
     9744b394-7f5b-4f3f-97ed-1061c9129eb2: seo # seo
+    13206bce-4ea7-40c9-86fc-36ff7a728d7e: Banner_mobile # Banner_mobile
     517591a8-ff67-4a2d-9030-b017777f8d19: Kategorija # Kategorija
     a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
     b6417f85-8d11-44f0-ab58-66f5733257d8: Events # Events

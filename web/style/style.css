@@ -146,7 +146,7 @@ h1 {
 
 /*a bit different for generic , height not 100%*/
 .bg-img-general {
-    height: 820px !important;
+    height: 700px !important;
     /*height: auto !important;*/
     background-image: url("../img/bg-general.png");
     background-position: center;

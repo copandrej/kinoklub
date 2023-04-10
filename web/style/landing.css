@@ -44,6 +44,25 @@
 
 }
 
+.bannerDesktop {
+    display: block;
+}
+
+.bannerDesktop {
+    width: 100% !important;
+    margin-bottom: 100px;
+}
+
+.bannerMobile img, .bannerDesktop img {
+    width: 100% !important;
+    object-fit: cover;
+    height: auto;
+}
+
+.bannerMobile {
+    display: none;
+}
+
 /*changing hover animatin for this links (check .hover classes and animations at style.css*/
 .next-events .hover:after {
     height: 4px;
@@ -204,12 +223,18 @@
         margin-left: 0px !important;
     }
 
-    .banner img {
-        height: 505px;
+    .bannerMobile {
+        height: auto;
         width: 100% !important;
         object-fit: cover;
         margin-bottom: 100px;
-
+    }
+    .bannerDesktop {
+        display: none;
+    }
+    
+    .bannerMobile {
+        display: block;
     }
 
     .notes-link {
