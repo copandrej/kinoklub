@@ -60,10 +60,8 @@
 		</header>
 
 		<!-- navbar mobile -->
-		<nav
-			id="mobile-meni" class="mobile-meni display-none">
+		<nav id="mobile-meni" class="mobile-meni display-none">
 
-			<!--<a href="notes">NOTES AND STORIES</a>-->
 				<a href="projekti">Projekti</a>
 				<a href="novice">Zgodbe</a>
 				<a href="dogodki">Koledar dogodkov</a>
@@ -86,18 +84,13 @@
 			<div id="spremembaaa" class="sp"></div>
 		</div>
 
-		{# Create an entry query with the 'section' and 'limit' parameters #}
+		{# entry query #}
 		{% set myEntryQuery = craft.entries()
         .section('notes')
         .limit(3) %}
 
-		{# Fetch the entries #}
 		{% set entries = myEntryQuery.all() %}
-		{# Display the entries #}
 
-		<!-- main content 
-						tukaj dodaš še za events
-						-->
 			<main>
 				<div class="jumbotron events"> <h4>prihajajoči dogodki</h4>
 				<h5>in projekcije</h5>
@@ -152,18 +145,15 @@
 						<section class="row">
 
 							<div class="col-xl-8">
-								{# <span class="category mobile-display">{{ entry.category }}</span> #}
 								<a href="{{ entry.slug }}">
-
-									<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}"></a>
+									<img alt="{{ entry.altText }}" loading="lazy" class="note-img" src="{{ slika.url }}">
+								</a>
 							</div>
 
 							<div class="col-xl-4 title">
 								<span class="category">{{ entry.category }}, {{entry.postDate|date("d/m/y")}}</span>
 								<a style="text-decoration:none;" href="{{ entry.slug }}">
-									<h3 class="title">
-										{{ entry.title }}
-									</h3>
+									<h3 class="title">{{ entry.title }}</h3>
 								</a>
 							</div>
 
@@ -183,10 +173,7 @@
 								</a>
 							</div>
 
-							<div
-								class="col-xl-8">
-								{# <span class="category mobile-display">{{ entry.category }}</span> #}
-
+							<div class="col-xl-8">
 								<a href="{{ entry.slug }}"><img alt="{{ entry.altText }}" loading="lazy" class="note-img" style="float: right" src="{{ slika.url }}"></a>
 							</div>
 
@@ -244,6 +231,7 @@
 
 				</form>
 			{% endif %}
-		</div>
-	</body>
-</html></main>{% include "footer-sl" %}
+		</div>	
+	</main>
+{% include "footer-sl" %}
+
