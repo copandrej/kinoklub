@@ -5,9 +5,9 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 		
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.css?v=2">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.css?v=52">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/events.css?v=14.7">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.min.css">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.min.css">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/events.min.css">
 	
 	</head>
 
@@ -90,7 +90,7 @@
 
 				<select id="mySelect" name="date" value="{{date}}" onchange="this.form.submit()" class="form-select form-select-lg events-form" aria-label="Default">
 
-					<option class="conf-meni-option" value="" disabled selected hidden>date</option>
+					<option class="conf-meni-option" value="" disabled selected hidden>month</option>
 					<option class="conf-meni-option" value="">all</option>
 					{% set existingDates = [] %}
 					{% for entry in entries %}

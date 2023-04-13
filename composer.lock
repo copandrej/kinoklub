@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34437031b4db67b6b04ad86ddf5a3046",
+    "content-hash": "8be5012a35d8f2c28d96bdc128c39c66",
     "packages": [
         {
             "name": "born05/craft-assetusage",
@@ -54,6 +54,61 @@
                 "issues": "https://github.com/born05/craft-assetusage/issues"
             },
             "time": "2023-04-03T08:03:17+00:00"
+        },
+        {
+            "name": "c10d/craft-recaptcha",
+            "version": "2.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/c10d-dev/craft-recaptcha/zipball/bab4f26c81d50208d7649b26a6d6e78b9ed2005b",
+                "reference": "bab4f26c81d50208d7649b26a6d6e78b9ed2005b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0",
+                "php": "^8.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "reCAPTCHA v3 for Craft CMS",
+                "handle": "craft-recaptcha",
+                "developer": "Cédric Givord",
+                "developerUrl": "https://c10d.dev",
+                "documentationUrl": "https://github.com/c10d-dev/craft-recaptcha/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/c10d-dev/craft-recaptcha/master/CHANGELOG.md",
+                "components": {
+                    "recaptcha": "c10d\\craftrecaptcha\\services\\RecaptchaService"
+                },
+                "class": "c10d\\craftrecaptcha\\CraftRecaptcha"
+            },
+            "autoload": {
+                "psr-4": {
+                    "c10d\\craftrecaptcha\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cédric Givord",
+                    "homepage": "https://c10d.dev"
+                }
+            ],
+            "description": "Integrate reCAPTCHA v3 validation into your forms.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craft-recaptcha",
+                "craftcms",
+                "recaptcha"
+            ],
+            "support": {
+                "docs": "https://github.com/c10d-dev/craft-recaptcha/blob/master/README.md",
+                "issues": "https://github.com/c10d-dev/craft-recaptcha/issues"
+            },
+            "time": "2023-03-23T00:22:22+00:00"
         },
         {
             "name": "cebe/markdown",

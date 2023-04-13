@@ -1,4 +1,4 @@
-dateModified: 1680155252
+dateModified: 1681371931
 elementSources:
   craft\elements\Asset:
     -
@@ -134,6 +134,16 @@ plugins:
     edition: standard
     enabled: false
     schemaVersion: 2.0.0
+  craft-recaptcha:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      secretKey: 6LedrIIlAAAAAHvb5INOZ8MDmFtdyAIlIugr1OHD
+      siteKey: 6LedrIIlAAAAAISRihmnW9uogL_vwSIg1R_0F_D0
+      threshold: '1.0'
+      validateContactForm: ''
+      validateUsersRegistration: ''
   expanded-singles:
     edition: standard
     enabled: true

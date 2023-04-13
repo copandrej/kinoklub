@@ -798,7 +798,7 @@ form {
     margin-top: 55px;
 }
 
-.form input[type=submit], .submit {
+.form input[type=submit], .submit, button {
     border-radius: 0;
     display: block;
     /* float: left; */
@@ -824,7 +824,7 @@ form {
 
 }
 
-.form input[type=submit]:hover, .submit:hover {
+.form input[type=submit]:hover, .submit:hover , button:hover {
     background: black;
     color: white;
 }
@@ -1134,7 +1134,7 @@ video {
         padding: 14px 35px;
     }
 
-    .form input[type=submit], .submit {
+    .form input[type=submit], .submit, button {
         font-family: 'Manrope-500';
         font-size: 24px;
         line-height: 33px;
