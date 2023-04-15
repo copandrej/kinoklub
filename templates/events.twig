@@ -7,7 +7,7 @@
 		
 		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.min.css">
 		<link rel="stylesheet" href="{{alias('@web') }}/style/normal.min.css">
-		<link rel="stylesheet" href="{{alias('@web') }}/style/events.min.css">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/events.min.css?1">
 	
 	</head>
 
@@ -146,7 +146,7 @@
 					{% set count = count + 1 %}
 
 					{% set slika = entry.slika.one %}
-					<div class="col-lg event-col{% if count > 6 %} disc-more displayNone{% endif %}">
+					<div class="col-lg event-col {% if count is divisible by(3) %}col-auto{% endif %}{% if count > 6 %} disc-more displayNone{% endif %}">
 						<a href="{{ entry.slug }}">
 							<img alt="{{ entry.altText }}" src="{{ slika.url }}" class="event-img">
 						</a>

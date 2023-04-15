@@ -1,4 +1,4 @@
-dateModified: 1681371931
+dateModified: 1681554655
 elementSources:
   craft\elements\Asset:
     -
@@ -101,11 +101,13 @@ fs:
 meta:
   __names__:
     0e562f94-5806-4803-bd62-64df37c4d6cf: Date # Date
+    1bf9552f-1784-41a4-87f3-6b5d9e6167f9: 'Glavni Text projekti' # Glavni Text projekti
     1d09924c-7d8b-4c7b-bd9a-26a1510cd435: Place # Place
     3d596aee-6653-4770-a869-2adcf68e8a4f: Projects # Projects
     4afffa94-3642-4081-8cf0-0b281a97608b: Events # Events
     4b30886b-a63c-4f1a-998a-b2ef3d2b9f95: Home # Home
     4f541f05-c78e-43df-ba73-556c39ed5e4a: About # About
+    5a3c7965-ae5a-473b-89f9-d61a766e24ae: Project # Project
     5d67afcb-a40e-4d38-8b10-4423c1ba48a4: Naslov # Naslov
     6f7de5eb-1b48-4f02-8088-a464aeea88cd: Slika # Slika
     7dff5ce0-6641-40f0-926b-8bd7f905d8bf: 'Kino Klub SI' # Kino Klub SI
@@ -125,6 +127,7 @@ meta:
     517591a8-ff67-4a2d-9030-b017777f8d19: Kategorija # Kategorija
     a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
     b6417f85-8d11-44f0-ab58-66f5733257d8: Events # Events
+    bd6492b1-5917-4f84-98db-5cdc881ac7ae: Project # Project
     e9b86cb5-7af9-4e68-bde6-8c598884aaf9: Notes # Notes
     e8440175-43c0-41bd-92a3-fdac6020477c: 'Alt text' # Alt text
     ec752501-2740-4382-afb1-396107a872da: 'Notes and Stories' # Notes and Stories

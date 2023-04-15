@@ -784,7 +784,7 @@ footer a:hover {
 }
 .search-form {
     float: right;
-    margin-right: 40px!important;
+    margin-right: 195px!important;
     margin-top: 45px!important;
 }
 
@@ -929,19 +929,30 @@ video {
     .bg-img-general {
         height: 500px !important;
     }
+    
 }
-
+@media only screen and (max-width: 1500px) {
+    .search-form {
+        margin-right: 100px!important;
+    }
+}
 @media only screen and (max-width: 1150px) {
 
     .navbar1,
     .navbar1-parallax {
         display: none;
     }
+    .search {
+        width: 320px;
+    }
 
     .jumbotron,
     .events-jumbo {
         padding-left: 70px;
         padding-right: 70px;
+    }
+    .search-form {
+        margin-right: 70px!important;
     }
 
     .knof {
@@ -1192,9 +1203,6 @@ video {
         margin-right: auto!important; 
         display: table;
 
-    }
-    .search {
-        width: 320px;
     }
 
     .logo {

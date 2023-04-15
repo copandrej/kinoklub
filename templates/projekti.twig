@@ -73,7 +73,7 @@
 		<main>
 			<h3 class="project-title">Projekti</h3>
 			<div class="jumbotron projects">
-				<p class="proj-napis">Odkrijte nekaj projektov, za katere se zavzemamo. Projekti temeljijo na delu, ki ga opravljamo in smo ga opravljali v preteklosti in sedanjosti.</p>
+				<p class="proj-napis">{% block content %}{{ entry.glavniTextProjekti }}{% endblock %}</p>
 
 
 				{% set myEntryQuery = craft.entries()

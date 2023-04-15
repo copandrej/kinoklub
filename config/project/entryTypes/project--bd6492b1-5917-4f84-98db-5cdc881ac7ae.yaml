@@ -1,0 +1,55 @@
+fieldLayouts:
+  cd1d5585-5463-48c3-b69b-ce6bcfafea94:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9d45994b-d54a-47b3-a33b-3a73b8249c66
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1bf9552f-1784-41a4-87f3-6b5d9e6167f9 # Glavni Text projekti
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 407835e3-a78e-4870-acfc-ef435eb69dfe
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 197b5ecc-6fd0-4392-8774-3baffa880103
+        userCondition: null
+handle: project
+hasTitleField: true
+name: Project
+section: 5a3c7965-ae5a-473b-89f9-d61a766e24ae # Project
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

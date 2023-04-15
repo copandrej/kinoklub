@@ -15,6 +15,7 @@
     letter-spacing: -0.02em;
     color: #000000;
     padding-top: 62px;
+    padding-bottom: 25px;
     
 }
 
@@ -133,7 +134,9 @@
 .configurator {
     display:inline-block; 
     margin:0; 
-    margin-left:200px
+    margin-left:200px;
+    float: right;
+    margin-top: 34px;
 }
 .events-form:focus {
     border: 0;
@@ -157,8 +160,12 @@
         width: 400px;
     }
 }
+@media only screen and (max-width: 1280px) {
 
-
+.configurator {
+    float: none;
+}
+}
 @media only screen and (max-width: 1150px) {
     .configurator {
         display:inline-block; 

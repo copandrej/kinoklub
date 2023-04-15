@@ -41,7 +41,31 @@ fieldLayouts:
             uid: b8d3f30f-8387-4e52-a32b-1d9a5fcbe38b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 47ab79f6-6159-4ddf-a6e3-22bee591def8 # Banner_desktop
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c55a43f0-0e33-40c2-9c2e-f1bc78923597
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 13206bce-4ea7-40c9-86fc-36ff7a728d7e # Banner_mobile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4ee2af8-422e-46c5-863c-9ac48eee66c1
+            userCondition: null
+            warning: null
+            width: 25
           -
             elementCondition: null
             fieldUid: 9744b394-7f5b-4f3f-97ed-1061c9129eb2 # seo
@@ -56,36 +80,6 @@ fieldLayouts:
             width: 100
         name: Content
         uid: cf818e90-86a5-48cd-803f-7ddbac044cb6
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 47ab79f6-6159-4ddf-a6e3-22bee591def8 # Banner_desktop
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c55a43f0-0e33-40c2-9c2e-f1bc78923597
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 13206bce-4ea7-40c9-86fc-36ff7a728d7e # Banner_mobile
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b4ee2af8-422e-46c5-863c-9ac48eee66c1
-            userCondition: null
-            warning: null
-            width: 100
-        name: Banner
-        uid: cd1af741-da0e-48c0-a463-5d31dccea618
         userCondition: null
 handle: home
 hasTitleField: false
