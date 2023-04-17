@@ -5,7 +5,7 @@
 		<!-- meta tags -->
 		{% include "meta.twig" %}
 
-		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.min.css">
+		<link rel="stylesheet" href="{{alias('@web') }}/style/landing.min.css?1">
 		<style>
 			{% set slika = entry.slika.one %}
 			{% set bannerMobile = entry.bannerMobile.one %}
@@ -53,7 +53,7 @@
 
 			<div class="par">
 				<div class="chi">
-					<p id="chi">Fura nas skupnost.</p>
+					<a class="chi" href="{{ entry.motoUrl }}" target="_blank" id="chi">Fura nas skupnost.</a>
 				</div>
 			</div>
 
@@ -128,14 +128,18 @@
 				</a>
 			</div>
 			<div class="bannerDesktop">
-				<img alt="bannerDesktop" src="{{ bannerDesktop.url }}">
+				<a href="{{ entry.bannerUrl }}" target="_blank">
+					<img loading="lazy" alt="bannerDesktop" src="{{ bannerDesktop.url }}">
+				</a>
 			</div>
 			<div class="bannerMobile">
-				<img alt="bannerMobile" src="{{ bannerMobile.url }}">
+				<a href="{{ entry.bannerUrl }}" target="_blank">
+					<img loading="lazy" alt="bannerMobile" src="{{ bannerMobile.url }}">
+				</a>
 			</div>
 			<div class="jumbotron landing-main">
-				<h4>pretekle in prihodnje</h4>
-				<h5>zgodbe in karte</h5>
+				<h4>preteklost in prihodnost</h4>
+				<h5>zgodbe & kartice</h5>
 
 
 				{% for entry in entries %}

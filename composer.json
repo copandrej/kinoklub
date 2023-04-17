@@ -2,7 +2,7 @@
   "require": {
     "born05/craft-assetusage": "3.1.0",
     "c10d/craft-recaptcha": "2.1.0",
-    "craftcms/cms": "4.4.7",
+    "craftcms/cms": "4.4.7.1",
     "craftcms/redactor": "3.0.4",
     "ether/seo": "4.1.0",
     "jub/craft-newsletter": "2.1.0",

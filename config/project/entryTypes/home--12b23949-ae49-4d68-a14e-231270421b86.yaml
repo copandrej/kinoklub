@@ -44,6 +44,18 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: bef1fc0a-abb1-4500-a1be-4c63b1ac8674 # Moto Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ff3818f-720c-4ebe-acf0-7c5383924909
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 47ab79f6-6159-4ddf-a6e3-22bee591def8 # Banner_desktop
             instructions: null
             label: null
@@ -66,6 +78,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+          -
+            elementCondition: null
+            fieldUid: 14c96fdd-31ef-4b90-b837-25c359880575 # Banner Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9524f95a-856a-4e71-a05d-500dbab261fb
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 9744b394-7f5b-4f3f-97ed-1061c9129eb2 # seo

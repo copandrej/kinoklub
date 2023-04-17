@@ -1,4 +1,4 @@
-dateModified: 1681554655
+dateModified: 1681742098
 elementSources:
   craft\elements\Asset:
     -
@@ -115,6 +115,7 @@ meta:
     8b6fcde2-6dc2-4235-8257-f26af6b76a38: About # About
     9b7967d1-ab44-43c1-8617-27cc29600d25: 'Tip dogodka' # Tip dogodka
     12b23949-ae49-4d68-a14e-231270421b86: Home # Home
+    14c96fdd-31ef-4b90-b837-25c359880575: 'Banner Url' # Banner Url
     17dfc7be-7af9-4875-ba4b-9ed7942d1a68: Opis # Opis
     47ab79f6-6159-4ddf-a6e3-22bee591def8: Banner_desktop # Banner_desktop
     71f1e1a8-6334-4c4d-9bfc-4c60fea6a590: Project # Project
@@ -128,6 +129,7 @@ meta:
     a5095b5e-8a24-4f7f-bb02-26be023077b2: 'Kino klub' # Kino klub
     b6417f85-8d11-44f0-ab58-66f5733257d8: Events # Events
     bd6492b1-5917-4f84-98db-5cdc881ac7ae: Project # Project
+    bef1fc0a-abb1-4500-a1be-4c63b1ac8674: 'Moto Url' # Moto Url
     e9b86cb5-7af9-4e68-bde6-8c598884aaf9: Notes # Notes
     e8440175-43c0-41bd-92a3-fdac6020477c: 'Alt text' # Alt text
     ec752501-2740-4382-afb1-396107a872da: 'Notes and Stories' # Notes and Stories

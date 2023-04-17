@@ -170,7 +170,7 @@ h1 {
     justify-content: center;
 }
 
-.chi {
+#chi {
     text-align: center;
 
     font-family: 'Manrope-400';
@@ -183,7 +183,12 @@ h1 {
     letter-spacing: -0.02em;
 
     color: #FFFFFF;
+    text-decoration: none;
 
+}
+#chi:hover {
+text-decoration: none;
+color: white;
 }
 
 
@@ -1114,9 +1119,14 @@ video {
         color: #FFFFFF;
     }
 
-    .icons {
-        display: none;
+    .icons a {
+            float: none;
     }
+
+    .icons {
+        height: 120px;
+    }
+
 
     .socials p {
 
@@ -1295,16 +1305,20 @@ video {
     }
 
     #chi {
-        font-family: 'Manrope-400';
+        font-family: 'Manrope-400'!;
         font-size: 30px;
         line-height: 41px;
         text-align: center;
         letter-spacing: -0.02em;
-
-        padding-left: 40px;
-        padding-right: 40px;
+        text-decoration: none;
+        color: white;
     }
 
+    #chi:hover {
+        text-decoration: none;
+        color: white;
+    }
+    
     .jumbotron h4 {
         font-family: 'Manrope-700';
         font-size: 30px;

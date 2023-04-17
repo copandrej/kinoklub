@@ -70,10 +70,7 @@
 
 
 		<main>
-			<h3 class="project-title">Projects</h3>
-			<div class="jumbotron projects">
-				<p class="proj-napis">{% block content %}{{ entry.glavniTextProjekti }}{% endblock %}</p>
-
+			<div class="jumbotron projects" style="padding-top: 0;">
 
 				{% set myEntryQuery = craft.entries()
                 .section('projects')

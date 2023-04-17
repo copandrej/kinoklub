@@ -1,0 +1,14 @@
+columnSuffix: yawrpyqe
+contentColumnType: string(511)
+fieldGroup: 734bb3f1-97ed-4c94-8234-b4002833597e # Common
+handle: bannerUrl
+instructions: null
+name: 'Banner Url'
+searchable: false
+settings:
+  maxLength: 511
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\Url
